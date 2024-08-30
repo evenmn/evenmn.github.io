@@ -1,16 +1,16 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: About me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Even. The most important things that you need to know about me are:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- I like coding
+- I love cycling
 
-What else do you need?
+### My resume
 
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+- Bachelor in Physics, Astronomy and Meteorology (2014-2017)
+- Masters in Computational Physics (2017-2019)
+- PhD in Physics (2019-2024)
