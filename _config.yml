@@ -10,21 +10,21 @@
 ############################
 
 # Name of website
-title: My website
+title: Even Marius Nordhagen
 
 # Your name to show in the footer
-author: Some Person
+author: Even Marius Nordhagen
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  About me: "aboutme"
+  Projects:
+    - Friction modelling: "friction"
+    - Inverse design: "inversedesign"
+  Contact: "contact"
 
 ################
 # --- Logo --- #
