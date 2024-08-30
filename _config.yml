@@ -15,6 +15,9 @@ title: Even Marius Nordhagen
 # Your name to show in the footer
 author: Even Marius Nordhagen
 
+# Remove ads
+remove-ads: true
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
@@ -54,20 +57,20 @@ social-network-links:
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: evenmarius.nordhagen
   github: evenmn
-#  twitter: daattali
-#  patreon: DeanAttali
-#  youtube: "@daattali"
+#  twitter: yourname
+#  patreon: yourname
+#  youtube: yourname
 #  whatsapp: +4748043633
 #  medium: yourname
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: evenmarius.nordhagen
 #  xing: yourname
-#  stackoverflow: "3943160/daattali"
+#  stackoverflow: yourname
   snapchat: evenmarius
   instagram: evennordhagen
 #  spotify: yourname
   telephone: +4748043633
-#  steam: deanat78
+#  steam: yourname
 #  twitch: yourname
 #  yelp: yourname
 #  telegram: yourname
@@ -126,7 +129,7 @@ edit_page_button: true
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "machine learning, friction, molecular dynamics simulations, weather models"
 
 ######################################
 # --- Colours / background image --- #
