@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Inverse design
-subtitle: using
+subtitle: using diffusion models
 ---
 
 Placeholder
