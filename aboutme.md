@@ -41,7 +41,7 @@ I have observed that, throughout my brief academic career, I have progressively 
 - UNAK (2018)
 - Teaching Assistant, UiO (2018-2019)
 - Summer internship, ASC (2018)
-- Researcher, MET (2024-)
+- Researcher, MET Norway (2024-)
 
 ### Courses taught
 - FYS-MEK1110, Classical Mechanics (2018-2022)
