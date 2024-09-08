@@ -1,18 +1,18 @@
 ---
-layout: page
-title: Contact me
-subtitle: 
+layout: page  
+title: Contact Me  
+subtitle:  
 ---
 
-- Phone: +47 480 43 633
-- Email: even.nordhagen@gmail.com
-- Available: Any time
+## Contact Information
+- **Phone**: [+47 480 43 633](tel:004748043633)
+- **Email**: [even.nordhagen@gmail.com](mailto:even.nordhagen@gmail.com)
+- **Availability**: Any time
 
-## In person
-- Office: Norwegian Meteorological Institute, 
-- Available: Mon-Fri 8AM-4PM
+## In Person
+- **Office**: Norwegian Meteorological Institute
+- **Office Hours**: Monday to Friday, 8 AM - 4 PM
 
-## Social media
-- LinkedIn: [Even Marius Nordhagen](https://www.linkedin.com/in/even-marius-nordhagen-a44248135/)
-- github: [evenmn](https://github.com/evenmn)
-
+## Social Media
+- **LinkedIn**: [Even Marius Nordhagen](https://www.linkedin.com/in/even-marius-nordhagen-a44248135/)
+- **GitHub**: [evenmn](https://github.com/evenmn)
