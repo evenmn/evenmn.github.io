@@ -4,7 +4,7 @@ title: About me
 subtitle:
 ---
 
-Hi! I'm Even, a physicist by profesion, but currently working on weather modeling using data-driven models at the [Norwegian Meteorological Institute (MET Norway)](https://met.no/english). I have a keen interest in physics in general, modeling, visualization and machine learning, and find myself often solving problems with code. Do not hesitate reaching out to me if you ever want to discuss the aformentioned topics.
+Hi! I'm Even, a physicist by profesion, but currently working on weather modeling using data-driven models at the [Norwegian Meteorological Institute (MET Norway)](https://met.no/en). I have a keen interest in physics in general, modeling, visualization and machine learning, and find myself often solving problems with code. Do not hesitate reaching out to me if you ever want to discuss the aformentioned topics.
 
 In my spare time I enjoy being active and social, spending time on CrossFit, gravel cycling and playing chess (I'm the ultimate freak in other words).
 
