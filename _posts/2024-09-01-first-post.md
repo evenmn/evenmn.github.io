@@ -4,7 +4,7 @@ title: My first blog post
 subtitle: Why I decided to make my own website
 gh-repo: evenmn/evenmn.github.io
 gh-badge: [follow]
-#tags: [test]
+tags: [first post]
 comments: true
 mathjax: true
 author: Even Marius Nordhagen
