@@ -12,13 +12,13 @@ author: Even Marius Nordhagen
 Last week, I attended the [Workshop on Large-Scale Deep Learning for the Earth System](https://cesoc.net/workshop-on-large-scale-deep-learning-for-the-earth-system/) in Bonn, Germany, and it was a great experience. Given that the workshop specialized in machine learning models for predicting weather and climate, it could hardly be more relevant for my current position at MET Norway. The event featured presentations on cutting-edge deep learning models for weather and climate forecasting.
 
 ![University Club Bonn](/assets/img/university_club_bonn.png)
-*The workshop was held at the University Club in Bonn. Notably, Bonn is the birthplace of Ludwig van Beethoven, which explains the numerous Beethoven portraits adorning the walls.*
+*The workshop was held at the University Club in Bonn. Notably, Bonn is the birthplace of Ludwig van Beethoven, which explains the numerous Beethoven portraits adorning the walls. Image is taken from [https://www.axona-aichi.com/projects/archives/58](https://www.axona-aichi.com/projects/archives/58).*
 
 ## Workshop Overview
 The workshop spanned two days, with the first day dedicated to weather-related discussions and the second day focused on climate topics. While there were poster sessions and opportunities for discussion between talks, the primary emphasis was on the presentations. A total of 32 talks were delivered to an audience of 120 attendees, alongside 25 poster presentations. The schedule was densely packed, making it challenging to absorb and retain all the information.
 
 ## Outcomes
-Given my primary research interests and the workshop's intensive schedule, I will focus this post on the weather-related presentations from Day 1 that particularly captivated me. Despite the wide range of topics covered, certain themes were more prominent than others. Here are the key topics that stood out:
+Given my primary research interests and the workshop's intensive schedule, I will focus this post on the weather-related presentations from Day 1 that particularly captivated me. Despite the wide range of topics covered, certain themes were more prominent than others. Here are the hottest topics:
 
 - Transitioning from deterministic to probabilistic models (ensemble models)
 - Integration of direct observations with end-to-end machine learning pipelines
