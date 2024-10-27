@@ -25,8 +25,9 @@ remove-ads: true
 navbar-links:
   About me: "aboutme"
   Projects:
-    - Friction modelling: "friction"
-    - Inverse design: "inversedesign"
+    - Friction modelling: "projects/friction"
+    - Inverse design: "projects/inversedesign"
+    - Quantum dots: "projects/quantumdots"
   Contact: "contact"
 
 ################
@@ -198,7 +199,7 @@ footer-img: "/assets/img/sic_bgimage.png" #"/assets/img/bgimage.png"
 ####################
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-#disqus: ""
+disqus: "evennordhagen"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
