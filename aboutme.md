@@ -60,3 +60,7 @@ I have observed that, throughout my brief academic career, I have progressively 
 
 - Norwegian (native)
 - English (fluent)
+
+### Presentations
+- European Geological Union (EGU) General Assembly 2023, Vienna, Austria
+- EuroHPC User Day 2024, Amsterdam, Netherlands
