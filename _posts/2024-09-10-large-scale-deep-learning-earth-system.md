@@ -73,4 +73,6 @@ The technology is now available to develop cutting-edge operational probabilisti
 
 One of the primary responsibilities of meteorological institutes is to issue warnings for extreme weather to safeguard life and property. Therefore, I hope to see an even greater emphasis on extreme weather prediction at the next workshop on large-scale deep learning for the Earth system. I look forward to attending and contributing again next year!
 
-![Signature](/assets/img/signature.png)
+Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
+
+![Signature](/assets/img/signature.png){: .mx-auto.d-block :}
