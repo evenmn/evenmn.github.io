@@ -24,7 +24,7 @@ We already have quite good models for the weather, ocean and climate. What is so
 
 The WeatherGenerator can be compared to recent models for natural language processing (NLP) such as ChatGPT, Gemini and llama. They have partly or entirely replaced a long range of tools and services, including translators, grammar correctors, code linters, personal assistants and much more. Not only do they offer a fast, reliable and easy to use service, but they also outperforms the old methods on most tasks. 
 
-![WeatherGenerator Applications](/assets/img/weather-generator/weathergenerator_applications.png)
+![WeatherGenerator Applications](/assets/img/weather-generator/weathergenerator_applications.png){: .mx-auto.d-block :}
 *The WeatherGenerator will be able to take reanalysis data, simulation data and observations as inputs, and output predictions, state estimates and high-impact applications. Inputs and outputs can be 100m or 100km, global or local and from the past, present or future with arbitrary temporal resolution.*
 
 ## How is it working?
