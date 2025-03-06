@@ -87,6 +87,8 @@ Some of these parameters are equal due to symmetries, while some of them can be 
 ## Optimizing water model
 Inspired by evolution, we use a genetic algorithm to find optimal values for the parameters.
 
+According to Charles Darwin's evolutionary theory the biological evolution is controlled by natural selection: Only the strongest individuals will be able to reproduce, reinforcing the population for every generation. When two individuals mate, the genomes are mixed in an apparent random fashion, exploiting the knowledge about the genes. There is also an exploration aspect where ... 
+
 (how genetic algorithms work)
 
 (hierarchical genetic algorithm)
