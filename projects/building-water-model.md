@@ -10,7 +10,7 @@ gh-badge: [follow]
 tags: [dissociative, water, molecular dynamics, Vashishta, genetic algorithm]
 comments: true
 mathjax: true
-author: Even Marius Nordhagen
+author: Even Nordhagen
 ---
 
 Computer experiments offer information that is not available in real experiments, at the same time as they are less error prone and often cheaper. This is the main reason why ever more research is based on computer simulations. However, can we really rely on computer simulations when making important decision? How do we know that the computer experiments capture effects as the real experiments? The answer is that the simulations have to be tested and verified on the exact thing that we aim to investigate, as computer simulations will never capture all aspects of the real world. 
@@ -84,30 +84,46 @@ Some of these parameters are equal due to symmetries, while some of them can be 
 
 (Genetic algorithm illustration: starting from a random population. Evaluate the objective fitness of each individual. Let the fittest individuals multiply, while the least fittest individuals die without offsprings. Exploitation. Exploration: Allow for mutation and swapping parameters/genes.)
 
-## Optimizing water model
+## Global optimization using a genetic algorithm
 Inspired by evolution, we use a genetic algorithm to find optimal values for the parameters.
 
-According to Charles Darwin's evolutionary theory the biological evolution is controlled by natural selection: Only the strongest individuals will be able to reproduce, reinforcing the population for every generation. When two individuals mate, the genomes are mixed in an apparent random fashion, exploiting the knowledge about the genes. There is also an exploration aspect where ... 
+According to Charles Darwin's evolutionary theory the biological evolution is controlled by natural selection: Only the strongest individuals will be able to reproduce, reinforcing the population for every generation. When two individuals mate, the genomes are mixed in an apparent random fashion, exploiting the knowledge about the genes. There is also an exploration aspect where cells mutate, meaning that some of the genes are changed independently of the parent genomes.
 
-(how genetic algorithms work)
+Genetic, or evolutionary, algorithms are heavily inspired by Darwin's evolutionary theory, where each individual represents a set of parameters instead of a set of genomes. Starting from a population of $$N$$ individuals, the fitness of each individual is calculated using an objective score. Only the fittest individuals are allowed to reproduce and thus the next generation of individuals is only a result of the fittest individuals of the previous generation. Some parameters are also randomly changed to represent cell mutation, letting the algorithm explore the parameter space better.
 
-(hierarchical genetic algorithm)
+### Objective fitness score
+The genetic algorithm relies heavily on an objective fitness function. Generally, it is just a skill score determining how good an individual performs. In our case, each individual is a parameterizartion of the Vashishta potential and the objective skill score is determined by how close each parameterization is the experimental values of bulk water density at various temperatures and pressures. Calculating the density requires molecular dynamics simulations, and is by far the most expensive part of the genetic algorithm.
 
-(local optimization: Nelder-Mead simplex method)
+Since we want to optimize multiple quantities simultaneously, the objective fitness function consists of several terms. The brute-force way of evaluating the function is to  weight all the terms equally and calculating everything in one go. However, we can actually save a lot of computations by prioritizing some of the quantities first, and gradually add quantities of lower priority when the higher priorities are satisfied. This is what is the key ingredients in the so-called Hierarchical Objective Genetic Algorithm (HOGA).
+
+![Nelder-Mead](/assets/img/building-water-model/nelder-mead.png){: .mx-auto.d-block :}
+*Nelder-Mead simplex algorithm*
+
+## Local optimization
+Once the fitness score is satisfyingly low, we have found a satisfactory local minimum in the parameter space. To dig deeper in this local minimum, we use a local optimization technique based on the Nelder-Mead simplex method. The idea is simple: We evaluate three points close to the best point that we have, hence the name simplex. Based on the results we move one of the points/vertices and create a new simplex based on four possible actions:
+
+- reflect
+- contract
+- expand
+- shrink
+
+The action to perform is based on a set of rules, made to exploit the knowledge at the same time as we explore. The new simplex hopefully has a lower center than the previous one. We continue this procedure until convergence. 
 
 ![Siloxane bridges](/assets/img/building-water-model/siloxane_bridges.png){: .mx-auto.d-block :}
 *With a reactive water potential we can simulate reactions with other components. Here, water is simulated together with silicon dioxide and is shown to form siloxane bonds (purple). Siloxane bonds are important in frictional aging as discussed in [my friction project](https://evenmn.github.io/projects/friction/).*
 
 ## Adding more components
+So what if we want to simulate more than water?
 Following the same procedure, we can add more components. However, every time we add a new component, interaction parameters between the existing components and the new component, as well as between the new component itself has to be found. For the third parameter, this corresponds to $$3^3-2^3=19$$ new three-atom combinations.
 
-(in general difficult)
+For every additional parameter to optimize, the optimization task gets exponentially harder. In general, it is therefore difficult to add more components to the parameter optimization. Fortunately, we can often use our physical intuition to reduce the dimensionality of the optimization problem and make it feasible. For instance, we know that water molecules have to be charge neutral, i.e. the charge of hydrogen ($$Z_{\mathrm{H}}$$) and oxygen ($$Z_{\mathrm{O}}$$) are related through the equation:
 
-(can use intuition to reduce number of parameters significantly)
+$$2Z_{\mathrm{H}}=-Z_{\mathrm{O}}.$$
 
-(silicon dioxide very relevant for geological processes)
+For geological applications, the interplay between water and silicon dioxide, or silica, is especially interesting. To build a model for silica and water, we only need to addsilicon as an additional component to the water model. This can be done by following the optimization procedure above. 
 
 ## Conclusions
+Computer simulations offer insights and provide information that is not available from real experiments. However, to get realistic results that we can rely on, the model explaining the atomic interactions has to be tuned correctly. In this project we have looked at how an reactive water model can be derived by an approach inspired by Darwin's evolutionary theory. The model can also be extended to more components.
 
 For more details, please read our paper published in Journal of Physical Chemistry B: [Camposano, Nordhagen, Sveinsson, Malthe-Sørenssen, *Genetic Algorithm Workflow for Parameterization of a Water Model Using the Vashishta Force Field*, J. Phys. Chem. B (2025), **129**, 4, 1331–1342](https://pubs.acs.org/doi/full/10.1021/acs.jpcb.4c06389).
 
