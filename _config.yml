@@ -28,7 +28,7 @@ navbar-links:
     - Friction modelling: "projects/friction"
     - Inverse design: "projects/inversedesign"
     - Quantum dots: "projects/quantumdots"
-  Software: "software"
+  #Software: "software"
   Contact: "contact"
 
 ################

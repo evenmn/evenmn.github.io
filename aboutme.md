@@ -40,8 +40,6 @@ I have observed that, throughout my brief academic career, I have progressively 
 - **2024-today: Researcher,** Norwegian Meteorological Institute
 - **2018: Summer internship,** Andøya Space Center
 - **2018-2019: Teaching Assistant,** University of Oslo
-- **2018: Private Tutor,** UNAK
-- **2013-2017: Employee,** Circle K, Lørenfallet, Lillestrøm
 
 ### Courses taught
 - **FYS4460,** Percolation and Disordered Systems, 2024
