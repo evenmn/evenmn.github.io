@@ -6,7 +6,7 @@ subtitle:
 
 Hi! I'm Even, a physicist by profesion, but currently working on weather modeling using data-driven models at the [Norwegian Meteorological Institute (MET Norway)](https://met.no/en). I have a keen interest in physics in general, modeling, visualization and machine learning, and find myself often solving problems with code. Do not hesitate reaching out to me if you ever want to discuss the aformentioned topics.
 
-In my spare time I enjoy being active and social, spending time on CrossFit, gravel cycling and playing chess (I'm the ultimate freak in other words).
+In my spare time I enjoy being active and social, spending time on CrossFit, gravel cycling and playing chess.
 
 ![Even](/assets/img/EVEN-2.png)
 *Even (pronounced /ˈɛvən/), which translates to "happy victor," is a traditional Norwegian name with origins in Old Norse. Satellite images that looks like letters. From the left: Bellona plateau, Mapleton (Maine), Sea of Okhotskis, Yapacani (Bolivia). The images are taken from [NASA Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/index.html).*
