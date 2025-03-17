@@ -6,7 +6,7 @@ subtitle:
 
 Hi! I'm Even, a physicist by profesion, but currently working on weather modeling using data-driven models at the [Norwegian Meteorological Institute (MET Norway)](https://met.no/en). I have a keen interest in physics in general, modeling, visualization and machine learning, and find myself often solving problems with code. Do not hesitate reaching out to me if you ever want to discuss the aformentioned topics.
 
-In my spare time I enjoy being active and social, spending time on CrossFit, gravel cycling and playing chess (I'm the ultimate freak in other words).
+In my spare time I enjoy being active and social, spending time on CrossFit, gravel cycling and playing chess.
 
 ![Even](/assets/img/EVEN-2.png)
 *Even (pronounced /ˈɛvən/), which translates to "happy victor," is a traditional Norwegian name with origins in Old Norse. Satellite images that looks like letters. From the left: Bellona plateau, Mapleton (Maine), Sea of Okhotskis, Yapacani (Bolivia). The images are taken from [NASA Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/index.html).*
@@ -30,37 +30,35 @@ I have observed that, throughout my brief academic career, I have progressively 
 ## Summary
 ### Education
 
-- Bachelor in Physics, Astronomy and Meteorology, UiO (2014-2017)
-- Exchange semester, Department of Physical and Mathematical Sciences, NTU (2017)
-- Masters in Computational Physics, UiO (2017-2019)
-- PhD in Physics, UiO (2019-2024)
+- **2019-2024: PhD** supervised by Anders Malthe-Sørenssen and Henrik Andersen Sveinsson at University of Oslo. Thesis: "[Molecular Dynamics Simulations of Dry Friction on the Nanoscale](https://www.duo.uio.no/handle/10852/112708)"
+- **2017-2019: Masters in Computational Physics** supervised by Morten Hjorth-Jensen at University of Oslo. Thesis: "[Studies of Quantum Dots using Machine Learning](https://www.duo.uio.no/handle/10852/73753)"
+- **2017: Exchange student,** Department of Physical and Mathematical Sciences, Nanyang Technological University, Singapore
+- **2014-2017: Bachelor of Physics, Astronomy and Meteorology,** University of Oslo
 
 ### Work experience
 
-- Circle K, Lørenfallet, Lillestrøm (2013-2017)
-- UNAK (2018)
-- Teaching Assistant, UiO (2018-2019)
-- Summer internship, ASC (2018)
-- Researcher, MET Norway (2024-)
+- **2024-today: Researcher,** Norwegian Meteorological Institute
+- **2018: Summer internship,** Andøya Space Center
+- **2018-2019: Teaching Assistant,** University of Oslo
 
 ### Courses taught
-- FYS-MEK1110, Classical Mechanics (2018-2022)
-- FYS1120, Electromagnetism (2018-2019)
-- FYS3150/4150, Computational Physics (2021-2023)
-- FYS1100, Mechanics and Modeling (2023)
-- FYS4460, Percolation and Disordered Systems (2024)
-- NAT3000, Scientific Programming in School (2023)
+- **FYS4460,** Percolation and Disordered Systems, 2024
+- **NAT3000,** Scientific Programming in School, 2023
+- **FYS3150/4150,** Computational Physics, 2021, 2022, 2023
+- **FYS1100,** Mechanics and Modeling, 2023
+- **FYS-MEK1110,** Classical Mechanics, 2018, 2019, 2020, 2021, 2022
+- **FYS1120,** Electromagnetism, 2018, 2019
 
 ### Skills
 
-- Programming languages: Python (Advanced), C++ (Advanced)
-- Software and Tools: Linux, HPC, Data Analysis, Machine Learning
+- **Programming languages:** Python (Advanced), C++ (Advanced)
+- **Software and Tools:** Linux, HPC, Data Analysis, Machine Learning
 
 ### Languages
 
-- Norwegian (native)
-- English (fluent)
+- **Norwegian** (native)
+- **English** (fluent)
 
 ### Presentations
-- European Geological Union (EGU) General Assembly 2023, Vienna, Austria
-- EuroHPC User Day 2024, Amsterdam, Netherlands
+- **EuroHPC User Day 2024,** Amsterdam, Netherlands
+- **European Geological Union (EGU)** General Assembly 2023, Vienna, Austria
