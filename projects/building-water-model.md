@@ -82,12 +82,11 @@ where $$B_{jik}$$, $$\gamma$$, $$r_0$$, $$\cos\bar{\theta}_{jik}$$ and $$C_{jik}
 
 Some of these parameters are equal due to symmetries, while some of them can be deduced from physical experiments. Still, there are many parameters to be found, way more than possible with a simple grid search. We need a systematic way of doing this. 
 
-(Genetic algorithm illustration: starting from a random population. Evaluate the objective fitness of each individual. Let the fittest individuals multiply, while the least fittest individuals die without offsprings. Exploitation. Exploration: Allow for mutation and swapping parameters/genes.)
+![Genetic Algorithm](/assets/img/building-water-model/genetic_algorithm.png){: .mx-auto.d-block :}
+*One generation of the genetic algorithm: We start from an initial population, here of 5 individuals. First, the fittest individuals are identified using an objective fitness score, and individuals that don't obey to the standard are discarded. Thereafter, crossover between their chromosomes (here respresented by colored boxes) is performed. This action represents the exploitation element of evolution. The exploration aspect of evolution is covered by random mutations of the chromosomes, which is the last thing that happens before the next population generation is created*
 
 ## Global optimization using a genetic algorithm
-Inspired by evolution, we use a genetic algorithm to find optimal values for the parameters.
-
-According to Charles Darwin's evolutionary theory the biological evolution is controlled by natural selection: Only the strongest individuals will be able to reproduce, reinforcing the population for every generation. When two individuals mate, the genomes are mixed in an apparent random fashion, exploiting the knowledge about the genes. There is also an exploration aspect where cells mutate, meaning that some of the genes are changed independently of the parent genomes.
+Inspired by evolution, we use a genetic algorithm to find optimal values for the parameters. According to Charles Darwin's evolutionary theory the biological evolution is controlled by natural selection: Only the strongest individuals will be able to reproduce, reinforcing the population for every generation. When two individuals mate, the genomes are mixed in an apparent random fashion, exploiting the knowledge about the genes. There is also an exploration aspect where cells mutate, meaning that some of the genes are changed independently of the parent genomes.
 
 Genetic, or evolutionary, algorithms are heavily inspired by Darwin's evolutionary theory, where each individual represents a set of parameters instead of a set of genomes. Starting from a population of $$N$$ individuals, the fitness of each individual is calculated using an objective score. Only the fittest individuals are allowed to reproduce and thus the next generation of individuals is only a result of the fittest individuals of the previous generation. Some parameters are also randomly changed to represent cell mutation, letting the algorithm explore the parameter space better.
 
