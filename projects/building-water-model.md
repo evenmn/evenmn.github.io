@@ -117,7 +117,7 @@ The process can be extended to include additional components. However, each time
 
 As we add more parameters to optimize, the complexity of the optimization task increases exponentially. In general, this makes it difficult to expand the model with additional components. However, by leveraging physical intuition, we can often reduce the dimensionality of the problem, making the task more manageable.
 
-For example, we know that water molecules must be charge-neutral, meaning that the charges on hydrogen ($$Z_{\mathrm{H}}$$) and oxygen ($$Z_{\mathrm{O}}) atoms must be related by the equation:
+For example, we know that water molecules must be charge-neutral, meaning that the charges on hydrogen ($$Z_{\mathrm{H}}$$) and oxygen ($$Z_{\mathrm{O}}$$) atoms must be related by the equation:
 
 $$2Z_{\mathrm{H}}=-Z_{\mathrm{O}}.$$
 
@@ -128,7 +128,7 @@ Computer simulations provide valuable insights and information that are often in
 
 For more details, please read our paper published in Journal of Physical Chemistry B: [Camposano, Nordhagen, Sveinsson, Malthe-Sørenssen, *Genetic Algorithm Workflow for Parameterization of a Water Model Using the Vashishta Force Field*, J. Phys. Chem. B (2025), **129**, 4, 1331–1342](https://pubs.acs.org/doi/full/10.1021/acs.jpcb.4c06389).
 
-Disclaimer: All illustrations used here were created with [Ovito](https://www.ovito.org) and TikZ.
+*Disclaimer*: All illustrations used here were created with [Ovito](https://www.ovito.org) and TikZ.
 
 Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 
