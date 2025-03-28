@@ -10,10 +10,10 @@
 ############################
 
 # Name of website
-title: Even Marius Nordhagen
+title: Even Nordhagen
 
 # Your name to show in the footer
-author: Even Marius Nordhagen
+author: Even Nordhagen
 
 # Remove ads
 remove-ads: true
@@ -91,7 +91,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: Personal website of Even Marius Nordhagen
+rss-description: Personal website of Even Nordhagen
 
 ###########################
 # --- General options --- #
