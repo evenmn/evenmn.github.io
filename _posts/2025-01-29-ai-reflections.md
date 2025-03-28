@@ -10,7 +10,7 @@ gh-badge: [follow]
 tags: []
 comments: true
 mathjax: true
-author: Even Marius Nordhagen
+author: Even Nordhagen
 ---
 
 % attract readers attention
@@ -22,11 +22,11 @@ Started on physics in 2014 fortunate to learn programming already from the first
 (The TIOBE index)
 *Python's TIOBE rating has increased from 2.4% in 2014 to 23.1% in 2025. Source: tiobe.com*
  
-The popularity of Python has exploded in the past years, many thanks to the popularity of machine learning. Almost all large machine learning projects (>90%) are developed in Python. Machine learning is Python. However, in many ways Python has been just as important for the machine learning boom as machine learning has been for the Python boom. With that I mean that the machine learning progress is largely fuelled by the great libraries built by the community - Pytorch, TensorFlow and Jax - which are all taking advantage of the philosophies in Python. Together with advances in hardware, great Python libraries is the main reason why development in machine learning happens so fast.
+The popularity of Python has exploded in the past years, thanks to the popularity of machine learning. Almost all large machine learning projects (>90%) are developed in Python. Machine learning is Python. However, in many ways Python has been just as important for the machine learning boom as machine learning has been for the Python boom. With that I mean that the machine learning progress is largely fuelled by the great libraries built by the community - Pytorch, TensorFlow and Jax - which are all taking advantage of the philosophies in Python. Together with advances in hardware, great Python libraries is the main reason why development in machine learning happens so fast.
 
 % what is machine learning
 ## Exactly what is machine learning?
-Machine learning is the science of ... Even though the term is new, many of the techniques are old and have been used over many decades. For instance, simple gradient descent fits under the *machine learning* umbrella, and has been around since calculus was developed. I will go through a simple example ...
+Machine learning is the science of training computers without explicitly programming them. Even though the term is new, many of the techniques are old and have been used over many decades. For instance, simple gradient descent fits under the *machine learning* umbrella, and has been around since calculus was developed. I will go through a simple example ...
 (demonstrate machine learning with an everyday problem where one parameter has to be tweaked - use gradient update)
 
 ## Recent advances that made machine learning revolution possible
@@ -40,7 +40,7 @@ Machine learning is the science of ... Even though the term is new, many of the 
 ## Future development
 Extrapolate time line to predict the future. 
 
-DeepSeek proves that NVIDIA no longer has monopoly. China has invested largely in machine learning and is now harvesting from it.
+DeepSeek proves that NVIDIA no longer has monopoly. China has invested largely in machine learning and they are now harvesting from it.
 
 ## Conclusions
 Langtangen memorial
