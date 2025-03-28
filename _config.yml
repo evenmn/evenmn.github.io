@@ -28,6 +28,7 @@ navbar-links:
     - Friction modelling: "projects/friction"
     - Inverse design: "projects/inversedesign"
     - Quantum dots: "projects/quantumdots"
+    - Water model: "projects/building-water-model"
   #Software: "software"
   Contact: "contact"
 
