@@ -7,7 +7,7 @@ gh-badge: [follow]
 tags: [first post]
 comments: true
 mathjax: true
-author: Even Marius Nordhagen
+author: Even Nordhagen
 ---
 
 ## Purpose of the Website

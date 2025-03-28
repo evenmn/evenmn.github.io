@@ -10,7 +10,7 @@ gh-badge: [follow]
 tags: [AIFS, stretched-grid]
 comments: true
 mathjax: true
-author: Even Marius Nordhagen
+author: Even Nordhagen
 ---
 
 We have developed the most accurate model for regional weather prediction available, thanks to recent advances in machine learning weather modeling. Our model is based on graph neural networks and employs a stretched grid with higher resolution over the target regional domain.

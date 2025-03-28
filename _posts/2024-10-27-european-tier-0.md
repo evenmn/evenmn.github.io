@@ -10,7 +10,7 @@ gh-badge: [follow]
 tags: [EuroHPC, tier-0, LUMI, Leonardo]
 comments: true
 mathjax: true
-author: Even Marius Nordhagen
+author: Even Nordhagen
 ---
 
 I just came back from the **EuroHPC User Day 2024**, held in Amsterdam on October 22-23, where I had the honor of presenting the outcomes of our research on the EuroHPC supercomputers. For those who may not be familiar, the **European High-Performance Computing Joint Undertaking** (**EuroHPC JU**) oversees the installation, operation, maintenance, and distribution of Europe’s most powerful supercomputers, commissioned by the European Union. This network includes three of the current top 10 supercomputers globally: **LUMI**, **Leonardo**, and **MareNostrum 5**. Additionally, **Jupiter**, which is currently being installed, is expected to soon rank as the world's second most powerful supercomputer. The conference was primarily user-focused, which is why I was invited to share our work there.

@@ -7,7 +7,7 @@ gh-badge: [follow]
 tags: [weather prediction, machine learning, data-driven]
 comments: true
 mathjax: true
-author: Even Marius Nordhagen
+author: Even Nordhagen
 ---
 Last week, I attended the [Workshop on Large-Scale Deep Learning for the Earth System](https://cesoc.net/workshop-on-large-scale-deep-learning-for-the-earth-system/) in Bonn, Germany, and it was a great experience. Given that the workshop specialized in machine learning models for predicting weather and climate, it could hardly be more relevant for my current position at MET Norway. The event featured presentations on cutting-edge deep learning models for weather and climate forecasting.
 
