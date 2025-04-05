@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The Schrodinger equation
+title: The Schrödinger equation
 subtitle: solved with a machine learning approach
 #cover-img: /assets/img/onebody.png
 share-img: /assets/img/onebody.png
@@ -10,11 +10,11 @@ mathjax: true
 ![One-body](/assets/img/onebody.png)
 *The one-body density determines the probability of finding a particle at a certain distance from another particle. Here, applied on quantum dots with machine learning prediction to the left and a conventional method to the right.*
 
-The Schrodinger equation is the most accurate equation in physics, and has successfully explained numerious atomic systems. By solving the time-independent Schrodinger equation (below), we know in principle everything about the system. However, this can be a highly challenging task, as any system of more than two objects cannot be described analytically (the three-body problem).
+The Schrödinger equation is the most accurate equation in physics, and has successfully explained numerious atomic systems. By solving the time-independent Schrödinger equation (below), we know in principle everything about the system. However, this can be a highly challenging task, as any system of more than two objects cannot be described analytically (the three-body problem).
 
 $$\hat{\mathcal{H}}\Psi=E\Psi$$
 
-Here, we propose an alternative method for solving the equation. According to the variational principle, any wave function $$\Psi$$ that is inserted into the Schrodinger equation will yield a system energy $$E$$ larger than (or equal to) the ground-state energy (with a few restrictions). This means that we can optimize a function $$\Psi$$ under minimization the energy $$E$$ and approach the ground-state of a certain system $$\hat{\mathcal{H}}$$. This is the perfect machine learning problem, where $$\Psi$$ is a variational function, for instance an artificial neural network, and the energy is the loss that we want to minimize. At the time we were working on this, it was a quite novel idea. However, Google Deepmind also worked on a similar project with their [FermiNet](ferminet.com), which got a lot of attention.
+Here, we propose an alternative method for solving the equation. According to the variational principle, any wave function $$\Psi$$ that is inserted into the Schrödinger equation will yield a system energy $$E$$ larger than (or equal to) the ground-state energy (with a few restrictions). This means that we can optimize a function $$\Psi$$ under minimization the energy $$E$$ and approach the ground-state of a certain system $$\hat{\mathcal{H}}$$. This is the perfect machine learning problem, where $$\Psi$$ is a variational function, for instance an artificial neural network, and the energy is the loss that we want to minimize. At the time we were working on this, it was a quite novel idea. However, Google Deepmind also worked on a similar project with their [FermiNet](ferminet.com), which got a lot of attention.
 
 % Outline
 We will first describe how the trial energy $$E_T$$ can be found for a particular function $$\Psi_T$$, before we move on to the machine learning part where the function $$\Psi_T$$ is optimized in order to find the ground state.
