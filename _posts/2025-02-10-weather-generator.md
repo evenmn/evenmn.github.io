@@ -26,7 +26,7 @@ We already have quite good models for the weather, ocean and climate. What is so
 
 The WeatherGenerator can be compared to recent models for natural language processing (NLP) such as ChatGPT, Gemini and llama. They have partly or entirely replaced a long range of tools and services, including translators, grammar correctors, code linters, personal assistants and much more. Not only do they offer a fast, reliable and easy to use service, but they also outperforms the old methods on many tasks.
 
-There are already some examples on foundation models for weather and climate that proves the concept and demonstrate their capabilities. In particular, Microsoft have developed Aurora [Bodnar et al., 2024], a foundation model for climate, weather and air pollution featuring 1.3 billion parameters trained on diverse data. However, compared to the ORBIT model [..., 2025], featuring 113 billion parameters, that is a tiny model. Notably, both these models were developed in the United States.
+There are already some examples on foundation models for weather and climate that proves the concept and demonstrate their capabilities. In particular, Microsoft have developed Aurora [Bodnar et al., 2024], a foundation model for climate, weather and air pollution featuring 1.3 billion parameters trained on diverse data. However, compared to the ORBIT model [Wang et al., 2024], featuring 113 billion parameters, that is a tiny model. Notably, both these models were developed in the United States.
 
 ![WeatherGenerator Applications](/assets/img/weather-generator/weathergenerator_applications.png){: .mx-auto.d-block :}
 *The WeatherGenerator will be able to take reanalysis data, simulation data and observations as inputs, and output predictions, state estimates and high-impact applications. Inputs and outputs can be 100m or 100km, global or local and from the past, present or future with arbitrary temporal resolution.*
@@ -67,7 +67,7 @@ The WeatherGenerator project (grant agreement No. 101187947) is funded by the Eu
 ![Funded by EU](/assets/img/weather-generator/EN-Funded by the EU-POS.png){: .mx-auto.d-block :}
 
 ## References
-- [Bodnar et al., 2024]: Bodnar et al., Aurora: A Foundation Model of the Atmosphere, arXiv:2405.13063 [physics] (2024)
-- [..., 2025]: ORBIT: Oak Ridge ...
+- [Bodnar et al., 2024] : Bodnar et al., Aurora: A Foundation Model of the Atmosphere, arXiv:2405.13063 [physics] (2024)
+- [Wang et al., 2024] : Wang et al., ORBIT: Oak Ridge Base Foundation Model for  Earth System Predictability, arXiv:2404.14712 [physics] (2024)
 
 ![Signature](/assets/img/signature.png){: .mx-auto.d-block :}
