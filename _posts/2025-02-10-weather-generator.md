@@ -36,7 +36,7 @@ The recent success of LLMs is greatly powered by advances in machine learning an
 
 To be able to repeat this for weather forecasting, one needs access to huge amounts of data and computational resources. Fortunately, this is something we do in the weather forecasting community. The idea is to train an LLM on large amounts of meteorological data, including reanalysis, simulation data and observations from synoptical stations, radars, lidars, satelites and aviation. We will then utilize the EuroHPC computing infrastructures, like LUMI, Leonardo and the upcoming Jupiter clusters, for development, training and testing. I have written about EuroHPC and my experiences with running on the infrastructure [in a recent post](www.evenmn.github.io/2024-10-27-european-tier-0/). 
 
-![Large Language Models WeatherGenerator Machine Learning Weather Forecasting](/assets/img/weather-generator/llm1.jpg)
+![Large Language Models WeatherGenerator Machine Learning Weather Forecasting](/assets/img/weather-generator/llm1.png)
 *LLMs rely on a so-called latent space, where...*
 
 Most of today's LLMs are based on a transformer architecture, with a self-attention mechanism. This was for a long time very costly, as the nature of attention made it hard to split up the tasks in small sub-tasks and run them in parallel. A turning point came in 2017, when [highly parallelizable transformers](www.evenmn.github.io) where made available. This made it possible to train LLMs on large infrastructures with thousands of graphics processing units. 
