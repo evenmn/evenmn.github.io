@@ -18,7 +18,7 @@ Alongside my studies, I had what I’d consider the ideal part-time job: teachin
 ![ASC](/assets/img/aboutme/asc.jpg)
 *Here in 2018, holding the lens system of the all-sky camera used for cloud detection at Andøya Space Center.*
 
-After completing my master’s, I pursued a PhD focused on [friction at the nanoscale](https://evennordhagen.com/projects/friction/) using molecular dynamics (MD) simulations. These simulations offer space-time resolution far beyond what's possible in experiments, allowing deeper insights. I discovered that frictional silicon carbide interfaces strengthen over time due to surface diffusion — explaining why friction decreases at higher sliding velocities. This work culminated in a publication: ([E. M. Nordhagen, H. A. Sveinsson, A. M. Sørenssen, "Diffusion-driven Frictional Aging in Silicon Carbide", *Tribology letters* **71**, 95 (2023)](https://doi.org/10.1007/s11249-023-01762-z)). During my PhD, I also delved into generative machine learning, which led me to address the inverse design problem in frictional systems. I defended my thesis in August 2024.
+After completing my master’s, I pursued a PhD focused on [friction at the nanoscale](https://evennordhagen.com/projects/friction/) using molecular dynamics (MD) simulations. These simulations offer space-time resolution far beyond what's possible in experiments, allowing deeper insights. I discovered that frictional silicon carbide interfaces strengthen over time due to surface diffusion — explaining why friction decreases at higher sliding velocities. This work culminated in a [publication in Tribology Letters](https://doi.org/10.1007/s11249-023-01762-z). During my PhD, I also delved into generative machine learning, which led me to address the [inverse frictional design problem](https://evennordhagen.com/projects/inversedesign/). I defended my thesis in August 2024.
 
 In May 2024, I joined MET Norway as a researcher, working on developing machine learning models for high-resolution weather forecasting in the Nordics. Machine learning has recently shown great promise in global weather forecasting due to its accuracy and efficiency, and we're building on this momentum with a regional model. (You can check out our preprint here: [arXiv:2409.02891](https://arxiv.org/abs/2409.02891)).
 
@@ -48,7 +48,7 @@ Looking back, I’ve noticed a trend in my academic journey: the scale of the sy
 
 ### Skills
 
-- **Programming languages:** Python (Advanced), C++ (Advanced)
+- **Programming languages:** Python, C++
 - **Software and Tools:** Linux, HPC, Data Analysis, Machine Learning
 
 ### Languages
