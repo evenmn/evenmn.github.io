@@ -47,7 +47,7 @@ There are several ways to solve this problem, and indeed the linear regression p
 
 $$\hat{y}_i=w\cdot x_i$$,
 
-that is closest possible to the actual thermostat increase $$y_i$$. This is the function that we want to optimize. Here, $$w$$ is the parameter to be tuned and $$x_i$$ is the outside temperature drop. We need to pick a metric to be minimized, called the *loss function*, which is typically the mean-squared error:
+that is closest possible to the actual thermostat increase $$y_i$$. This is the *model* that we want to optimize. Here, $$w$$ is the parameter to be tuned and $$x_i$$ is the outside temperature drop. We need to pick a metric to be minimized, called the *loss function*, which is typically the mean-squared error:
 
 $$\mathcal{L}(y,\hat{y}; w)=\frac{1}{5}\sum_{i=1}^5(y_i-\hat{y}_i)^2=\frac{1}{5}\sum_{i=1}^5(y_i-wx_i)^2$$.
 
@@ -65,7 +65,9 @@ This means that the slope in the exact point where $$w=1$$ is equivalent to redu
 
 $$w\leftarrow w-\eta\nabla_w\mathcal{L}(y,\hat{y};w)$$.
 
-Here, $$\eta$$ is the so-called learning rate, determining how much the parameters should be adjusted for every step. By adjusting $$w$$ iteratively, we will see that the optimal value in this problem is $$w=1.35$$.
+Here, $$\eta$$ is the so-called *learning rate*, determining how much the parameters should be adjusted for every step. By adjusting $$w$$ iteratively, we will see that the optimal value in this problem is $$w=1.35$$.
+
+This is an example of an extremely basic machine learning problem, but it illustrates the concepts, including the data, model, loss function and learning rate. In practice, typical machine learning problems include large amounts of data and a much more complex model, often based on neural networks.
 
 ## Discoveries that made the machine learning revolution possible
 - Back propagation (1996)
