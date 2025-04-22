@@ -65,25 +65,38 @@ This means that the slope in the exact point where $$w=1$$ is equivalent to redu
 
 $$w\leftarrow w-\eta\nabla_w\mathcal{L}(y,\hat{y};w)$$.
 
-Here, $$\eta$$ is the so-called *learning rate*, determining how much the parameters should be adjusted for every step. By adjusting $$w$$ iteratively, we will see that the optimal value in this problem is $$w=1.35$$.
+Here, $$\eta$$ is the so-called *learning rate*, determining how much the parameters should be adjusted for every step. By adjusting $$w$$ iteratively, we will see that the optimal value in this problem is $$w=1.35$$. So for every degree the outside temperature drops, we need to increase the thermostat by 1.35°C.
 
 This is an example of an extremely basic machine learning problem, but it illustrates the concepts, including the data, model, loss function and learning rate. In practice, typical machine learning problems include large amounts of data and a much more complex model, often based on neural networks.
 
 ## Discoveries that made the machine learning revolution possible
-- Back propagation (1996)
-- Training neural networks on GPUs (2014)
-- Generative adversarial networks (Goodfellow (2014), Radford (2015))
-- Residual neural networks - how to train very deep networks (2015)
-- Variational autoencoders (2013)
-- Transformers (Attention is all you need (2017))
-- Diffusion models (Ho (2020))
+Intro
 
-The AI revolution actually started in 2014...
+### Back propagation
+Back propagation allows us to compute the gradients of complex models such at deep neural networks. The algorithm was discovered in 1986, and all deep learning relies on it (https://www.nature.com/articles/323533a0). If we want to make metaphores to the brain,  (https://www.nature.com/articles/s41583-020-0277-3)
+
+### Efficient hardware
+- Training neural networks on GPUs, Krizhevsky (2014)
+
+### Generative models
+- Generative adversarial networks (Goodfellow (2014), Radford (2015))
+
+### Residual neural networks
+- Residual neural networks - how to train very deep networks (2015)
+
+### Variational autoencoders
+- Variational autoencoders (2013)
+
+### Transformers
+- Transformers (Attention is all you need (2017))
+
+### Diffusion models
+- Diffusion models (Ho (2020))
 
 ## Future development
 Extrapolate time line to predict the future. 
 
-DeepSeek proves that NVIDIA no longer has monopoly. China has invested largely in machine learning and they are now harvesting from it.
+DeepSeek proves that NVIDIA no longer has monopoly (AMD). China has invested largely in machine learning and they are now harvesting from it.
 
 ## Conclusions
 Python rules the world of machine learning.
