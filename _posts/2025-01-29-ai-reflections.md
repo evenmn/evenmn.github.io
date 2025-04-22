@@ -69,19 +69,23 @@ Here, $$\eta$$ is the so-called *learning rate*, determining how much the parame
 
 This is an example of an extremely basic machine learning problem, but it illustrates the concepts, including the data, model, loss function and learning rate. In practice, typical machine learning problems include large amounts of data and a much more complex model, often based on neural networks.
 
+## A neural network
+
+
 ## Discoveries that made the machine learning revolution possible
-Intro
+Machine learning requires many essentail components. From algorithms to hardware to model architecture. This list could easily be much longer, but I will here focus on my subjective meaning of discoveries that hade been essential for the machine learning revolution that we see today.
 
 ### Back propagation
-Back propagation allows us to compute the gradients of complex models such at deep neural networks. The algorithm was discovered in 1986, and all deep learning relies on it (https://www.nature.com/articles/323533a0). If we want to make metaphores to the brain,  (https://www.nature.com/articles/s41583-020-0277-3)
+Back propagation allows us to compute the gradients of complex models such at deep neural networks. It is a technique of computing gradients starting from the end of the model and propagating forward, hence the name. The algorithm was discovered in 1986, and all deep learning relies on it (https://www.nature.com/articles/323533a0). If we want to make metaphores to the brain,  (https://www.nature.com/articles/s41583-020-0277-3)
 
 ### Efficient hardware
-- Training neural networks on GPUs, Krizhevsky (2014)
+Graphical Processing Units (GPUs) are computational units that can process very many small tasks simultaneously. Like the name suggests, they were developed to process graphics used in video games in particular. At some point around 2010, some people realized that GPUs could be used to accelerate training of neural networks. One of the most influental demonstrations of the use came in 2012, when Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton showed how a deep neural network outperformed traditional methods for image classification by a huge margin [Krizhevsky 2012].
 
 ### Generative models
-- Generative adversarial networks (Goodfellow (2014), Radford (2015))
+Another breakthrough came in 2014, when Ian Goodfellow et al. demonstrated that neural networks can be used to generate images [Goodfellow 2014]. The idea was innovative: By setting two networks to compete each other, one with the task of generating fake images (*the generator*) and the other with the task of discriminating between real and fake images (*the discriminator*). The method was called generative adversarial networks (GANs). According to Goodfellow himself he got the idea on a party, went home to investigate the idea and had a prototype ready in the morning.
 
 ### Residual neural networks
+The stability of training deep neural networks 
 - Residual neural networks - how to train very deep networks (2015)
 
 ### Variational autoencoders
