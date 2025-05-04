@@ -53,8 +53,8 @@ Looking back, I’ve noticed a trend in my academic journey: the scale of the sy
 
 ### Languages
 
-- **Norwegian** (native)
-- **English** (fluent)
+- **Norwegian**
+- **English**
 
 ### Presentations
 - **EuroHPC User Day 2024,** Amsterdam, Netherlands
