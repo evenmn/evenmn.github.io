@@ -96,7 +96,7 @@ A key component of the genetic algorithm is the objective fitness function, whic
 Since we are optimizing multiple quantities simultaneously, the objective fitness function is composed of several terms. A straightforward approach would be to weight all terms equally and calculate them all at once. However, we can save considerable computational resources by prioritizing certain quantities and gradually adding those of lower priority once the higher-priority ones are optimized. This approach is a fundamental feature of the Hierarchical Objective Genetic Algorithm (HOGA).
 
 ![Nelder-Mead](/assets/img/building-water-model/nelder-mead.png){: .mx-auto.d-block :}
-*The Nelder-Mead simplex algorithm*
+The Nelder-Mead simplex algorithm is based on evaluating three points close to each other in the parameter space. Here, $$p_{\mathrm{min}}$$ is the point with lowest fitness value and $$p_{\mathrm{max}}$$ is the point with the highest fitness value. The algorithm involves four possible actions, where all includes adjusting $$p_{\mathrm{min}}$$: moving $$p_{\mathrm{min}}$$ by contraction (green), reflection (blue) or expansion (pink), or shrinking the simplex towards $$p_{\mathrm{max}}$$ (red).
 
 ## Local optimization
 Once the fitness score has reached an acceptable value, we have located a satisfactory local minimum in the parameter space. To refine this minimum further, we employ a local optimization technique based on the Nelder-Mead simplex method. The concept is straightforward: we begin by evaluating three points near the best solution we’ve found so far, which is why it’s called a "simplex". Based on the results, we move one of the points (vertices) and form a new simplex using one of the following four actions:
