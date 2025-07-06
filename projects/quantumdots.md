@@ -6,25 +6,36 @@ mathjax: true
 ---
 
 ![One-body](/assets/img/quantum_dots/onebody.png)
-*The one-body density determines the probability of finding a particle at a certain distance from another particle. Here, applied on quantum dots with machine learning prediction to the left.*
+*The one-body density determines the probability of finding a particle at a certain distance from another particle. Here, applied on quantum dots with machine learning prediction to the left and classical method to the right.*
 
 $$\hat{\mathcal{H}}\Psi=E\Psi$$
 
-The Schrödinger equation is the most accurate equation in physics, and has successfully explained numerious atomic systems. By solving the time-independent Schrödinger equation (above), we know in principle everything about the system. However, this can be a highly challenging task, as any system of more than two objects cannot be described analytically (the three-body problem).
+The Schrödinger equation, used to describe quantum mechanical systems such as atoms and sub-atomic systems, is often perceived as the most accurate equation in physics. By solving the time-independent Schrödinger equation presented above, we can in principle get all information about the system it was solved for. However, solving the equation is often a highly non-trivial task, and only systems with up to two objects can be solved with analytical methods, known as the three-body problem. Many sophisticated methods have been developed to find approximate solutions to the equation, but they need to trade-off between accuracy and computational cost. The most accurate methods are very computational intensive, and can only be applied on tiny systems like small atoms.
 
-Here, we propose an alternative method for solving the equation. According to the variational principle, any wave function $$\Psi$$ that is inserted into the Schrödinger equation will yield a system energy $$E$$ larger than (or equal to) the ground-state energy (with a few restrictions). This means that we can optimize a function $$\Psi$$ under minimization the energy $$E$$ and approach the ground-state of a certain system $$\hat{\mathcal{H}}$$. This is the perfect machine learning problem, where $$\Psi$$ is a variational function, for instance an artificial neural network, and the energy is the loss that we want to minimize. At the time we were working on this, it was a quite novel idea. However, Google Deepmind also worked on a similar project with their FermiNet, which got a lot of attention.
+(insert accuracy as a function of computational cost plot)
+*Caption*
 
-% Outline
-We will first describe how the trial energy $$E_T$$ can be found for a particular function $$\Psi_T$$, before we move on to the machine learning part where the function $$Psi_T$$ is optimized in order to find the ground state.
+To challenge the classical methods, we have developed a machine learning approach to solving the Schrödinger equation. Machine learning is well-suited for this task due to the underlying principles of quantum mechanics:
+
+*The variational principle ensures that the system energy $$E$$ will never be smaller than the ground-state energy, regardless of the choice of the wavefunction $$\Psi$$*
+
+This important because it means we can optimize $$\Psi$$ with respect to minimizing $$E$$ in order to find the ground state. And once $$E$$ is minimized, we have the ground state wavefunction $$\Psi_0$$, which in principle provides all the information about the system.
+
+This idea is not innovative. In fact, the foundation of this methodology, known as variational Monte Carlo (VMC), was laid in the 1950's and has since been very successful [Metropolis?]. However, the method requires an initial wavefunction guess, or a *trial wavefunction*, which again requires some insight about the system. Convergence of the method is sensitive to the trial wavefunction, which can be highly non-trivial for complex systems. One way to make the approach more general is to replace the trial wavefunction by a neural network, known for its flexibility [Hornik et al., 1986]. The idea was inspired by neural quantum states [Carleo and Troyer, 2015] and FermiNet [Pfau et al., 2019].
+
+For our full paper, please see [*Front. Phys.*, 11:1061580](https://www.frontiersin.org/articles/10.3389/fphy.2023.1061580).
+
+## Machine learning terminology
+In machine learning terminology, the trial wavefunction, $$\Psi_T$$, is our *model*. It is represented by a neural network, which contains all the variational parameters that are optimized during training. The associated energy, known as the *trial energy*, $$E$$, will be treated as our *loss function* and is lower bounded by the ground state energy. I have written a [blog post](https://evennordhagen.com/2025-05-04-ai-reflections/) about machine learning, components and terminology. 
 
 (cool image)
 *Caption*
 
-## Machine learning stuff
-Machine learning is all about optimizing parameters with respect to minimizing a metric. In our case, the metric is the system energy, which is minimized by a gradient method:
+## Methodology
+Machine learning is all about optimizing parameters with respect to minimizing a metric, such as the energy. This is typically done with a gradient method:
 
 $$
-E\leftarrow E-\nabla_{\theta}\Delta x
+E_{\theta}\leftarrow E_{\theta}-\nabla_{\theta}\Delta x
 $$
 
 See last section for details about how the energy and gradients is computed.
@@ -36,6 +47,7 @@ See last section for details about how the energy and gradients is computed.
 This method is general, and can in principle be applied to any quantum mechanical system, such as atoms and molecules. However, the system size is limited by the computational cost of the system energy and gradients, and we are in practice restricted to small systems of a few atoms. As a proof of concept, we apply the methodology to quantum dots, which have natural and cheap to calculate basis functions in the Hermite polynomials. Also, the quantum dots have significant applications in the field of technology.
 
 (show quantum dots)
+*Caption*
 
 ## Some math*
 I will try to keep this post easy to read without too many details, but some math is needed to explain how this method works. However, if you are not familiar with quantum mechanics, feel free to skip this section. 
