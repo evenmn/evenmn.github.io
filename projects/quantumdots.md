@@ -35,10 +35,24 @@ In machine learning terminology, the trial wavefunction, $$\Psi_T$$, is our *mod
 Machine learning is all about optimizing parameters with respect to minimizing a metric, such as the energy. This is typically done with a gradient method:
 
 $$
-E_{\theta}\leftarrow E_{\theta}-\nabla_{\theta}\Delta x
+\theta \leftarrow \theta-\nabla_{E}\Delta x.
 $$
 
-See last section for details about how the energy and gradients is computed.
+Here, $$\nabla_{E}$$ is the gradient of the energy and $$\Delta_x$$ is the step length, or the *learning rate* in machine learning terms. The energy is computed by solving the inner product 
+
+$$
+E=\frac{\langle\Psi|\hat{\mathcal{H}}|\Psi\rangle}{\langle\Psi|\Psi\rangle},
+$$
+
+which numerically is possible when we know the wave function $$\Psi$$. The algorithm for converging towards the correct ground-state wavefunction $$\Psi_0$$ is the following:
+
+1. Initialize the trial wavefunction, $$\Psi_T$$, in our case a neural network $$\sim\mathcal{N}(0,\mathbb{I})$$
+2. Compute $$E$$ from the equation above
+3. Compute $$\partial E/\partial\theta$$, the gradient components
+4. Update $$\Psi$$ to minimize the energy
+5. Repeat 2, 3 and 4 until convergence
+
+Computation of the energy and the gradients here is the computationally intensive part, and also the mathematically most involved one. This is not needed to follow this blog post, but if you're curious, feel free to look into the last section.
 
 (show convergence)
 *Caption*
@@ -49,7 +63,7 @@ This method is general, and can in principle be applied to any quantum mechanica
 (show quantum dots)
 *Caption*
 
-## Some math*
+## Sampling the energy and gradients*
 I will try to keep this post easy to read without too many details, but some math is needed to explain how this method works. However, if you are not familiar with quantum mechanics, feel free to skip this section. 
 
 This section is about how the system energy $$E_T$$ is calculated for a particular function $$Psi_T$$, which is done by sampling.
