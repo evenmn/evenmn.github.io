@@ -4,6 +4,8 @@ title: Publications
 subtitle:  
 ---
 
+Below follows an incomplete list of publications and preprints that I have co-authored.
+
 ## Journal Articles
 
 <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.5c00722" style="color: black; text-decoration: none;">
