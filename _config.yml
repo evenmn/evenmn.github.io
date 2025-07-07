@@ -30,6 +30,7 @@ navbar-links:
     - Quantum dots: "projects/quantumdots"
     - Water model: "projects/building-water-model"
   #Software: "software"
+  Publications: "publications"
   Contact: "contact"
 
 ################
