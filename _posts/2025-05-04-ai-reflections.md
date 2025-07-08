@@ -15,14 +15,14 @@ author: Even Nordhagen
 
 Artificial intelligence (AI) has enabled us to tackle problems that seemed impossible just a decade ago. It has revolutionized fields such as natural language processing, image synthesis, video generation, and [weather forecasting](https://evennordhagen.com/2024-09-12-stretched-grid/) — the area I’m currently most involved in. In this blog post, we’ll explore what AI really is, its key components, the current state of the field, future directions, and the role Python plays in AI development. I’ll also include a tribute to my brilliant informatics lecturer, **Hans Petter Langtangen**.
 
-![AI Illustration Neural Network Machine Learning](/assets/img/ai-reflections/ai.png)
+<img src="/assets/img/ai-reflections/ai.png" alt="AI Illustration Neural Network Machine Learning" class="img-responsive-center">
 *Artificial intelligence, particularly neural networks, is inspired by the structure and function of the human brain’s neural networks, but only loosely emulates them*
 
 I began my physics studies at the University of Oslo (UiO) in 2014, where we were fortunate to be introduced to programming from the very first semester. From the outset, we were essentially trained to become computational physicists. At that time, a significant debate was unfolding within the Faculty of Mathematics and Natural Sciences regarding which programming language should be taught to bachelor students. Many professors advocated for low-level languages like C, C++, and Fortran, citing their speed and prevalent use in physics applications.
 
 To be fair, these languages were the natural choice back then, holding a much higher market share than higher-level, slower alternatives like Python and MATLAB. However, **Hans Petter Langtangen** presented a compelling argument for Python. He emphasized that Python encompasses all the necessary components suitable for students without prior programming experience. As a scripting language, it is pre-compiled, facilitates easy integration of third-party code, and is open-source. Despite Python's modest market share of only 2% at the time, Langtangen successfully persuaded his colleagues to adopt it for teaching. As we will soon see, that decision proved to be a very wise one.
 
-![TIOBE Weather Forecasting Machine Learning Python](/assets/img/ai-reflections/tiobe.png)
+<img src="/assets/img/ai-reflections/tiobe.png" alt="TIOBE Weather Forecasting Machine Learning Python" class="img-responsive-center">
 *Python's TIOBE rating has increased from 2.4% in 2014 to 23.8% in 2025. Source: tiobe.com*
  
 The popularity of Python has skyrocketed in recent years, largely driven by the rise of artificial intelligence—especially machine learning. Today, the vast majority of large-scale machine learning projects (over 90%) are developed in Python. In a sense, machine learning is synonymous with Python—whether you like it or not.
@@ -38,7 +38,7 @@ Although the term machine learning feels modern, many of its underlying techniqu
 
 What’s truly new is our ability to train deep artificial neural networks, a subfield known as deep learning. Much of the recent progress in AI stems from this advancement—but we’ll save a deeper dive into deep learning for later.
 
-![Thermostat Machine Learning Deep Learning Artificial Intelligence Langtangen](/assets/img/ai-reflections/thermostat.png)
+<img src="/assets/img/ai-reflections/thermostat.png" alt="Thermostat Machine Learning Deep Learning Artificial Intelligence Langtangen" class="img-responsive-center">
 *In the example below, machine learning is used to find the optimal thermostat setting, given the temperature change outside.*
 
 ### Example: Tuning a Thermostat
@@ -163,7 +163,9 @@ Artificial intelligence has come a long way—from academic curiosity to a force
 
 Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 
-![Signature](/assets/img/signature.png){: .mx-auto.d-block :}
+<div class="signature">
+    <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;">
+</div>
 
 ## References
 - [Hornik 1989] : Hornik, K., Stinchcombe, M., & White, H. (1989). *Multilayer feedforward networks are universal approximators*. [Neural Networks, 2(5), 359–366](https://doi.org/10.1016/0893-6080(89)90020-8)

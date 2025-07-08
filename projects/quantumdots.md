@@ -5,8 +5,9 @@ subtitle: solved with a machine learning approach
 mathjax: true
 ---
 
-![One-body](/assets/img/quantum_dots/onebody.png)
-*The one-body density determines the probability of finding a particle at a certain distance from another particle. Here, applied on quantum dots with machine learning prediction to the left and classical method to the right.*
+<img src="/assets/img/quantum_dots/onebody.png" alt="One-body" class="mx-auto d-block">
+<p><em>The one-body density determines the probability of finding a particle at a certain distance from another particle. Here, applied on quantum dots with machine learning prediction to the left and classical method to the right</em></p>
+
 
 $$\hat{\mathcal{H}}\Psi=E\Psi$$
 
@@ -30,6 +31,8 @@ In machine learning terminology, the trial wavefunction, $$\Psi_T$$, is our *mod
 
 (cool image)
 *Caption*
+<img src="/assets/img/building-water-model/dissociative_water.png" alt="Water molecule" class="img-responsive-center">
+<p><em>Real water molecules can react with the surroundings. Most water models do not capture this chemical nature of water</em></p>
 
 ## Methodology
 Machine learning is all about optimizing parameters with respect to minimizing a metric, such as the energy. This is typically done with a gradient method:
@@ -102,3 +105,9 @@ Here, it is important to draw the system samples from the correct probability di
 
 ## Optimization using machine learning
 Once we have calculated the system energy $$E_T$$. However, to change $$\Psi_T$$ in order to minimize the energy $$E_T$$, we need to know how $$E_T$$ changes as we change the parameters in $$\Psi_T$$, $$\theta$$. We need to know $$dE_T(\theta)/d\theta$$. 
+
+Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
+
+<div class="signature">
+    <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;">
+</div>

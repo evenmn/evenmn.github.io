@@ -7,8 +7,8 @@ mathjax: true
 
 Friction is known as one of the most longstandig problem in physics, dating back to the times of Leonardo da Vinci in the 1500s. Many great minds have since studied friction, including Coulomb, Euler and Reynolds. However, the underlying mechanisms of frictions remains unknown. I'm obviously not as smart as these masterminds, so what makes me believe that I can find something new in this field? The answer is that we got new methods in the form of computers. Powerful computers.
 
-![Sliding](/assets/img/friction/paper2_fig1.png)
-*Sliding friction.* 
+<img src="/assets/img/friction/paper2_fig1.png" alt="Sliding friction" class="img-responsive-center">
+<p><em>Sliding friction.</em></p>
 
 Friction is difficult to study because of complex interfacial processes, such as deformation, atomic diffusion and chemical reactions. When performing real experiments, the spatial resolution is typically limited by the optics of microscops and the temporal resolution is restricted by the frequencies spectropic cameras can deliver. In computer simulations, the spatial resolution is only limited by the floating point precision and temporal resolution is limited by the time step specified. As a result, computer simulations are superior to real experiments in spatial and temporal resolution, making it possible to see details that are not possible in real experiments.
 
@@ -23,8 +23,8 @@ where $$F_R$$ is the frictional force, $$\mu$$ is the friction coefficient and $
 
 Additionally, the students learn about static and dynamics friction as two independent phenomena, whereas static friction is the resistance force when two surfaces are stationary and dynamic friction is the resistance force of two substrates of relative motion. However, as no substrate is totally rigid, the substrates will deform when they are in contact and have a relative motion, making the interface in contact for a short time period. Consequently, dynamic friction is actually static, but with a very short contact time! So why do we observe a difference in the measured friction in the static and dynamic case then? The only logical explanation is that the contact time plays an important role.
 
-![Aging](/assets/img/friction/fig0.png)
-*Frictional aging.*
+<img src="/assets/img/friction/fig0.png" alt="Frictional aging" class="img-responsive-center">
+<p><em>Frictional aging.</em></p>
 
 ## Time dependent friction
 To investigate our hypothesis from above, we may perform experiments where we measure the static friction force at different contact times. In fact, these kinds of experiments have been performed since the 1950's [Rabinowich, 1952]. They show the same behavior across a long range of materials: the longer an interface is in contact, the stronger friction. When you think about it, it is not very surprising. Imagine that you face some fresh, smoking hot asphalt. If you walk on the asphalt, you will probably not have a problem, but once you stop, your shoes will stick to the asphalt and if you wait long enough you may get stuck. You can think of it like the shoes gradually "grows" into the asphalt. Even though this is a quite extreme example, it is reminiscent to the process that happens in every friction process. Despite many suggestions, the underlying mechanisms of this time dependent behavior remains elusive. 
@@ -43,8 +43,8 @@ Most people think about sliding when friction is mentioned. I have already menti
 ## Friction-velocity relationship
 I have performed simulations to investigate the friction-velocity relationship, where the approach is to slide a single contact at various velocities and temperatures. We observe that the friction-velocity curves feature multiple regimes, some where friction increases with velocity and some where friction decreases with velocity. [To be published].
 
-![Relationship](/assets/img/friction/paper2_fig2.png)
-*Friction vs. velocity.* 
+<img src="/assets/img/friction/paper2_fig2.png" alt="Relationship" class="img-responsive-center">
+<p><em>Friction vs. velocity</em></p>
 
 ## References
 - [Rabinowich, 1952] : E. Rabinowicz, The Nature of the Static and Kinetic Coefficients of Friction, *Journal of Applied Physics*, **22**, 11 (1951)

@@ -15,8 +15,8 @@ For my master’s degree, I explored [how to solve the Schrödinger equation usi
 
 Alongside my studies, I had what I’d consider the ideal part-time job: teaching assistant at UiO. I taught a range of physics courses including classical mechanics, electromagnetism, and computational physics (full list below). During the summer of 2018, I interned at Andøya Space Center (ASC), where I developed an automated framework for cloud detection. Rocket launches depend on precise atmospheric measurements using LIDARs — which require clear skies — so we created software using an all-sky camera to replace the manual, error-prone cloud assessments. As a side note, ASC just became [the first site in Europe to launch satellites](https://andoyaspace.no/news-articles/andoya-spaceport-officially-opened/)!
 
-![ASC](/assets/img/aboutme/asc.jpg)
-*Here in 2018, holding the lens system of the all-sky camera used for cloud detection at Andøya Space Center.*
+<img src="/assets/img/aboutme/asc.jpg" alt="ASC" class="img-responsive-center">
+<p><em>Here in 2018, holding the lens system of the all-sky camera used for cloud detection at Andøya Space Center.</em></p>
 
 After completing my master’s, I pursued a PhD focused on [friction at the nanoscale](https://evennordhagen.com/projects/friction/) using molecular dynamics (MD) simulations. These simulations offer space-time resolution far beyond what's possible in experiments, allowing deeper insights. I discovered that frictional silicon carbide interfaces strengthen over time due to surface diffusion — explaining why friction decreases at higher sliding velocities. This work culminated in a [publication in Tribology Letters](https://doi.org/10.1007/s11249-023-01762-z). During my PhD, I also delved into generative machine learning, which led me to address the [inverse frictional design problem](https://evennordhagen.com/projects/inversedesign/). I defended my thesis in August 2024.
 
