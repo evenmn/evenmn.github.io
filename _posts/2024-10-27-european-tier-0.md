@@ -15,12 +15,16 @@ author: Even Nordhagen
 
 I just came back from the **EuroHPC User Day 2024**, held in Amsterdam on October 22-23, where I had the honor of presenting the outcomes of our research on the EuroHPC supercomputers. For those who may not be familiar, the **European High-Performance Computing Joint Undertaking** (**EuroHPC JU**) oversees the installation, operation, maintenance, and distribution of Europe’s most powerful supercomputers, commissioned by the European Union. This network includes three of the current top 10 supercomputers globally: **LUMI**, **Leonardo**, and **MareNostrum 5**. Additionally, **Jupiter**, which is currently being installed, is expected to soon rank as the world's second most powerful supercomputer. The conference was primarily user-focused, which is why I was invited to share our work there.
 
-<img src="/assets/img/eurohpc/LUMI.jpg" alt="LUMI" class="img-responsive-center">
+<div class="text-center">
+    <img src="/assets/img/eurohpc/LUMI.jpg" alt="LUMI" style="width: 70%;">
+</div>
 *LUMI is Europe's most powerful computer, and means 'snow' in Finnish.*
 
 This post will delve into my experiences with the EuroHPC supercomputing facilities, drawing also on the collaborative research that my team and I have detailed in a scientific paper that’s presently undergoing peer review.
 
-<img src="/assets/img/eurohpc/EYE.jpg" alt="EYE" class="img-responsive-center">
+<div class="text-center">
+    <img src="/assets/img/eurohpc/EYE.jpg" alt="EYE" style="width: 70%;">
+</div>
 *The EuroHPC User Day 2024 was held at the EYE Film Museum, Amsterdam.*
 
 ## What Got Me Hooked
@@ -29,7 +33,9 @@ First, let me share how I became so fascinated with supercomputers. My journey b
 
 In 2020, when Abel was decommissioned, the condensed matter group at the University of Oslo acquired part of the system. I was tasked with relocating and setting up this portion in our physics department, giving me valuable hands-on experience in cluster installation and maintenance. This event significantly fueled my interest in high-performance computing.
 
-<img src="/assets/img/eurohpc/eurohpc.jpeg" alt="EuroHPC" class="img-responsive-center">
+<div class="text-center">
+    <img src="/assets/img/eurohpc/eurohpc.jpeg" alt="EuroHPC" style="width: 70%;">
+</div>
 *Location of the EuroHPC supercomputers. Photo from the first presentation at EuroHPC User Day 2024.*
 
 ## First impressions
@@ -40,7 +46,9 @@ For instance, large language models (LLMs) like ChatGPT have become household na
 
 But the thrill of running on these colossal computers goes beyond their societal implications. It's also about the sheer wonder of the technology itself: billions of computations per second, intricate algorithms optimizing performance, and the quest to push the boundaries of what's possible.
 
-<img src="/assets/img/eurohpc/abel.png" alt="Abel" class="img-responsive-center">
+<div class="text-center">
+    <img src="/assets/img/eurohpc/abel.png" alt="Abel" style="width: 70%;">
+</div>
 *Me and Anders Malthe-Sørenssen collecting nodes from the Abel computer. Photo: Sebastian Winther-Larsen.*
 
 ## How These Computers Work
@@ -53,7 +61,9 @@ Here's how it works: You can dedicate different parts of the supercomputer to an
 
 But we can push this even further by assigning each country to different segments of the supercomputer. Now, many parts of the computer are working simultaneously, each focused on a smaller task. This way, the analysis of the satellite images can be conducted much faster compared to a sequential approach.
 
-<img src="/assets/img/eurohpc/lumi_sinfo.png" alt="SINFO" class="img-responsive-center">
+<div class="text-center">
+    <img src="/assets/img/eurohpc/lumi_sinfo.png" alt="SINFO" style="width: 100%;">
+</div>
 *Screen shot of the GPU resources on LUMI. Note that 1,830 nodes are allocated and 811 are draining, each featuring 4 powerful GPUs.*
 
 This is the fundamental principle behind supercomputers: partitioning the machine so that each small segment handles a dedicated task, with many such tasks running in parallel. This method dramatically reduces the wall-clock time, making it feasible to tackle colossal computations that would otherwise be impractical.
@@ -72,7 +82,9 @@ Some differences are unavoidable due to hardware variations. For example, LUMI u
 
 These variations translate into differing user experiences, which isn’t ideal. There's a balance to be struck between security and user-friendliness, and in this case, different national computing centers have found different equilibriums. As a result, users must adapt to different environments when transitioning between systems, which can be inefficient and cumbersome.
 
-<img src="/assets/img/eurohpc/eurohpc_2.jpeg" alt="EuroHPC" class="img-responsive-center">
+<div class="text-center">
+    <img src="/assets/img/eurohpc/eurohpc_2.jpeg" alt="EuroHPC" style="width: 70%;">
+</div>
 *Some statistics from the EuroHPC User Day 2024. One important message (for us in particular) is that Earth System Sciences and Environmental Studies is slightly underrepresented in the applications compared to computational physics, material and chemical sciences and engineering.*
 
 The unnecessary differences between supercomputers extend to file system architectures and login procedures, impacting user workflows. Some systems use Lustre filesystems, which excel at handling large files but struggle with many small files. This necessitates the use of containers for software dependencies on Lustre systems like LUMI. On other systems, virtual environments might be more efficient.
