@@ -1,0 +1,18 @@
+<li id="{{entry.key}}">
+  {% if entry.author %}
+    {{ entry.author | join: ", " }}.
+  {% endif %}
+  {% if entry.title %}
+    <em>{{ entry.title }}</em>.
+  {% endif %}
+  {% if entry.journal %}
+    <strong>{{ entry.journal }}</strong>,
+  {% endif %}
+  {% if entry.year %}
+    {{ entry.year }}.
+  {% endif %}
+  {% if entry.url %}
+    <a href="{{ entry.url }}">{{ entry.url }}</a>
+  {% endif %}
+</li>
+
