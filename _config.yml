@@ -307,7 +307,7 @@ plugins:
   - jekyll-scholar
 
 scholar:
-  style: nature
+  style: apa
   locale: en
   source: ./_bibliography
   bibliography: references.bib

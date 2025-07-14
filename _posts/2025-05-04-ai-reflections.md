@@ -93,7 +93,7 @@ This is an example of an extremely basic machine learning problem, but it illust
 ## An artificial neural network
 It's difficult to discuss recent advances in machine learning without mentioning artificial neural networks. Inspired by the structure of the brain, these networks consist of interconnected nodes (or "neurons") that transmit signals and activate in response to specific inputs.
 
-More importantly, neural networks—henceforth referred to simply as neural networks—are universal function approximators. This means they are flexible enough to approximate any continuous function, as shown by Hornik et al.{% cite hornik1989 %}
+More importantly, neural networks—henceforth referred to simply as neural networks—are universal function approximators. This means they are flexible enough to approximate any continuous function, as shown by Hornik et al. {% cite hornik1989 %}.
 
 A simple example is the *two-layer perceptron*, which can be expressed mathematically as:
 
@@ -112,43 +112,43 @@ Machine learning depends on a variety of essential components—ranging from alg
 ### Backpropagation
 Backpropagation is the cornerstone of training deep neural networks. It allows us to efficiently compute gradients in complex, multi-layered models by propagating errors backward from the output layer through the network—hence the name. This technique enables the optimization of millions of parameters using gradient-based methods.
 
-The modern form of the backpropagation algorithm was popularized in a landmark 1986 paper by Rumelhart, Hinton, and Williams. Today, virtually all deep learning frameworks rely on it.{% cite rumelhart1986 %}
+The modern form of the backpropagation algorithm was popularized in a landmark 1986 paper by Rumelhart, Hinton, and Williams. Today, virtually all deep learning frameworks rely on it {% cite rumelhart1986 %}.
 
-If you're interested in how this compares to learning in biological brains, Lillicrap et al. offer an insightful discussion on the biological plausibility of backpropagation and alternative mechanisms found in neuroscience.{% cite lillicrap2020 %}
+If you're interested in how this compares to learning in biological brains, Lillicrap et al. offer an insightful discussion on the biological plausibility of backpropagation and alternative mechanisms found in neuroscience {% cite lillicrap2020 %}.
 
 ### Efficient hardware
 **Graphics Processing Units** (GPUs) are specialized hardware designed to handle many small, parallel tasks efficiently. Originally developed for rendering graphics in video games, GPUs turned out to be ideally suited for the kinds of matrix and vector operations that dominate machine learning workloads.
 
-Around 2010, researchers began to realize that GPUs could dramatically accelerate the training of neural networks. One of the most influential demonstrations of this came in 2012, when Krizhevsky, Sutskever, and Hinton used a deep convolutional neural network — **AlexNet** — to win the ImageNet competition. Their model outperformed traditional image classification methods by a large margin, marking a turning point for deep learning.{% cite krizhevsky2012 %}
+Around 2010, researchers began to realize that GPUs could dramatically accelerate the training of neural networks. One of the most influential demonstrations of this came in 2012, when Krizhevsky, Sutskever, and Hinton used a deep convolutional neural network — **AlexNet** — to win the ImageNet competition. Their model outperformed traditional image classification methods by a large margin, marking a turning point for deep learning {% cite krizhevsky2012 %}.
 
 ### Variational autoencoders
-**Variational Autoencoders** (VAEs), introduced in 2013, are a powerful and innovative method for both compressing data and generating new samples [Kingma 2013]. A VAE consists of two main components: an **encoder** that compresses input data into a compact representation, and a **decoder** that reconstructs the original data from this compressed form.
+**Variational Autoencoders** (VAEs), introduced in 2013, are a powerful and innovative method for both compressing data and generating new samples {% cite kingma2022 %}. A VAE consists of two main components: an **encoder** that compresses input data into a compact representation, and a **decoder** that reconstructs the original data from this compressed form.
 
 The key idea is to train the VAE to reproduce its input by first encoding it into a lower-dimensional space—known as the **latent space** — and then decoding it back. Ideally, this latent representation captures the most important features of the input. Once trained, the model can sample and slightly perturb points in the latent space to generate new, plausible data points, making VAEs a foundational tool in generative modeling.
 
 ### Generative models
-Another major breakthrough came in 2014, when Ian Goodfellow and colleagues introduced a novel approach to generating images using neural networks [Goodfellow 2014]. Their innovation was the **Generative Adversarial Network** (GAN) — a framework where two neural networks are trained in opposition to each other.
+Another major breakthrough came in 2014, when Ian Goodfellow and colleagues introduced a novel approach to generating images using neural networks {% cite goodfellow2014 %}. Their innovation was the **Generative Adversarial Network** (GAN) — a framework where two neural networks are trained in opposition to each other.
 
 One network, the **generator**, attempts to produce realistic fake images, while the other, the **discriminator**, tries to distinguish between real and generated images. Over time, this adversarial setup drives the generator to create increasingly convincing outputs.
 
 According to Goodfellow himself, the idea for GANs came to him during a party. He went home, explored the concept, and had a working prototype by the next morning—a testament to how simple yet powerful the idea was.
 
 ### Residual neural networks
-For a long time, training very deep neural networks was challenging due to instability and degradation—networks tended to lose or "forget" important information as it was passed through many layers. In 2015, researchers at Microsoft Research proposed a simple but powerful solution: **skip connections**.{% cite he2015 %}
+For a long time, training very deep neural networks was challenging due to instability and degradation—networks tended to lose or "forget" important information as it was passed through many layers. In 2015, researchers at Microsoft Research proposed a simple but powerful solution: **skip connections** {% cite he2015 %}.
 
 By allowing information to bypass one or more layers and be added directly to deeper layers, these connections helped preserve essential features and improved the flow of gradients during training. This architecture, known as a Residual Neural Network (ResNet), made it possible to train much deeper networks effectively and has since become a fundamental building block in modern deep learning.
 
 ### Transformers
 The **Transformer** architecture revolutionized natural language processing by introducing a powerful mechanism called multi-head attention. The core idea is to convert entire blocks of text into tokens—numerical representations that models can understand—and then use attention to determine which tokens are most relevant in a given context.
 
-While attention mechanisms were explored in the early 2010s, it wasn't until 2017 that they reached a major breakthrough. Researchers at Google introduced the Transformer architecture, which replaced recurrent structures with a fully attention-based model that could be highly parallelized, dramatically improving training efficiency and scalability.{% cite vawani2017 %}
+While attention mechanisms were explored in the early 2010s, it wasn't until 2017 that they reached a major breakthrough. Researchers at Google introduced the Transformer architecture, which replaced recurrent structures with a fully attention-based model that could be highly parallelized, dramatically improving training efficiency and scalability {% cite vaswani2017 %}.
 
 ### Diffusion models
-**Diffusion models** are a class of generative models inspired by stochastic processes in physics.{% cite ho2020 %} Remarkably, these models were introduced only a few years ago, yet they’ve rapidly reshaped the landscape of generative modeling. I’ve personally used diffusion models to tackle the [inverse frictional design problem](https://evennordhagen.com/projects/inversedesign/).
+**Diffusion models** are a class of generative models inspired by stochastic processes in physics {% cite ho2020 %}. Remarkably, these models were introduced only a few years ago, yet they’ve rapidly reshaped the landscape of generative modeling. I’ve personally used diffusion models to tackle the [inverse frictional design problem](https://evennordhagen.com/projects/inversedesign/).
 
 Diffusion models have surpassed GANs in both stability and generation quality, and their capabilities go far beyond static image synthesis—they can also generate sequences of images, enabling realistic video generation.
 
-Modern diffusion models often operate in a compressed latent space, where the input data is first encoded using a Variational Autoencoder (VAE).{% cite rombach2021 %} These **latent diffusion models** significantly reduce computational costs while maintaining high generation quality, making them a state-of-the-art solution in generative modeling.
+Modern diffusion models often operate in a compressed latent space, where the input data is first encoded using a Variational Autoencoder (VAE) {% cite rombach2022 %}. These **latent diffusion models** significantly reduce computational costs while maintaining high generation quality, making them a state-of-the-art solution in generative modeling.
 
 ### Self-supervised learning
 One of the most significant advances in recent years is **self-supervised learning** — a paradigm where models learn meaningful patterns from raw, unlabeled data. Instead of relying on manual annotations, models are trained using pretext tasks such as predicting missing words in a sentence, reconstructing parts of an image, or matching images to corresponding captions.
@@ -174,15 +174,5 @@ Feel free to drop a comment or question below if you have thoughts or experience
 </div>
 
 ## References
+{% bibliography --query hornik1989 %}
 {% bibliography --query @article %}
-
-- [Hornik 1989] : Hornik, K., Stinchcombe, M., & White, H. (1989). *Multilayer feedforward networks are universal approximators*. [Neural Networks, 2(5), 359–366](https://doi.org/10.1016/0893-6080(89)90020-8)
-- [Rumelhart 1986] : Rumelhart, D. E., Hinton, G. E., & Williams, R. J. (1986). *Learning representations by back-propagating errors*. [Nature, 323(6088), 533–536](https://www.nature.com/articles/323533a0)
-- [Lillicrap 2020] : Lillicrap, T. P., Santoro, A., Marris, L., Akerman, C. J., & Hinton, G. (2020). *Backpropagation and the brain*. [Nature Reviews Neuroscience, 21, 335–346](https://www.nature.com/articles/s41583-020-0277-3)
-- [Krizhevsky 2012] : Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). *ImageNet Classification with Deep Convolutional Neural Networks*. [Advances in Neural Information Processing Systems, 25 (NeurIPS 2012)](https://proceedings.neurips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html) 
-- [Kingma 2013] : Kingma, D. P., & Welling, M. (2013). *Auto-Encoding Variational Bayes*. [arXiv:1312.6114](https://arxiv.org/abs/1312.6114)
-- [Goodfellow 2014] : Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., & Bengio, Y. (2014). *Generative Adversarial Networks*. [arXiv:1406.2661](https://arxiv.org/abs/1406.2661)
-- [He 2015] : He, K., Zhang, X., Ren, S., & Sun, J. (2015). *Deep Residual Learning for Image Recognition*. [arXiv:1512.03385](https://arxiv.org/abs/1512.03385)
-- [Vaswani 2017] : Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). *Attention is All You Need*. [arXiv:1706.03762](https://arxiv.org/abs/1706.03762)
-- [Ho 2020] : Ho, J., Jain, A., & Abbeel, P. (2020). *Denoising Diffusion Probabilistic Models*. [arXiv:2006.11239](https://arxiv.org/abs/2006.11239)
-- [Rombach 2021] : Rombach, R., Blattmann, A., Lorenz, D., Esser, P., & Ommer, B. (2021). *High-Resolution Image Synthesis with Latent Diffusion Models*. [arXiv:2112.10752](https://arxiv.org/abs/2112.10752)
