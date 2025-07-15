@@ -36,7 +36,7 @@ To gain new insights into time dependent friction, I have performed simulations 
 ## Sliding friction
 Most people think about sliding when friction is mentioned. I have already mentioned the connection between static and dynamic friction, and the theory above has some important implications on the behavior of sliding friction. At low relative velocities between surfaces, the surfaces will stick for a period, then slip and then stick again, conveniently called stick-slip friction. During the stick phase, the two surfaces are attached like they where stationary*, but with a contact time that decreases with increasing relative velocity (the contact time is inversely proportional to the velocity). Since friction increases with increasing contact times, friction will hence decrease with increasing velocity. This dependency has been known since the 1940's {% cite dokos1946 %}, but was not explained until later.
 
-* *This is a logical assumption, but according to some recent works the interface may evolve differently under shear stress than normal stress, even though the interfaces initially are identical {% cite kilgore2009 %}*
+*This is a logical assumption, but according to some recent works the interface may evolve differently under shear stress than normal stress, even though the interfaces initially are identical {% cite kilgore2009 %}
 
 (image gif showing sliding asperity)
 
