@@ -8,6 +8,8 @@ Below follows an incomplete list of publications and preprints that I have co-au
 
 ## Journal Articles
 
+{% bibliography --query hornik1989 %}
+
 <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.5c00722" style="color: black; text-decoration: none;">
   <strong>AVC Camposano, EM Nordhagen, A Malthe-Sørenssen, HA Sveinsson</strong>. <em>An Extended Energy-Biased Aggregation-Volume-Bias Monte Carlo (EB-AVBMC) Method for Nucleation Simulation of a Reactive Water Potential</em>. <strong>Journal of Chemical Theory and Computation</strong> (2025).
 </a><br>

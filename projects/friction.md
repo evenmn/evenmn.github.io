@@ -5,7 +5,7 @@ subtitle: using molecular dynamics simulations
 mathjax: true
 ---
 
-Friction is known as one of the most longstandig problem in physics, dating back to the times of Leonardo da Vinci in the 1500s. Many great minds have since studied friction, including Coulomb, Euler and Reynolds. However, the underlying mechanisms of frictions remains unknown. I'm obviously not as smart as these masterminds, so what makes me believe that I can find something new in this field? The answer is that we got new methods in the form of computers. Powerful computers.
+Friction is known as one of the most longstandig problem in physics, dating back to the times of Leonardo da Vinci in the 1500s. Many great minds have since studied friction, including Coulomb, Euler and Reynolds. However, the underlying mechanisms of frictions remains unknown. I'm obviously not as intelligent as these masterminds, so what makes me believe that I can find something new in this field? The answer is that we got new methods in the form of computers. Powerful computers.
 
 <img src="/assets/img/friction/paper2_fig1.png" alt="Sliding friction" class="img-responsive-center">
 <p><em>Sliding friction.</em></p>
@@ -27,16 +27,16 @@ Additionally, the students learn about static and dynamics friction as two indep
 <p><em>Frictional aging.</em></p>
 
 ## Time dependent friction
-To investigate our hypothesis from above, we may perform experiments where we measure the static friction force at different contact times. In fact, these kinds of experiments have been performed since the 1950's [Rabinowich, 1952]. They show the same behavior across a long range of materials: the longer an interface is in contact, the stronger friction. When you think about it, it is not very surprising. Imagine that you face some fresh, smoking hot asphalt. If you walk on the asphalt, you will probably not have a problem, but once you stop, your shoes will stick to the asphalt and if you wait long enough you may get stuck. You can think of it like the shoes gradually "grows" into the asphalt. Even though this is a quite extreme example, it is reminiscent to the process that happens in every friction process. Despite many suggestions, the underlying mechanisms of this time dependent behavior remains elusive. 
+To investigate our hypothesis from above, we may perform experiments where we measure the static friction force at different contact times. In fact, these kinds of experiments have been performed since the 1950's {% cite rabinowicz1951 %}. They show the same behavior across a long range of materials: the longer an interface is in contact, the stronger friction. When you think about it, it is not very surprising. Imagine that you face some fresh, smoking hot asphalt. If you walk on the asphalt, you will probably not have a problem, but once you stop, your shoes will stick to the asphalt and if you wait long enough you may get stuck. You can think of it like the shoes gradually "grows" into the asphalt. Even though this is a quite extreme example, it is reminiscent to the process that happens in every friction process. Despite many suggestions, the underlying mechanisms of this time dependent behavior remains elusive. 
 
 (image -- gif of contact evolution)
 
-To gain new insights into time dependent friction, I have performed simulations of a single contact point as two surfaces get into contact. What we observed was that surface atoms tend to gather around the contact, increasing the actual contact area between the surfaces and making the interface stronger. This is possible because of surface diffusion and the fact that atoms are strongly bounded around the contact. I refer to [Nordhagen, 2023] for more details.
+To gain new insights into time dependent friction, I have performed simulations of a single contact point as two surfaces get into contact. What we observed was that surface atoms tend to gather around the contact, increasing the actual contact area between the surfaces and making the interface stronger. This is possible because of surface diffusion and the fact that atoms are strongly bounded around the contact. I refer to {% cite nordhagen2023 %} for more details.
 
 ## Sliding friction
-Most people think about sliding when friction is mentioned. I have already mentioned the connection between static and dynamic friction, and the theory above has some important implications on the behavior of sliding friction. At low relative velocities between surfaces, the surfaces will stick for a period, then slip and then stick again, conveniently called stick-slip friction. During the stick phase, the two surfaces are attached like they where stationary*, but with a contact time that decreases with increasing relative velocity (the contact time is inversely proportional to the velocity). Since friction increases with increasing contact times, friction will hence decrease with increasing velocity. This dependency has been known since the 1940's [Dokos, 1946], but was not explained until later.
+Most people think about sliding when friction is mentioned. I have already mentioned the connection between static and dynamic friction, and the theory above has some important implications on the behavior of sliding friction. At low relative velocities between surfaces, the surfaces will stick for a period, then slip and then stick again, conveniently called stick-slip friction. During the stick phase, the two surfaces are attached like they where stationary*, but with a contact time that decreases with increasing relative velocity (the contact time is inversely proportional to the velocity). Since friction increases with increasing contact times, friction will hence decrease with increasing velocity. This dependency has been known since the 1940's {% cite dokos1946 %}, but was not explained until later.
 
-*This is a logical assumption, but according to some recent works the interface may evolve differently under shear stress than normal stress, even though the interfaces initially are identical []
+*This is a logical assumption, but according to some recent works the interface may evolve differently under shear stress than normal stress, even though the interfaces initially are identical {% cite kilgore2009 %}
 
 (image gif showing sliding asperity)
 
@@ -47,6 +47,4 @@ I have performed simulations to investigate the friction-velocity relationship, 
 <p><em>Friction vs. velocity</em></p>
 
 ## References
-- [Rabinowich, 1952] : E. Rabinowicz, The Nature of the Static and Kinetic Coefficients of Friction, *Journal of Applied Physics*, **22**, 11 (1951)
-- [Nordhagen, 2023] : E. M. Nordhagen, H. A. Sveinsson, A. Malthe-Sørenssen, Diffusion-Driven Frictional Aging in Silicon Carbide, *Tribology Letters*, **71**, 3 (2023)
-- [Dokos, 1946] : S. J. Dokos, Sliding Friction Under Extreme Pressures—1, *Journal of Applied Mechanics*, **13**, 2 (1946)
+{% bibliography --query @article %}

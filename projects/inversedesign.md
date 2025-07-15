@@ -17,6 +17,9 @@ The inverse operation where a surface ... We call this inverse frictional design
 
 To be continued. 
 
+## References
+{% bibliography --query @article %}
+
 Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 
 <div class="signature">
