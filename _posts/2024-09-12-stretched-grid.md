@@ -18,7 +18,7 @@ We have developed the most accurate model for regional weather prediction availa
 Our latest Preprint: [arXiv:2409.02891](https://arxiv.org/abs/2409.02891)
 
 ## Machine Learning Weather Prediction
-Recent machine learning models have surpassed conventional numerical weather prediction models in key metrics such as 2m temperature and mean sea-level pressure [Bi 2023, Kurth 2023, Lam 2023, Lang 2024]. However, these models typically offer lower spatial resolution (~31 km) compared to the best regional forecasting systems, which achieve resolutions of 1-3 km. Our goal was to leverage the progress in machine learning models for regional weather prediction.
+Recent machine learning models have surpassed conventional numerical weather prediction models in key metrics such as 2m temperature and mean sea-level pressure {% cite bi2023 kurth2023 lang2024 %}. However, these models typically offer lower spatial resolution (~31 km) compared to the best regional forecasting systems, which achieve resolutions of 1-3 km. Our goal was to leverage the progress in machine learning models for regional weather prediction.
 
 ## Stretched Grid
 There are various methods to produce regional forecasts. The most common method is the limited area model (LAM) approach, where the boundaries of the regional model are updated by a global model. This approach requires running a separate global model, adding complexity to the forecasting framework. Our approach, instead, uses a global stretched grid with higher resolution over the regional domain. This is achieved through the flexibility of graph neural networks (GNNs), which accommodate arbitrary grids.
@@ -50,10 +50,7 @@ However, the model performs less effectively in predicting instantaneous wind, c
 We have developed a highly effective machine learning model for regional weather prediction. The model performs as well as or better than leading numerical weather prediction models in terms of temperature and precipitation. However, due to smoothing, it struggles to predict sharp features such as strong winds, convection, and other extreme events. We plan to address this by implementing an ensemble approach. Additionally, our model generates forecasts significantly faster than conventional numerical weather prediction models, enabling more frequent high-resolution forecasts.
 
 ## References
-- [Bi 2023] K. Bi, L. Xie, H. Zhang et al.: “Accurate medium-range global weather forecasting with 3d neural networks”. Nature, 619, 533 (2023)
-- [Kurth 2023] T. Kurth, S. Subramanian, P. Harrington et al.: “FourCastNet: Accelerating Global High-Resolution Weather Forecasting Using Adaptive Fourier Neural Operators”, Proceedings of the Platform for Advanced Scientific Computing Conference, 13, 1 (2023)
-- [Lam 2023] R. Lam, A. Sanchez-Gonzalez, M. Willson, et al.: “Graphcast: Learning skillful medium-range global weather forecasting”, Science, 382, 1416 (2023)
-- [Lang 2024] S. Lang, A. Mihai, C. Matthew et al.: «AIFS - ECMWF's data-driven forecasting system», arXiv preprint, arXiv:2406.01465 (2024)
+{% bibliography --query @article %}
 
 Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 

@@ -174,5 +174,4 @@ Feel free to drop a comment or question below if you have thoughts or experience
 </div>
 
 ## References
-{% bibliography --query hornik1989 %}
 {% bibliography --query @article %}
