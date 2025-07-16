@@ -47,4 +47,4 @@ I have performed simulations to investigate the friction-velocity relationship, 
 <p><em>Friction vs. velocity</em></p>
 
 ## References
-{% bibliography --query @article %}
+{% bibliography --file friction %}
