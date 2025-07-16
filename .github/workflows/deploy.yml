@@ -15,8 +15,12 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0'  # Ruby 3.0 works with Jekyll 3.10 and jekyll-scholar
+          ruby-version: '3.3.4'
           bundler-cache: true
+
+      - name: Install build dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential libffi-dev
+
 
       - name: Install dependencies
         run: |
