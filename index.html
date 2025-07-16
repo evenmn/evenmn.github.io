@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  
+
+  <title>Even Nordhagen</title>
+
+  
+  
+  <meta name="author" content="Even Nordhagen">
+  
+
+  <meta name="description" content="A curious physicist and machine learning entusiast">
+
+  
+
+  
+  <meta name="keywords" content="Even Marius Nordhagen, Nordhagen, Even Nordhagen, machine learning, friction, molecular dynamics simulations, weather models">
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="Even Nordhagen" href="/feed.xml">
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ6Q8NX2RD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GZ6Q8NX2RD');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Even Nordhagen">
+  <meta property="og:title" content="Even Nordhagen">
+  <meta property="og:description" content="A curious physicist and machine learning entusiast">
+
+  
+  <meta property="og:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <link rel="canonical" href="/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Even Nordhagen">
+  <meta property="twitter:description" content="A curious physicist and machine learning entusiast">
+
+  
+  <meta name="twitter:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
+  
+
+  
+
+
+  
+
+  
+  
+  <link rel="icon" href="/favicon.ico" />
+  
+
+  
+
+</head>
+
+
+<body>
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand navbar-brand-logo" href="/"><img alt="Even Nordhagen Logo" src="/assets/img/signature.png"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/projects/friction">Friction modelling</a>
+                  <a class="dropdown-item" href="/projects/inversedesign">Inverse design</a>
+                  <a class="dropdown-item" href="/projects/quantumdots">Quantum dots</a>
+                  <a class="dropdown-item" href="/projects/building-water-model">Water model</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/portrait_nordhagen_machine_learning.jpg" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "New Paper Out", \
+          "desc"     : "New Paper Out", \
+          "category" : "waternucleationVashishtaMonte CarloMetropolisAVBMC", \
+          "url"      : "/2025-07-06-avbmc/", \
+          "date"     : "July  6, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Langtangen Was Right", \
+          "desc"     : "Langtangen Was Right", \
+          "category" : "AI boomartificial intelligencemachine learningHans Petter Langtangen", \
+          "url"      : "/2025-05-04-ai-reflections/", \
+          "date"     : "May  4, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Destination Earth - On-Demand Extremes (DE330)", \
+          "desc"     : "Destination Earth - On-Demand Extremes (DE330)", \
+          "category" : "Destination EarthDestinEDE330DEODEextreme weather", \
+          "url"      : "/2024-12-27-deode/", \
+          "date"     : "December 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "desc"     : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "category" : "EuroHPCtier-0LUMILeonardo", \
+          "url"      : "/2024-10-27-european-tier-0/", \
+          "date"     : "October 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Regional Data-Driven Weather Modeling", \
+          "desc"     : "Regional Data-Driven Weather Modeling", \
+          "category" : "AIFSstretched-grid", \
+          "url"      : "/2024-09-12-stretched-grid/", \
+          "date"     : "September 12, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "desc"     : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "category" : "weather predictionmachine learningdata-driven", \
+          "url"      : "/2024-09-10-large-scale-deep-learning-earth-system/", \
+          "date"     : "September 10, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "My first blog post", \
+          "desc"     : "My first blog post", \
+          "category" : "first post", \
+          "url"      : "/2024-09-01-first-post/", \
+          "date"     : "September  1, 2024" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "About me", \
+          "desc"     : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Building a Flexible Water Model", \
+          "desc"     : "Building a Flexible Water Model", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/building-water-model/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Contact Me", \
+          "desc"     : "Contact Me", \
+          "category" : "page", \
+          "url"      : "/contact/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Friction modeling", \
+          "desc"     : "Friction modeling", \
+          "category" : "page", \
+          "url"      : "/projects/friction/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Inverse frictional design", \
+          "desc"     : "Inverse frictional design", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/inversedesign/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Publications", \
+          "desc"     : "Publications", \
+          "category" : "page", \
+          "url"      : "/publications/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "The Schrödinger equation", \
+          "desc"     : "The Schrödinger equation", \
+          "category" : "page", \
+          "url"      : "/projects/quantumdots/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Software", \
+          "desc"     : "Software", \
+          "category" : "page", \
+          "url"      : "/software/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "desc"     : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/page2/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  
+
+
+
+<header class="header-section ">
+<div class="intro-header ">
+  
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="page-heading">
+          <h1>Even Nordhagen</h1>
+          
+            
+              <hr class="small">
+              <span class="page-subheading">A curious physicist and machine learning entusiast</span>
+            
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+</header>
+
+
+<main class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      
+
+      
+
+
+
+<!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+<ul class="posts-list list-unstyled" role="list">
+  
+  <li class="post-preview">
+    <article>
+      
+
+      
+
+      <a href="/2025-07-06-avbmc/">
+        <h2 class="post-title">New Paper Out</h2>
+
+        
+          <h3 class="post-subtitle">
+          Quantifying Nucleation Processes in Water
+          </h3>
+        
+      </a>
+
+      
+        <span>By <strong>Even Nordhagen</strong></span>
+      
+      <p class="post-meta">
+        
+        Posted on July 6, 2025
+      </p>
+
+      
+      <div class="post-image post-image-small">
+        <a href="/2025-07-06-avbmc/" aria-label="Thumbnail">
+          <img src="/assets/img/avbmc/thumbnail.jpeg" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      
+      
+      <div class="post-image post-image-short">
+        <a href="/2025-07-06-avbmc/" aria-label="Thumbnail">
+          <img src="/assets/img/avbmc/thumbnail.jpeg" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      <div class="post-entry">
+        
+        Nucleation marks the onset of phase transitions – for instance, when water vapor begins to condense into liquid droplets. These processes are critical across many scientific domains, especially in atmospheric science.
+
+        
+        
+          <a href="/2025-07-06-avbmc/" class="post-read-more">[Read&nbsp;More]</a>
+        
+      </div>
+      
+
+      
+      <div class="blog-tags">
+        <span>Tags:</span>
+        <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+        <ul class="d-inline list-inline" role="list">
+          
+          <li class="list-inline-item">
+            <a href="/tags#water">water</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#nucleation">nucleation</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#Vashishta">Vashishta</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#Monte Carlo">Monte Carlo</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#Metropolis">Metropolis</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#AVBMC">AVBMC</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </article>
+  </li>
+  
+  <li class="post-preview">
+    <article>
+      
+
+      
+
+      <a href="/2025-05-04-ai-reflections/">
+        <h2 class="post-title">Langtangen Was Right</h2>
+
+        
+          <h3 class="post-subtitle">
+          Reflections on Python's role in AI Development
+          </h3>
+        
+      </a>
+
+      
+        <span>By <strong>Even Nordhagen</strong></span>
+      
+      <p class="post-meta">
+        
+        Posted on May 4, 2025
+      </p>
+
+      
+      <div class="post-image post-image-small">
+        <a href="/2025-05-04-ai-reflections/" aria-label="Thumbnail">
+          <img src="/assets/img/ai-reflections/ai-reflection_thumbnail.png" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      
+      
+      <div class="post-image post-image-short">
+        <a href="/2025-05-04-ai-reflections/" aria-label="Thumbnail">
+          <img src="/assets/img/ai-reflections/ai-reflection_thumbnail.png" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      <div class="post-entry">
+        
+        Artificial intelligence (AI) has enabled us to tackle problems that seemed impossible just a decade ago. It has revolutionized fields such as natural language processing, image synthesis, video generation, and weather forecasting — the area I’m currently most involved in. In this blog post, we’ll explore what AI really is,...
+        
+        
+          <a href="/2025-05-04-ai-reflections/" class="post-read-more">[Read&nbsp;More]</a>
+        
+      </div>
+      
+
+      
+      <div class="blog-tags">
+        <span>Tags:</span>
+        <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+        <ul class="d-inline list-inline" role="list">
+          
+          <li class="list-inline-item">
+            <a href="/tags#AI boom">AI boom</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#artificial intelligence">artificial intelligence</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#machine learning">machine learning</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#Hans Petter Langtangen">Hans Petter Langtangen</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </article>
+  </li>
+  
+  <li class="post-preview">
+    <article>
+      
+
+      
+
+      <a href="/2024-12-27-deode/">
+        <h2 class="post-title">Destination Earth - On-Demand Extremes (DE330)</h2>
+
+        
+          <h3 class="post-subtitle">
+          Forecasting and warn against extreme weather events
+          </h3>
+        
+      </a>
+
+      
+        <span>By <strong>Even Nordhagen</strong></span>
+      
+      <p class="post-meta">
+        
+        Posted on December 27, 2024
+      </p>
+
+      
+      <div class="post-image post-image-small">
+        <a href="/2024-12-27-deode/" aria-label="Thumbnail">
+          <img src="/assets/img/deode/deode_thumbnail.jpeg" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      
+      
+      <div class="post-image post-image-short">
+        <a href="/2024-12-27-deode/" aria-label="Thumbnail">
+          <img src="/assets/img/deode/deode_thumbnail.jpeg" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      <div class="post-entry">
+        
+        Imagine a world where we can predict extreme weather events before they happen, giving us precious time to prepare and possibly save lives. Intriguing, right? In this blog post, we’re diving into the Destination Earth - On-Demand Extremes Digital Twin (DEODE) project, where cutting-edge digital technology meets the chaos of...
+        
+        
+          <a href="/2024-12-27-deode/" class="post-read-more">[Read&nbsp;More]</a>
+        
+      </div>
+      
+
+      
+      <div class="blog-tags">
+        <span>Tags:</span>
+        <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+        <ul class="d-inline list-inline" role="list">
+          
+          <li class="list-inline-item">
+            <a href="/tags#Destination Earth">Destination Earth</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#DestinE">DestinE</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#DE330">DE330</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#DEODE">DEODE</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#extreme weather">extreme weather</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </article>
+  </li>
+  
+  <li class="post-preview">
+    <article>
+      
+
+      
+
+      <a href="/2024-10-27-european-tier-0/">
+        <h2 class="post-title">Playing with Europe's Biggest Supercomputers</h2>
+
+        
+          <h3 class="post-subtitle">
+          Some experiences
+          </h3>
+        
+      </a>
+
+      
+        <span>By <strong>Even Nordhagen</strong></span>
+      
+      <p class="post-meta">
+        
+        Posted on October 27, 2024
+      </p>
+
+      
+      <div class="post-image post-image-small">
+        <a href="/2024-10-27-european-tier-0/" aria-label="Thumbnail">
+          <img src="/assets/img/eurohpc/eurohpc_3.jpeg" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      
+      
+      <div class="post-image post-image-short">
+        <a href="/2024-10-27-european-tier-0/" aria-label="Thumbnail">
+          <img src="/assets/img/eurohpc/eurohpc_3.jpeg" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      <div class="post-entry">
+        
+        I just came back from the EuroHPC User Day 2024, held in Amsterdam on October 22-23, where I had the honor of presenting the outcomes of our research on the EuroHPC supercomputers. For those who may not be familiar, the European High-Performance Computing Joint Undertaking (EuroHPC JU) oversees the installation,...
+        
+        
+          <a href="/2024-10-27-european-tier-0/" class="post-read-more">[Read&nbsp;More]</a>
+        
+      </div>
+      
+
+      
+      <div class="blog-tags">
+        <span>Tags:</span>
+        <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+        <ul class="d-inline list-inline" role="list">
+          
+          <li class="list-inline-item">
+            <a href="/tags#EuroHPC">EuroHPC</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#tier-0">tier-0</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#LUMI">LUMI</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#Leonardo">Leonardo</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </article>
+  </li>
+  
+  <li class="post-preview">
+    <article>
+      
+
+      
+
+      <a href="/2024-09-12-stretched-grid/">
+        <h2 class="post-title">Regional Data-Driven Weather Modeling</h2>
+
+        
+          <h3 class="post-subtitle">
+          with a Global Stretched-Grid Approach
+          </h3>
+        
+      </a>
+
+      
+        <span>By <strong>Even Nordhagen</strong></span>
+      
+      <p class="post-meta">
+        
+        Posted on September 12, 2024
+      </p>
+
+      
+      <div class="post-image post-image-small">
+        <a href="/2024-09-12-stretched-grid/" aria-label="Thumbnail">
+          <img src="/assets/img/stretched_grid/20240127T06_24_48_60-2.png" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      
+      
+      <div class="post-image post-image-short">
+        <a href="/2024-09-12-stretched-grid/" aria-label="Thumbnail">
+          <img src="/assets/img/stretched_grid/20240127T06_24_48_60-2.png" alt="Post thumbnail">
+        </a>
+      </div>
+      
+
+      <div class="post-entry">
+        
+        We have developed the most accurate model for regional weather prediction available, thanks to recent advances in machine learning weather modeling. Our model is based on graph neural networks and employs a stretched grid with higher resolution over the target regional domain.
+
+        
+        
+          <a href="/2024-09-12-stretched-grid/" class="post-read-more">[Read&nbsp;More]</a>
+        
+      </div>
+      
+
+      
+      <div class="blog-tags">
+        <span>Tags:</span>
+        <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+        <ul class="d-inline list-inline" role="list">
+          
+          <li class="list-inline-item">
+            <a href="/tags#AIFS">AIFS</a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="/tags#stretched-grid">stretched-grid</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </article>
+  </li>
+  
+</ul>
+
+
+<ul class="pagination main-pager">
+  
+  
+  <li class="page-item next">
+    <a class="page-link" href="/page2">
+      <span class="d-none d-sm-inline-block">Older Posts</span>
+      <i class="fas fa-arrow-right" alt="Older Posts"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+
+      
+
+      
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:even.nordhagen@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/evenmn" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/evenmarius.nordhagen" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="tel:4748043633" title="Phone">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Phone</span>
+   </a>
+  </li><li class="list-inline-item">
+   <a href="https://orcid.org/0009-0005-3839-4011" title="ORCID">
+     <span class="fa-stack fa-lg" aria-hidden="true">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="fab fa-orcid fa-stack-1x fa-inverse"></i>
+     </span>
+     <span class="sr-only">ORCID</span>
+   </a>
+ </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=even.nordhagen@gmail.com" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li></ul>
+
+
+      
+      <p class="copyright text-muted">
+      
+        © Even Nordhagen
+        &nbsp;&bull;&nbsp;
+      
+      2025
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="/">evennordhagen.com</a>
+        </span>
+      
+
+      
+
+      
+
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

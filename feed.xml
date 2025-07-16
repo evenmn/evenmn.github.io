@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    
+    <title>Even Nordhagen</title>
+    
+    
+    <description>Personal website of Even Nordhagen</description>
+    
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+      <item>
+        <title>New Paper Out</title>
+        <description>
+          Quantifying Nucleation Processes in Water - 
+          Nucleation marks the onset of phase transitions – for instance, when water vapor begins to condense into liquid droplets. These processes are critical across many scientific domains, especially in atmospheric science. In a previous project, we used molecular dynamics to parameterize an interatomic potential that accurately reproduces liquid water properties...
+        </description>
+        <pubDate>Sun, 06 Jul 2025 00:00:00 -0400</pubDate>
+        <link>/2025-07-06-avbmc/</link>
+        <guid isPermaLink="true">/2025-07-06-avbmc/</guid>
+      </item>
+    
+      <item>
+        <title>Langtangen Was Right</title>
+        <description>
+          Reflections on Python&apos;s role in AI Development - 
+          Artificial intelligence (AI) has enabled us to tackle problems that seemed impossible just a decade ago. It has revolutionized fields such as natural language processing, image synthesis, video generation, and weather forecasting — the area I’m currently most involved in. In this blog post, we’ll explore what AI really is,...
+        </description>
+        <pubDate>Sun, 04 May 2025 00:00:00 -0400</pubDate>
+        <link>/2025-05-04-ai-reflections/</link>
+        <guid isPermaLink="true">/2025-05-04-ai-reflections/</guid>
+      </item>
+    
+      <item>
+        <title>Destination Earth - On-Demand Extremes (DE330)</title>
+        <description>
+          Forecasting and warn against extreme weather events - 
+          Imagine a world where we can predict extreme weather events before they happen, giving us precious time to prepare and possibly save lives. Intriguing, right? In this blog post, we’re diving into the Destination Earth - On-Demand Extremes Digital Twin (DEODE) project, where cutting-edge digital technology meets the chaos of...
+        </description>
+        <pubDate>Fri, 27 Dec 2024 00:00:00 -0500</pubDate>
+        <link>/2024-12-27-deode/</link>
+        <guid isPermaLink="true">/2024-12-27-deode/</guid>
+      </item>
+    
+      <item>
+        <title>Playing with Europe&apos;s Biggest Supercomputers</title>
+        <description>
+          Some experiences - 
+          I just came back from the EuroHPC User Day 2024, held in Amsterdam on October 22-23, where I had the honor of presenting the outcomes of our research on the EuroHPC supercomputers. For those who may not be familiar, the European High-Performance Computing Joint Undertaking (EuroHPC JU) oversees the installation,...
+        </description>
+        <pubDate>Sun, 27 Oct 2024 00:00:00 -0400</pubDate>
+        <link>/2024-10-27-european-tier-0/</link>
+        <guid isPermaLink="true">/2024-10-27-european-tier-0/</guid>
+      </item>
+    
+      <item>
+        <title>Regional Data-Driven Weather Modeling</title>
+        <description>
+          with a Global Stretched-Grid Approach - 
+          We have developed the most accurate model for regional weather prediction available, thanks to recent advances in machine learning weather modeling. Our model is based on graph neural networks and employs a stretched grid with higher resolution over the target regional domain. Our latest Preprint: arXiv:2409.02891 Machine Learning Weather Prediction...
+        </description>
+        <pubDate>Thu, 12 Sep 2024 00:00:00 -0400</pubDate>
+        <link>/2024-09-12-stretched-grid/</link>
+        <guid isPermaLink="true">/2024-09-12-stretched-grid/</guid>
+      </item>
+    
+      <item>
+        <title>Workshop on Large-scale Deep Learning for the Earth System</title>
+        <description>
+          My experience - 
+          Last week, I attended the Workshop on Large-Scale Deep Learning for the Earth System in Bonn, Germany, and it was a great experience. Given that the workshop specialized in machine learning models for predicting weather and climate, it could hardly be more relevant for my current position at MET Norway....
+        </description>
+        <pubDate>Tue, 10 Sep 2024 00:00:00 -0400</pubDate>
+        <link>/2024-09-10-large-scale-deep-learning-earth-system/</link>
+        <guid isPermaLink="true">/2024-09-10-large-scale-deep-learning-earth-system/</guid>
+      </item>
+    
+      <item>
+        <title>My first blog post</title>
+        <description>
+          Why I decided to make my own website - 
+          Purpose of the Website Today, substantial information about me (and individuals in general) is often dispersed across social media platforms, professional websites, and scientific publications. This website aims to consolidate the most crucial information about me and my work into a single, accessible location. To reach a wider audience, I...
+        </description>
+        <pubDate>Sun, 01 Sep 2024 00:00:00 -0400</pubDate>
+        <link>/2024-09-01-first-post/</link>
+        <guid isPermaLink="true">/2024-09-01-first-post/</guid>
+      </item>
+    
+  </channel>
+</rss>

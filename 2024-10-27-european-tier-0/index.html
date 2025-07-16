@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  
+
+  <title>Playing with Europe&apos;s Biggest Supercomputers | Even Nordhagen</title>
+
+  
+  
+  <meta name="author" content="Even Nordhagen">
+  
+
+  <meta name="description" content="Some experiences">
+
+  
+
+  
+  <meta name="keywords" content="Even Marius Nordhagen, Nordhagen, Even Nordhagen, machine learning, friction, molecular dynamics simulations, weather models">
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="Even Nordhagen" href="/feed.xml">
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ6Q8NX2RD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GZ6Q8NX2RD');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript">
+  MathJax = {
+    options: {
+      skipHtmlTags: [
+        'script', 'noscript', 'style', 'textarea', 'pre', 'code'
+      ]
+    }
+  };
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Even Nordhagen">
+  <meta property="og:title" content="Playing with Europe&apos;s Biggest Supercomputers | Even Nordhagen">
+  <meta property="og:description" content="Some experiences">
+
+  
+  <meta property="og:image" content="/assets/img/eurohpc/eurohpc_3.jpeg">
+  
+
+  
+  <meta property="og:type" content="article">
+  
+  <meta property="og:article:author" content="Even Nordhagen">
+  
+  <meta property="og:article:published_time" content="2024-10-27T00:00:00-04:00">
+  <meta property="og:url" content="/2024-10-27-european-tier-0/">
+  <link rel="canonical" href="/2024-10-27-european-tier-0/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Playing with Europe&apos;s Biggest Supercomputers | Even Nordhagen">
+  <meta property="twitter:description" content="Some experiences">
+
+  
+  <meta name="twitter:image" content="/assets/img/eurohpc/eurohpc_3.jpeg">
+  
+
+  
+
+
+  
+
+  
+  
+  <link rel="icon" href="/favicon.ico" />
+  
+
+  
+
+</head>
+
+
+<body>
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand navbar-brand-logo" href="/"><img alt="Even Nordhagen Logo" src="/assets/img/signature.png"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/projects/friction">Friction modelling</a>
+                  <a class="dropdown-item" href="/projects/inversedesign">Inverse design</a>
+                  <a class="dropdown-item" href="/projects/quantumdots">Quantum dots</a>
+                  <a class="dropdown-item" href="/projects/building-water-model">Water model</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/portrait_nordhagen_machine_learning.jpg" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "New Paper Out", \
+          "desc"     : "New Paper Out", \
+          "category" : "waternucleationVashishtaMonte CarloMetropolisAVBMC", \
+          "url"      : "/2025-07-06-avbmc/", \
+          "date"     : "July  6, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Langtangen Was Right", \
+          "desc"     : "Langtangen Was Right", \
+          "category" : "AI boomartificial intelligencemachine learningHans Petter Langtangen", \
+          "url"      : "/2025-05-04-ai-reflections/", \
+          "date"     : "May  4, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Destination Earth - On-Demand Extremes (DE330)", \
+          "desc"     : "Destination Earth - On-Demand Extremes (DE330)", \
+          "category" : "Destination EarthDestinEDE330DEODEextreme weather", \
+          "url"      : "/2024-12-27-deode/", \
+          "date"     : "December 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "desc"     : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "category" : "EuroHPCtier-0LUMILeonardo", \
+          "url"      : "/2024-10-27-european-tier-0/", \
+          "date"     : "October 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Regional Data-Driven Weather Modeling", \
+          "desc"     : "Regional Data-Driven Weather Modeling", \
+          "category" : "AIFSstretched-grid", \
+          "url"      : "/2024-09-12-stretched-grid/", \
+          "date"     : "September 12, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "desc"     : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "category" : "weather predictionmachine learningdata-driven", \
+          "url"      : "/2024-09-10-large-scale-deep-learning-earth-system/", \
+          "date"     : "September 10, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "My first blog post", \
+          "desc"     : "My first blog post", \
+          "category" : "first post", \
+          "url"      : "/2024-09-01-first-post/", \
+          "date"     : "September  1, 2024" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "About me", \
+          "desc"     : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Building a Flexible Water Model", \
+          "desc"     : "Building a Flexible Water Model", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/building-water-model/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Contact Me", \
+          "desc"     : "Contact Me", \
+          "category" : "page", \
+          "url"      : "/contact/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Friction modeling", \
+          "desc"     : "Friction modeling", \
+          "category" : "page", \
+          "url"      : "/projects/friction/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Inverse frictional design", \
+          "desc"     : "Inverse frictional design", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/inversedesign/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Publications", \
+          "desc"     : "Publications", \
+          "category" : "page", \
+          "url"      : "/publications/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "The Schrödinger equation", \
+          "desc"     : "The Schrödinger equation", \
+          "category" : "page", \
+          "url"      : "/projects/quantumdots/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Software", \
+          "desc"     : "Software", \
+          "category" : "page", \
+          "url"      : "/software/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "desc"     : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/page2/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+    
+      data-img-src-1="/assets/img/eurohpc/eurohpc_4.jpeg"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+<div class="intro-header  big-img ">
+  
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Playing with Europe's Biggest Supercomputers</h1>
+          
+            
+              <h2 class="post-subheading">Some experiences</h2>
+            
+          
+          
+           
+            
+              By <strong>Even Nordhagen</strong><br>
+            
+            <span class="post-meta">Posted on October 27, 2024</span>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <span class='img-desc'></span>
+</div>
+
+
+
+</header>
+
+
+<main class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+        
+        
+        
+
+        <div id="header-gh-btns">
+          
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=evenmn&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              
+            
+          
+        </div>
+      
+
+      
+
+      <div class="blog-post">
+        <p>I just came back from the <strong>EuroHPC User Day 2024</strong>, held in Amsterdam on October 22-23, where I had the honor of presenting the outcomes of our research on the EuroHPC supercomputers. For those who may not be familiar, the <strong>European High-Performance Computing Joint Undertaking</strong> (<strong>EuroHPC JU</strong>) oversees the installation, operation, maintenance, and distribution of Europe’s most powerful supercomputers, commissioned by the European Union. This network includes three of the current top 10 supercomputers globally: <strong>LUMI</strong>, <strong>Leonardo</strong>, and <strong>MareNostrum 5</strong>. Additionally, <strong>Jupiter</strong>, which is currently being installed, is expected to soon rank as the world’s second most powerful supercomputer. The conference was primarily user-focused, which is why I was invited to share our work there.</p>
+
+<div class="text-center">
+    <img src="/assets/img/eurohpc/LUMI.jpg" alt="LUMI" style="width: 70%;" />
+</div>
+<p><em>LUMI is Europe’s most powerful computer, and means ‘snow’ in Finnish.</em></p>
+
+<p>This post will delve into my experiences with the EuroHPC supercomputing facilities, drawing also on the collaborative research that my team and I have detailed in a scientific paper that’s presently undergoing peer review.</p>
+
+<div class="text-center">
+    <img src="/assets/img/eurohpc/EYE.jpg" alt="EYE" style="width: 70%;" />
+</div>
+<p><em>The EuroHPC User Day 2024 was held at the EYE Film Museum, Amsterdam.</em></p>
+
+<h2 id="what-got-me-hooked">What Got Me Hooked</h2>
+
+<p>First, let me share how I became so fascinated with supercomputers. My journey began in 2017 when I was first introduced to computer clusters. I gained access to the Norwegian <strong>Abel</strong> computer, which at the time was ranked among the world’s top 100 supercomputers. Although the scale of our jobs back then was relatively small by today’s standards, the simulation procedures were quite similar.</p>
+
+<p>In 2020, when Abel was decommissioned, the condensed matter group at the University of Oslo acquired part of the system. I was tasked with relocating and setting up this portion in our physics department, giving me valuable hands-on experience in cluster installation and maintenance. This event significantly fueled my interest in high-performance computing.</p>
+
+<div class="text-center">
+    <img src="/assets/img/eurohpc/eurohpc.jpeg" alt="EuroHPC" style="width: 70%;" />
+</div>
+<p><em>Location of the EuroHPC supercomputers. Photo from the first presentation at EuroHPC User Day 2024.</em></p>
+
+<h2 id="first-impressions">First impressions</h2>
+
+<p>I’m not going to hide that running jobs on large supercomputers is a cool experience. Witnessing 10,000 GPUs working simultaneously is truly unique and awe-inspiring. Knowing that these machines are behind much of today’s cutting-edge technology adds an extra level of excitement. The societal impact of supercomputers is immense, especially considering the ongoing AI revolution.</p>
+
+<p>For instance, large language models (LLMs) like ChatGPT have become household names, highlighting the role of AI in our daily lives. Beyond conversational AI, machine learning is increasingly vital in the healthcare industry. It holds promise for potentially saving millions of lives by enhancing cancer detection and combating antibiotic resistance. For example, recent studies have demonstrated remarkable success in detecting cancer and fighting antibiotic resistance using machine learning algorithms. The best presentation award at EuroHPC User Day 2024 went to Andrea Di Gioacchino for demonstrating how different microorganisms develop antibiotics using machine learning.</p>
+
+<p>But the thrill of running on these colossal computers goes beyond their societal implications. It’s also about the sheer wonder of the technology itself: billions of computations per second, intricate algorithms optimizing performance, and the quest to push the boundaries of what’s possible.</p>
+
+<div class="text-center">
+    <img src="/assets/img/eurohpc/abel.png" alt="Abel" style="width: 70%;" />
+</div>
+<p><em>Me and Anders Malthe-Sørenssen collecting nodes from the Abel computer. Photo: Sebastian Winther-Larsen.</em></p>
+
+<h2 id="how-these-computers-work">How These Computers Work</h2>
+
+<p>So, how do these supercomputers actually function? Despite their mysterious name, there’s no magic involved in how they operate. Fundamentally, they consist of many standard compute nodes connected via high-speed communication networks. To harness their immense power, tasks must be divided so that different parts can run independently across separate nodes (this is known as parallel processing).</p>
+
+<p>Imagine you need to count the number of trees worldwide using satellite images and an image analysis algorithm. This task would be nearly impossible to complete sequentially; analyzing each image one by one would take an inordinate amount of time. Thankfully, this problem is well-suited for parallel processing!</p>
+
+<p>Here’s how it works: You can dedicate different parts of the supercomputer to analyze images from each continent. One segment of the supercomputer could focus on Europe, another on Asia, and so on. This division alone would vastly speed up the task.</p>
+
+<p>But we can push this even further by assigning each country to different segments of the supercomputer. Now, many parts of the computer are working simultaneously, each focused on a smaller task. This way, the analysis of the satellite images can be conducted much faster compared to a sequential approach.</p>
+
+<div class="text-center">
+    <img src="/assets/img/eurohpc/lumi_sinfo.png" alt="SINFO" style="width: 100%;" />
+</div>
+<p><em>Screen shot of the GPU resources on LUMI. Note that 1,830 nodes are allocated and 811 are draining, each featuring 4 powerful GPUs.</em></p>
+
+<p>This is the fundamental principle behind supercomputers: partitioning the machine so that each small segment handles a dedicated task, with many such tasks running in parallel. This method dramatically reduces the wall-clock time, making it feasible to tackle colossal computations that would otherwise be impractical.</p>
+
+<h2 id="experiences">Experiences</h2>
+
+<p>All the EuroHPC computers, and in fact, all other supercomputers, run on the Linux operating system. This robust OS is ideal for high-performance computing due to its flexibility and stability. Resource distribution on these systems is managed by the queueing system known as SLURM (Simple Linux Utility for Resource Management). SLURM efficiently queues jobs based on a multi-factor priority list, allocates the necessary resources, and provides comprehensive accounting statistics.</p>
+
+<p>From my experience, SLURM works exceptionally well. The queue times are generally reasonable, ensuring that computational jobs are processed efficiently without significant delays. However, like all systems, there are challenges, one of the most common being the transfer of large data sets over long distances. This is usually not a cluster-specific problem, as the bottleneck is cables and not bandwidth. If you cannot change the hardware, one way to transfer data faster is by compressing the data.</p>
+
+<h2 id="some-improvements">Some Improvements</h2>
+
+<p>The human brain is hardwired to favor familiarity; we feel more comfortable in environments we’ve encountered before. This tendency is why store and restaurant chains design their spaces to look similar or identical, reducing the cognitive load for their customers. However, EuroHPC hasn’t fully capitalized on this psychological principle, resulting in varied user experiences across different systems.</p>
+
+<p>Some differences are unavoidable due to hardware variations. For example, LUMI uses AMD GPUs, while most other EuroHPC supercomputers are equipped with NVIDIA GPUs. This hardware distinction naturally leads to differences in the software side of things, necessitating unique configurations and varying user experiences. However, other discrepancies are less rational. One notable example is the divergent firewall policies across these supercomputers. In practice, some systems provide internet access from all nodes (like LUMI), while others restrict internet access to just the login nodes (such as Leonardo). There’s even a system like MareNostrum 5, which offers no external communication whatsoever.</p>
+
+<p>These variations translate into differing user experiences, which isn’t ideal. There’s a balance to be struck between security and user-friendliness, and in this case, different national computing centers have found different equilibriums. As a result, users must adapt to different environments when transitioning between systems, which can be inefficient and cumbersome.</p>
+
+<div class="text-center">
+    <img src="/assets/img/eurohpc/eurohpc_2.jpeg" alt="EuroHPC" style="width: 70%;" />
+</div>
+<p><em>Some statistics from the EuroHPC User Day 2024. One important message (for us in particular) is that Earth System Sciences and Environmental Studies is slightly underrepresented in the applications compared to computational physics, material and chemical sciences and engineering.</em></p>
+
+<p>The unnecessary differences between supercomputers extend to file system architectures and login procedures, impacting user workflows. Some systems use Lustre filesystems, which excel at handling large files but struggle with many small files. This necessitates the use of containers for software dependencies on Lustre systems like LUMI. On other systems, virtual environments might be more efficient.</p>
+
+<p>Moreover, login procedures vary, with some systems requiring two-factor authentication (2FA) for extra security while others do not. This inconsistency in file system use and security protocols creates a fragmented user experience, complicating transitions between different EuroHPC systems.</p>
+
+<p>In our conference paper, we advocate for a more unified policy regarding system setup. Standardizing policies and procedures across EuroHPC systems would simplify transitions from one supercomputer to another, fostering a more consistent and user-friendly experience. This could greatly enhance productivity and reduce the learning curve for users operating across multiple supercomputing systems. Standardizing these elements would allow users to focus more on their research rather than adapting to different system requirements.</p>
+
+<h2 id="moving-forward">Moving Forward</h2>
+
+<p>The good news is that our requests have been heard. EuroHPC plans to implement a unified system policy in 2025. This is a significant leap in the right direction, though I await its actual implementation with cautious optimism. Even with these changes, challenges like large file transfers will remain.</p>
+
+<p>Feel free to drop a comment or question below if you have thoughts or experiences you’d like to share.</p>
+
+<div class="signature">
+    <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;" />
+</div>
+
+      </div>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#EuroHPC">EuroHPC</a>
+          
+            <a href="/tags#tier-0">tier-0</a>
+          
+            <a href="/tags#LUMI">LUMI</a>
+          
+            <a href="/tags#Leonardo">Leonardo</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2024-10-27-european-tier-0%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2024-10-27-european-tier-0%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2024-09-12-stretched-grid/" data-toggle="tooltip" data-placement="top" title="Regional Data-Driven Weather Modeling">
+            <i class="fas fa-arrow-left" alt="Previous Post"></i>
+            <span class="d-none d-sm-inline-block">Previous Post</span>
+          </a>
+        </li>
+        
+        
+        <li class="page-item next">
+          <a class="page-link" href="/2024-12-27-deode/" data-toggle="tooltip" data-placement="top" title="Destination Earth - On-Demand Extremes (DE330)">
+            <span class="d-none d-sm-inline-block">Next Post</span>
+            <i class="fas fa-arrow-right" alt="Next Post"></i>
+          </a>
+        </li>
+        
+      </ul>
+      
+  <div class="disqus-comments">
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+	  var disqus_shortname = 'evennordhagen';
+	  /* ensure that pages with query string get the same discussion */
+	  var url_parts = window.location.href.split("?");
+	  var disqus_url = url_parts[0];
+	  (function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	  })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
+  
+  
+
+  
+
+
+  
+
+  
+
+
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:even.nordhagen@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/evenmn" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/evenmarius.nordhagen" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="tel:4748043633" title="Phone">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Phone</span>
+   </a>
+  </li><li class="list-inline-item">
+   <a href="https://orcid.org/0009-0005-3839-4011" title="ORCID">
+     <span class="fa-stack fa-lg" aria-hidden="true">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="fab fa-orcid fa-stack-1x fa-inverse"></i>
+     </span>
+     <span class="sr-only">ORCID</span>
+   </a>
+ </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=even.nordhagen@gmail.com" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li></ul>
+
+
+      
+      <p class="copyright text-muted">
+      
+        © Even Nordhagen
+        &nbsp;&bull;&nbsp;
+      
+      2025
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="/">evennordhagen.com</a>
+        </span>
+      
+
+      
+
+      
+
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

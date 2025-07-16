@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  
+
+  <title>Langtangen Was Right | Even Nordhagen</title>
+
+  
+  
+  <meta name="author" content="Even Nordhagen">
+  
+
+  <meta name="description" content="Reflections on Python&apos;s role in AI Development">
+
+  
+
+  
+  <meta name="keywords" content="Even Marius Nordhagen, Nordhagen, Even Nordhagen, machine learning, friction, molecular dynamics simulations, weather models">
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="Even Nordhagen" href="/feed.xml">
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ6Q8NX2RD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GZ6Q8NX2RD');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript">
+  MathJax = {
+    options: {
+      skipHtmlTags: [
+        'script', 'noscript', 'style', 'textarea', 'pre', 'code'
+      ]
+    }
+  };
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Even Nordhagen">
+  <meta property="og:title" content="Langtangen Was Right | Even Nordhagen">
+  <meta property="og:description" content="Reflections on Python&apos;s role in AI Development">
+
+  
+  <meta property="og:image" content="/assets/img/ai-reflections/ai-reflection_thumbnail.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  
+  <meta property="og:article:author" content="Even Nordhagen">
+  
+  <meta property="og:article:published_time" content="2025-05-04T00:00:00-04:00">
+  <meta property="og:url" content="/2025-05-04-ai-reflections/">
+  <link rel="canonical" href="/2025-05-04-ai-reflections/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Langtangen Was Right | Even Nordhagen">
+  <meta property="twitter:description" content="Reflections on Python&apos;s role in AI Development">
+
+  
+  <meta name="twitter:image" content="/assets/img/ai-reflections/ai-reflection_thumbnail.png">
+  
+
+  
+
+
+  
+
+  
+  
+  <link rel="icon" href="/favicon.ico" />
+  
+
+  
+
+</head>
+
+
+<body>
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand navbar-brand-logo" href="/"><img alt="Even Nordhagen Logo" src="/assets/img/signature.png"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/projects/friction">Friction modelling</a>
+                  <a class="dropdown-item" href="/projects/inversedesign">Inverse design</a>
+                  <a class="dropdown-item" href="/projects/quantumdots">Quantum dots</a>
+                  <a class="dropdown-item" href="/projects/building-water-model">Water model</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/portrait_nordhagen_machine_learning.jpg" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "New Paper Out", \
+          "desc"     : "New Paper Out", \
+          "category" : "waternucleationVashishtaMonte CarloMetropolisAVBMC", \
+          "url"      : "/2025-07-06-avbmc/", \
+          "date"     : "July  6, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Langtangen Was Right", \
+          "desc"     : "Langtangen Was Right", \
+          "category" : "AI boomartificial intelligencemachine learningHans Petter Langtangen", \
+          "url"      : "/2025-05-04-ai-reflections/", \
+          "date"     : "May  4, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Destination Earth - On-Demand Extremes (DE330)", \
+          "desc"     : "Destination Earth - On-Demand Extremes (DE330)", \
+          "category" : "Destination EarthDestinEDE330DEODEextreme weather", \
+          "url"      : "/2024-12-27-deode/", \
+          "date"     : "December 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "desc"     : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "category" : "EuroHPCtier-0LUMILeonardo", \
+          "url"      : "/2024-10-27-european-tier-0/", \
+          "date"     : "October 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Regional Data-Driven Weather Modeling", \
+          "desc"     : "Regional Data-Driven Weather Modeling", \
+          "category" : "AIFSstretched-grid", \
+          "url"      : "/2024-09-12-stretched-grid/", \
+          "date"     : "September 12, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "desc"     : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "category" : "weather predictionmachine learningdata-driven", \
+          "url"      : "/2024-09-10-large-scale-deep-learning-earth-system/", \
+          "date"     : "September 10, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "My first blog post", \
+          "desc"     : "My first blog post", \
+          "category" : "first post", \
+          "url"      : "/2024-09-01-first-post/", \
+          "date"     : "September  1, 2024" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "About me", \
+          "desc"     : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Building a Flexible Water Model", \
+          "desc"     : "Building a Flexible Water Model", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/building-water-model/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Contact Me", \
+          "desc"     : "Contact Me", \
+          "category" : "page", \
+          "url"      : "/contact/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Friction modeling", \
+          "desc"     : "Friction modeling", \
+          "category" : "page", \
+          "url"      : "/projects/friction/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Inverse frictional design", \
+          "desc"     : "Inverse frictional design", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/inversedesign/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Publications", \
+          "desc"     : "Publications", \
+          "category" : "page", \
+          "url"      : "/publications/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "The Schrödinger equation", \
+          "desc"     : "The Schrödinger equation", \
+          "category" : "page", \
+          "url"      : "/projects/quantumdots/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Software", \
+          "desc"     : "Software", \
+          "category" : "page", \
+          "url"      : "/software/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "desc"     : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/page2/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  
+
+
+
+<header class="header-section ">
+<div class="intro-header ">
+  
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Langtangen Was Right</h1>
+          
+            
+              <h2 class="post-subheading">Reflections on Python's role in AI Development</h2>
+            
+          
+          
+           
+            
+              By <strong>Even Nordhagen</strong><br>
+            
+            <span class="post-meta">Posted on May 4, 2025</span>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+</header>
+
+
+<main class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+        
+        
+        
+
+        <div id="header-gh-btns">
+          
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=evenmn&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              
+            
+          
+        </div>
+      
+
+      
+
+      <div class="blog-post">
+        <p>Artificial intelligence (AI) has enabled us to tackle problems that seemed impossible just a decade ago. It has revolutionized fields such as natural language processing, image synthesis, video generation, and <a href="https://evennordhagen.com/2024-09-12-stretched-grid/">weather forecasting</a> — the area I’m currently most involved in. In this blog post, we’ll explore what AI really is, its key components, the current state of the field, future directions, and the role Python plays in AI development. I’ll also include a tribute to my brilliant informatics lecturer, <strong>Hans Petter Langtangen</strong>.</p>
+
+<div class="text-center">
+    <img src="/assets/img/ai-reflections/ai.png" alt="AI Illustration Neural Network Machine Learning" style="width: 70%;" />
+</div>
+<p><em>Artificial intelligence, particularly neural networks, is inspired by the structure and function of the human brain’s neural networks, but only loosely emulates them</em></p>
+
+<p>I began my physics studies at the University of Oslo (UiO) in 2014, where we were fortunate to be introduced to programming from the very first semester. From the outset, we were essentially trained to become computational physicists. At that time, a significant debate was unfolding within the Faculty of Mathematics and Natural Sciences regarding which programming language should be taught to bachelor students. Many professors advocated for low-level languages like C, C++, and Fortran, citing their speed and prevalent use in physics applications.</p>
+
+<p>To be fair, these languages were the natural choice back then, holding a much higher market share than higher-level, slower alternatives like Python and MATLAB. However, <strong>Hans Petter Langtangen</strong> presented a compelling argument for Python. He emphasized that Python encompasses all the necessary components suitable for students without prior programming experience. As a scripting language, it is pre-compiled, facilitates easy integration of third-party code, and is open-source. Despite Python’s modest market share of only 2% at the time, Langtangen successfully persuaded his colleagues to adopt it for teaching. As we will soon see, that decision proved to be a very wise one.</p>
+
+<div class="text-center">
+    <img src="/assets/img/ai-reflections/tiobe.png" alt="TIOBE Weather Forecasting Machine Learning Python" style="width: 100%;" />
+</div>
+<p><em>Python’s TIOBE rating has increased from 2.4% in 2014 to 23.8% in 2025. Source: tiobe.com</em></p>
+
+<p>The popularity of Python has skyrocketed in recent years, largely driven by the rise of artificial intelligence—especially machine learning. Today, the vast majority of large-scale machine learning projects (over 90%) are developed in Python. In a sense, machine learning is synonymous with Python—whether you like it or not.</p>
+
+<p>But the relationship goes both ways. Python has been just as crucial to the growth of machine learning as machine learning has been to Python’s success. Much of the field’s rapid progress is thanks to powerful open-source libraries developed by the Python community—such as PyTorch, TensorFlow, and JAX—all of which embody Python’s core philosophy of simplicity and readability. Combined with advances in hardware, these libraries are a key reason why machine learning development is evolving at such a fast pace.</p>
+
+<h2 id="exactly-what-is-machine-learning">Exactly what is machine learning?</h2>
+<p>So, what exactly is machine learning? In simple terms, machine learning is the science of training computers to perform tasks without being explicitly programmed. Typically, this involves optimizing a complex function based on a specific metric using an algorithmic approach.</p>
+
+<p>Sound confusing? Don’t worry—there’s a concrete example coming up that should make things clearer.</p>
+
+<p>Although the term machine learning feels modern, many of its underlying techniques have been around for decades. For example, basic gradient descent—a core optimization method—has been used since the early days of calculus and falls squarely under the machine learning umbrella.</p>
+
+<p>What’s truly new is our ability to train deep artificial neural networks, a subfield known as deep learning. Much of the recent progress in AI stems from this advancement—but we’ll save a deeper dive into deep learning for later.</p>
+
+<div class="text-center">
+    <img src="/assets/img/ai-reflections/thermostat.png" alt="Thermostat Machine Learning Deep Learning Artificial Intelligence Langtangen" style="width: 70%;" />
+</div>
+<p><em>In the example below, machine learning is used to find the optimal thermostat setting, given the temperature change outside.</em></p>
+
+<h3 id="example-tuning-a-thermostat">Example: Tuning a Thermostat</h3>
+<p>Let’s look at a simple example to illustrate how machine learning works. Since I work in weather prediction, we’ll use a temperature-related scenario:</p>
+
+<p>Imagine you have a thermostat inside your house that needs to be adjusted based on the outside temperature. When the outside temperature drops, you need to increase the thermostat setting to maintain a constant indoor temperature. Conversely, when the outside temperature rises, you should lower the thermostat. But exactly how much should you adjust it?</p>
+
+<p>To answer that, you collect some data. You find that when the outside temperature drops by 2°C, the thermostat must be increased by 3°C to maintain comfort. You observe similar patterns for other temperature changes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">\(i\)</th>
+      <th style="text-align: left">Outside Temp Drop (°C)</th>
+      <th style="text-align: left">Thermostat Increase (°C)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">5</td>
+      <td style="text-align: left">7</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">3</td>
+      <td style="text-align: left">7</td>
+      <td style="text-align: left">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">10</td>
+      <td style="text-align: left">13</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">5</td>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">1.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Although this is a classic linear regression problem with an analytical solution, let’s solve it using a machine learning approach. We want a <em>model</em> that predicts the thermostat increase as a function of the temperature drop:</p>
+
+<p>\(\hat{y}_i=w\cdot x_i\),</p>
+
+<p>Here, \(x_i\) is the outside temperature drop, \(\hat{y}_i\) is the predicted thermostat increase, and \(w\) is the parameter we want to learn. We’ll optimize \(w\) by minimizing a <em>loss function</em>, in this case the mean squared error:</p>
+
+<p>\(\mathcal{L}(w)=\frac{1}{5}\sum_{i=1}^5(y_i-wx_i)^2\).</p>
+
+<p>Let’s start with an initial guess of \(w=1\). The loss becomes:</p>
+
+<p>\(\mathcal{L}(1)=\frac{1}{5}((3-2)^2+(7-5)^2+(10-7)^2+(13-10)^2+(1.5-1)^2)=4.65\).</p>
+
+<p>This value tells us that the squared error is 4.65°C\(^2\) on average. Now we compute the gradient of the loss with respect to \(w\):</p>
+
+\[\nabla_w\mathcal{L}(w) = -\frac{2}{5}\sum_{i=1}^5(y_i-wx_i)\cdot x_i\]
+
+<p>Plugging in \(w=1\):</p>
+
+<p>\(\nabla_w\mathcal{L}(1) = -\frac{2}{5}(2+10+21+30+0.5)=-25.4\).</p>
+
+<p>The negative gradient means that increasing \(w\) will reduce the loss. We can now update \(w\) using gradient descent:</p>
+
+<p>\(w\leftarrow w-\eta\nabla_w\mathcal{L}(w)\),</p>
+
+<p>where \(\eta\) is the so-called <em>learning rate</em>. This iterative process continues until the loss converges to a minimum. By adjusting \(w\) iteratively, we will see that the optimal value in this problem is \(w=1.35\). So for every degree the outside temperature drops, we need to increase the thermostat by 1.35°C.</p>
+
+<p>This is an example of an extremely basic machine learning problem, but it illustrates the concepts, including the data, model, loss function and learning rate. In practice, typical machine learning problems include large amounts of data and a much more complex model, often based on neural networks.</p>
+
+<h2 id="an-artificial-neural-network">An artificial neural network</h2>
+<p>It’s difficult to discuss recent advances in machine learning without mentioning artificial neural networks. Inspired by the structure of the brain, these networks consist of interconnected nodes (or “neurons”) that transmit signals and activate in response to specific inputs.</p>
+
+<p>More importantly, neural networks—henceforth referred to simply as neural networks—are universal function approximators. This means they are flexible enough to approximate any continuous function, as shown by Hornik et al. <a class="citation" href="#hornik1989">(Hornik et al., 1989)</a>.</p>
+
+<p>A simple example is the <em>two-layer perceptron</em>, which can be expressed mathematically as:</p>
+
+<p>\(\hat{y}_i=a^{(2)}\left(\sum_jw_{ij}^{(2)}\left(a^{(1)}\left(\sum_k w_{jk}^{(1)} \cdot x_k\right)\right)\right)\).</p>
+
+<p>Here:</p>
+
+<ul>
+  <li>\(w^{(1)}\) and \(w^{(2)}\) are the <em>weight matrices</em> for the first and second layers, respectively.</li>
+  <li>\(a^{(1)}\) and \(a^{(2)}\) are the <em>activation functions</em> applied at each layer.</li>
+</ul>
+
+<p>In our earlier thermostat example, replacing the linear model with a neural network like this could yield a better fit—but at the cost of introducing many more tunable parameters. Training such models requires computing gradients across layers, which is handled by the backpropagation algorithm. We’ll discuss that in more detail shortly.</p>
+
+<h2 id="discoveries-that-made-the-machine-learning-revolution-possible">Discoveries that made the machine learning revolution possible</h2>
+<p>Machine learning depends on a variety of essential components—ranging from algorithms and model architectures to advancements in hardware. While many breakthroughs have contributed to its rapid development, I’ll focus here on a few key discoveries that, in my view, have been especially crucial to the revolution we’re witnessing today.</p>
+
+<h3 id="backpropagation">Backpropagation</h3>
+<p>Backpropagation is the cornerstone of training deep neural networks. It allows us to efficiently compute gradients in complex, multi-layered models by propagating errors backward from the output layer through the network—hence the name. This technique enables the optimization of millions of parameters using gradient-based methods.</p>
+
+<p>The modern form of the backpropagation algorithm was popularized in a landmark 1986 paper by Rumelhart, Hinton, and Williams. Today, virtually all deep learning frameworks rely on it <a class="citation" href="#rumelhart1986">(Rumelhart et al., 1986)</a>.</p>
+
+<p>If you’re interested in how this compares to learning in biological brains, Lillicrap et al. offer an insightful discussion on the biological plausibility of backpropagation and alternative mechanisms found in neuroscience <a class="citation" href="#lillicrap2020">(Lillicrap et al., 2020)</a>.</p>
+
+<h3 id="efficient-hardware">Efficient hardware</h3>
+<p><strong>Graphics Processing Units</strong> (GPUs) are specialized hardware designed to handle many small, parallel tasks efficiently. Originally developed for rendering graphics in video games, GPUs turned out to be ideally suited for the kinds of matrix and vector operations that dominate machine learning workloads.</p>
+
+<p>Around 2010, researchers began to realize that GPUs could dramatically accelerate the training of neural networks. One of the most influential demonstrations of this came in 2012, when Krizhevsky, Sutskever, and Hinton used a deep convolutional neural network — <strong>AlexNet</strong> — to win the ImageNet competition. Their model outperformed traditional image classification methods by a large margin, marking a turning point for deep learning <a class="citation" href="#krizhevsky2012">(Krizhevsky et al., 2012)</a>.</p>
+
+<h3 id="variational-autoencoders">Variational autoencoders</h3>
+<p><strong>Variational Autoencoders</strong> (VAEs), introduced in 2013, are a powerful and innovative method for both compressing data and generating new samples <a class="citation" href="#kingma2022">(Kingma &amp; Welling, 2022)</a>. A VAE consists of two main components: an <strong>encoder</strong> that compresses input data into a compact representation, and a <strong>decoder</strong> that reconstructs the original data from this compressed form.</p>
+
+<p>The key idea is to train the VAE to reproduce its input by first encoding it into a lower-dimensional space—known as the <strong>latent space</strong> — and then decoding it back. Ideally, this latent representation captures the most important features of the input. Once trained, the model can sample and slightly perturb points in the latent space to generate new, plausible data points, making VAEs a foundational tool in generative modeling.</p>
+
+<h3 id="generative-models">Generative models</h3>
+<p>Another major breakthrough came in 2014, when Ian Goodfellow and colleagues introduced a novel approach to generating images using neural networks <a class="citation" href="#goodfellow2014">(Goodfellow et al., 2014)</a>. Their innovation was the <strong>Generative Adversarial Network</strong> (GAN) — a framework where two neural networks are trained in opposition to each other.</p>
+
+<p>One network, the <strong>generator</strong>, attempts to produce realistic fake images, while the other, the <strong>discriminator</strong>, tries to distinguish between real and generated images. Over time, this adversarial setup drives the generator to create increasingly convincing outputs.</p>
+
+<p>According to Goodfellow himself, the idea for GANs came to him during a party. He went home, explored the concept, and had a working prototype by the next morning—a testament to how simple yet powerful the idea was.</p>
+
+<h3 id="residual-neural-networks">Residual neural networks</h3>
+<p>For a long time, training very deep neural networks was challenging due to instability and degradation—networks tended to lose or “forget” important information as it was passed through many layers. In 2015, researchers at Microsoft Research proposed a simple but powerful solution: <strong>skip connections</strong> <a class="citation" href="#he2015">(He et al., 2015)</a>.</p>
+
+<p>By allowing information to bypass one or more layers and be added directly to deeper layers, these connections helped preserve essential features and improved the flow of gradients during training. This architecture, known as a Residual Neural Network (ResNet), made it possible to train much deeper networks effectively and has since become a fundamental building block in modern deep learning.</p>
+
+<h3 id="transformers">Transformers</h3>
+<p>The <strong>Transformer</strong> architecture revolutionized natural language processing by introducing a powerful mechanism called multi-head attention. The core idea is to convert entire blocks of text into tokens—numerical representations that models can understand—and then use attention to determine which tokens are most relevant in a given context.</p>
+
+<p>While attention mechanisms were explored in the early 2010s, it wasn’t until 2017 that they reached a major breakthrough. Researchers at Google introduced the Transformer architecture, which replaced recurrent structures with a fully attention-based model that could be highly parallelized, dramatically improving training efficiency and scalability <a class="citation" href="#vaswani2017">(Vaswani et al., 2017)</a>.</p>
+
+<h3 id="diffusion-models">Diffusion models</h3>
+<p><strong>Diffusion models</strong> are a class of generative models inspired by stochastic processes in physics <a class="citation" href="#ho2020">(Ho et al., 2020)</a>. Remarkably, these models were introduced only a few years ago, yet they’ve rapidly reshaped the landscape of generative modeling. I’ve personally used diffusion models to tackle the <a href="https://evennordhagen.com/projects/inversedesign/">inverse frictional design problem</a>.</p>
+
+<p>Diffusion models have surpassed GANs in both stability and generation quality, and their capabilities go far beyond static image synthesis—they can also generate sequences of images, enabling realistic video generation.</p>
+
+<p>Modern diffusion models often operate in a compressed latent space, where the input data is first encoded using a Variational Autoencoder (VAE) <a class="citation" href="#rombach2022">(Rombach et al., 2022)</a>. These <strong>latent diffusion models</strong> significantly reduce computational costs while maintaining high generation quality, making them a state-of-the-art solution in generative modeling.</p>
+
+<h3 id="self-supervised-learning">Self-supervised learning</h3>
+<p>One of the most significant advances in recent years is <strong>self-supervised learning</strong> — a paradigm where models learn meaningful patterns from raw, unlabeled data. Instead of relying on manual annotations, models are trained using pretext tasks such as predicting missing words in a sentence, reconstructing parts of an image, or matching images to corresponding captions.</p>
+
+<h2 id="whats-next-in-machine-learning">What’s next in machine learning?</h2>
+<p>Despite recent breakthroughs, machine learning is far from reaching its peak. Looking ahead, several key developments are shaping its future.</p>
+
+<p>The hardware landscape is shifting. <strong>DeepSeek</strong> and similar models have shown that NVIDIA no longer holds an exclusive grip on AI acceleration. Competitors like AMD are catching up, leading to a more open and competitive ecosystem. Meanwhile, China’s large-scale investments in AI are beginning to pay off, with major advances in model training and deployment emerging from Chinese tech labs.</p>
+
+<p>On the software side, <strong>Edge AI</strong> is gaining traction—bringing intelligence directly to devices like phones, sensors, and robots. These models can run locally, offering faster responses and better privacy without relying on cloud infrastructure. Closely related is <strong>Agent-based AI</strong>, which moves beyond passive prediction toward systems that can reason, plan, and act autonomously in complex environments.</p>
+
+<p>Finally, entertainment industries are quickly embracing AI. In movies and video games, generative models are transforming how scenes are created, characters behave, and experiences are personalized.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Artificial intelligence has come a long way—from academic curiosity to a force transforming nearly every aspect of modern life. At the heart of this revolution lies a powerful synergy between software and hardware, algorithms and data, creativity and code. Python, thanks to its simplicity and community support, emerged as the glue that held it all together. And in hindsight, <strong>Hans Petter Langtangen</strong>’s vision to teach Python before it was mainstream turned out to be remarkably prescient.</p>
+
+<p><strong>Langtangen</strong>’s legacy lives on—not just in lines of Python code or Jupyter notebooks, but in the minds of students he inspired to think computationally, creatively, and courageously. I consider myself fortunate to be one of them.</p>
+
+<p>Feel free to drop a comment or question below if you have thoughts or experiences you’d like to share.</p>
+
+<div class="signature">
+    <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;" />
+</div>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><span id="goodfellow2014">Goodfellow, I. J., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., &amp; Bengio, Y. (2014). Generative Adversarial Networks. <i>Communications of the ACM</i>, <i>63</i>(11), 139–144. https://arxiv.org/abs/1406.2661v1</span></li>
+<li><span id="vaswani2017">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., &amp; Polosukhin, I. (2017). Attention Is All You Need. <i>Advances in Neural Information Processing Systems</i>, <i>2017-Decem</i>, 5999–6009. https://arxiv.org/abs/1706.03762v5</span></li>
+<li><span id="rumelhart1986">Rumelhart, D. E., Hinton, G. E., &amp; Williams, R. J. (1986). Learning representations by back-propagating errors. <i>Nature</i>, <i>323</i>(6088), 533. https://doi.org/10.1038/323533a0</span></li>
+<li><span id="hornik1989">Hornik, K., Stinchcombe, M., &amp; White, H. (1989). Multilayer feedforward networks are universal approximators. <i>Neural Networks</i>, <i>2</i>(5), 359. https://doi.org/10.1016/0893-6080(89)90020-8</span></li>
+<li><span id="krizhevsky2012">Krizhevsky, A., Sutskever, I., &amp; Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. <i>Communications of the ACM</i>, <i>60</i>(6), 84–90. https://doi.org/10.1145/3065386</span></li>
+<li><span id="rabinowicz1951">Rabinowicz, E. (1951). The Nature of the Static and Kinetic Coefficients of Friction. <i>Journal of Applied Physics</i>, <i>22</i>(11), 1373–1379. https://doi.org/10.1063/1.1699869</span></li>
+<li><span id="dokos1946">Dokos, S. J. (1946). Sliding Friction Under Extreme Pressures—1. <i>Journal of Applied Mechanics</i>, <i>13</i>(2), A148–A156. https://doi.org/10.1115/1.4009539</span></li>
+<li><span id="nordhagen2023a">Nordhagen, E. M., Sveinsson, H. A., &amp; Malthe-Sørenssen, A. (2023). Diffusion-Driven Frictional Aging in Silicon Carbide. <i>Tribology Letters</i>, <i>71</i>(3), 95. https://doi.org/10.1007/s11249-023-01762-z</span></li>
+<li><span id="bi2023">Bi, K., Xie, L., Zhang, H., Chen, X., Gu, X., &amp; Tian, Q. (2023). Accurate medium-range global weather forecasting with 3D neural networks. <i>Nature</i>, <i>619</i>(7970), 533–538. https://doi.org/10.1038/s41586-023-06185-3</span></li>
+<li><span id="lillicrap2020">Lillicrap, T. P., Santoro, A., Marris, L., Akerman, C. J., &amp; Hinton, G. (2020). Backpropagation and the brain. <i>Nature Reviews Neuroscience</i>, <i>21</i>(6), 335–346. https://doi.org/10.1038/s41583-020-0277-3</span></li></ol>
+
+      </div>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#AI boom">AI boom</a>
+          
+            <a href="/tags#artificial intelligence">artificial intelligence</a>
+          
+            <a href="/tags#machine learning">machine learning</a>
+          
+            <a href="/tags#Hans Petter Langtangen">Hans Petter Langtangen</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2025-05-04-ai-reflections%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2025-05-04-ai-reflections%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2024-12-27-deode/" data-toggle="tooltip" data-placement="top" title="Destination Earth - On-Demand Extremes (DE330)">
+            <i class="fas fa-arrow-left" alt="Previous Post"></i>
+            <span class="d-none d-sm-inline-block">Previous Post</span>
+          </a>
+        </li>
+        
+        
+        <li class="page-item next">
+          <a class="page-link" href="/2025-07-06-avbmc/" data-toggle="tooltip" data-placement="top" title="New Paper Out">
+            <span class="d-none d-sm-inline-block">Next Post</span>
+            <i class="fas fa-arrow-right" alt="Next Post"></i>
+          </a>
+        </li>
+        
+      </ul>
+      
+  <div class="disqus-comments">
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+	  var disqus_shortname = 'evennordhagen';
+	  /* ensure that pages with query string get the same discussion */
+	  var url_parts = window.location.href.split("?");
+	  var disqus_url = url_parts[0];
+	  (function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	  })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
+  
+  
+
+  
+
+
+  
+
+  
+
+
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:even.nordhagen@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/evenmn" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/evenmarius.nordhagen" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="tel:4748043633" title="Phone">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Phone</span>
+   </a>
+  </li><li class="list-inline-item">
+   <a href="https://orcid.org/0009-0005-3839-4011" title="ORCID">
+     <span class="fa-stack fa-lg" aria-hidden="true">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="fab fa-orcid fa-stack-1x fa-inverse"></i>
+     </span>
+     <span class="sr-only">ORCID</span>
+   </a>
+ </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=even.nordhagen@gmail.com" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li></ul>
+
+
+      
+      <p class="copyright text-muted">
+      
+        © Even Nordhagen
+        &nbsp;&bull;&nbsp;
+      
+      2025
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="/">evennordhagen.com</a>
+        </span>
+      
+
+      
+
+      
+
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

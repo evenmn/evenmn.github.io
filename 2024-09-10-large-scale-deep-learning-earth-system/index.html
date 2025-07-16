@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  
+
+  <title>Workshop on Large-scale Deep Learning for the Earth System | Even Nordhagen</title>
+
+  
+  
+  <meta name="author" content="Even Nordhagen">
+  
+
+  <meta name="description" content="My experience">
+
+  
+
+  
+  <meta name="keywords" content="Even Marius Nordhagen, Nordhagen, Even Nordhagen, machine learning, friction, molecular dynamics simulations, weather models">
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="Even Nordhagen" href="/feed.xml">
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ6Q8NX2RD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GZ6Q8NX2RD');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript">
+  MathJax = {
+    options: {
+      skipHtmlTags: [
+        'script', 'noscript', 'style', 'textarea', 'pre', 'code'
+      ]
+    }
+  };
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Even Nordhagen">
+  <meta property="og:title" content="Workshop on Large-scale Deep Learning for the Earth System | Even Nordhagen">
+  <meta property="og:description" content="My experience">
+
+  
+  <meta property="og:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
+  
+
+  
+  <meta property="og:type" content="article">
+  
+  <meta property="og:article:author" content="Even Nordhagen">
+  
+  <meta property="og:article:published_time" content="2024-09-10T00:00:00-04:00">
+  <meta property="og:url" content="/2024-09-10-large-scale-deep-learning-earth-system/">
+  <link rel="canonical" href="/2024-09-10-large-scale-deep-learning-earth-system/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Workshop on Large-scale Deep Learning for the Earth System | Even Nordhagen">
+  <meta property="twitter:description" content="My experience">
+
+  
+  <meta name="twitter:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
+  
+
+  
+
+
+  
+
+  
+  
+  <link rel="icon" href="/favicon.ico" />
+  
+
+  
+
+</head>
+
+
+<body>
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand navbar-brand-logo" href="/"><img alt="Even Nordhagen Logo" src="/assets/img/signature.png"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/projects/friction">Friction modelling</a>
+                  <a class="dropdown-item" href="/projects/inversedesign">Inverse design</a>
+                  <a class="dropdown-item" href="/projects/quantumdots">Quantum dots</a>
+                  <a class="dropdown-item" href="/projects/building-water-model">Water model</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/portrait_nordhagen_machine_learning.jpg" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "New Paper Out", \
+          "desc"     : "New Paper Out", \
+          "category" : "waternucleationVashishtaMonte CarloMetropolisAVBMC", \
+          "url"      : "/2025-07-06-avbmc/", \
+          "date"     : "July  6, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Langtangen Was Right", \
+          "desc"     : "Langtangen Was Right", \
+          "category" : "AI boomartificial intelligencemachine learningHans Petter Langtangen", \
+          "url"      : "/2025-05-04-ai-reflections/", \
+          "date"     : "May  4, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Destination Earth - On-Demand Extremes (DE330)", \
+          "desc"     : "Destination Earth - On-Demand Extremes (DE330)", \
+          "category" : "Destination EarthDestinEDE330DEODEextreme weather", \
+          "url"      : "/2024-12-27-deode/", \
+          "date"     : "December 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "desc"     : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "category" : "EuroHPCtier-0LUMILeonardo", \
+          "url"      : "/2024-10-27-european-tier-0/", \
+          "date"     : "October 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Regional Data-Driven Weather Modeling", \
+          "desc"     : "Regional Data-Driven Weather Modeling", \
+          "category" : "AIFSstretched-grid", \
+          "url"      : "/2024-09-12-stretched-grid/", \
+          "date"     : "September 12, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "desc"     : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "category" : "weather predictionmachine learningdata-driven", \
+          "url"      : "/2024-09-10-large-scale-deep-learning-earth-system/", \
+          "date"     : "September 10, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "My first blog post", \
+          "desc"     : "My first blog post", \
+          "category" : "first post", \
+          "url"      : "/2024-09-01-first-post/", \
+          "date"     : "September  1, 2024" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "About me", \
+          "desc"     : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Building a Flexible Water Model", \
+          "desc"     : "Building a Flexible Water Model", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/building-water-model/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Contact Me", \
+          "desc"     : "Contact Me", \
+          "category" : "page", \
+          "url"      : "/contact/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Friction modeling", \
+          "desc"     : "Friction modeling", \
+          "category" : "page", \
+          "url"      : "/projects/friction/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Inverse frictional design", \
+          "desc"     : "Inverse frictional design", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/inversedesign/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Publications", \
+          "desc"     : "Publications", \
+          "category" : "page", \
+          "url"      : "/publications/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "The Schrödinger equation", \
+          "desc"     : "The Schrödinger equation", \
+          "category" : "page", \
+          "url"      : "/projects/quantumdots/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Software", \
+          "desc"     : "Software", \
+          "category" : "page", \
+          "url"      : "/software/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "desc"     : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/page2/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  
+
+
+
+<header class="header-section ">
+<div class="intro-header ">
+  
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Workshop on Large-scale Deep Learning for the Earth System</h1>
+          
+            
+              <h2 class="post-subheading">My experience</h2>
+            
+          
+          
+           
+            
+              By <strong>Even Nordhagen</strong><br>
+            
+            <span class="post-meta">Posted on September 10, 2024</span>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+</header>
+
+
+<main class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+        
+        
+        
+
+        <div id="header-gh-btns">
+          
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=evenmn&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              
+            
+          
+        </div>
+      
+
+      
+
+      <div class="blog-post">
+        <p>Last week, I attended the <a href="https://cesoc.net/workshop-on-large-scale-deep-learning-for-the-earth-system/">Workshop on Large-Scale Deep Learning for the Earth System</a> in Bonn, Germany, and it was a great experience. Given that the workshop specialized in machine learning models for predicting weather and climate, it could hardly be more relevant for my current position at MET Norway. The event featured presentations on cutting-edge deep learning models for weather and climate forecasting.</p>
+
+<div class="text-center">
+    <img src="/assets/img/lsdles/university_club_bonn.png" alt="University Club Bonn" style="width: 70%;" />
+</div>
+<p><em>The workshop was held at the University Club in Bonn. Notably, Bonn is the birthplace of Ludwig van Beethoven, which explains the numerous Beethoven portraits adorning the walls. Image is taken from <a href="https://www.axona-aichi.com/projects/archives/58">https://www.axona-aichi.com/projects/archives/58</a>.</em></p>
+
+<h2 id="workshop-overview">Workshop Overview</h2>
+<p>The workshop spanned two days, with the first day dedicated to weather-related discussions and the second day focused on climate topics. While there were poster sessions and opportunities for discussion between talks, the primary emphasis was on the presentations. A total of 32 talks were delivered to an audience of 120 attendees, alongside 25 poster presentations. The schedule was densely packed, making it challenging to absorb and retain all the information.</p>
+
+<h2 id="outcomes">Outcomes</h2>
+<p>Given my primary research interests and the workshop’s intensive schedule, I will focus this post on the weather-related presentations from Day 1 that particularly captivated me. Despite the wide range of topics covered, certain themes were more prominent than others. Here are the hottest topics:</p>
+
+<ul>
+  <li>Transitioning from deterministic to probabilistic models (ensemble models)</li>
+  <li>Integration of direct observations with end-to-end machine learning pipelines</li>
+  <li>Prediction of extreme weather events</li>
+</ul>
+
+<p>Beyond the scientific insights gained from the workshop, the experience also offered valuable networking opportunities. It was enlightening to meet new colleagues and connect with individuals I had previously only interacted with online. The exchange of ideas and the inspiration derived from these interactions were equally rewarding.</p>
+
+<div class="text-center">
+    <img src="/assets/img/lsdles/IMG_5006.jpeg" alt="Us" style="width: 70%;" />
+</div>
+<p><em>From stretched-grid presentation.</em></p>
+
+<h3 id="regional-models">Regional Models</h3>
+<p>While regional models were not the focus of most presentations at the workshop, I will discuss them first as they align closely with my current work. The second talk of the workshop, presented by Magnus, introduced our global stretched-grid graph neural network (GNN) for regional weather prediction. We have recently released a preprint of our work (<a href="https://arxiv.org/abs/2409.02891">arXiv:2409.02891</a>), and I’m eager to share a detailed post about it soon.</p>
+
+<p>Limited Area Modeling (LAM) is a well-established method for regional weather forecasting, wherein the boundaries of the limited area are updated through a separate global model. Joel Oskarsson et al. explored this technique combined with machine learning models to predict the weather over the Nordic regions (<a href="http://arxiv.org/abs/2309.17370">arXiv:2309.17370</a>). This approach has now been extended to a probabilistic model based on hierarchical GNNs, which Oskarsson presented at the workshop. In this method, an ensemble of members is generated through a rapid one-step process, providing uncertainty estimates and a skillful distribution of ensemble members (<a href="http://arxiv.org/abs/2406.04759">arXiv:2406.04759</a>). Although promising, their performance evaluation was limited to a 10 km spatial resolution.</p>
+
+<p>Another notable presentation was FengWu-GHR, a regional forecast system for China. Their approach significantly differs as they develop a global weather model with a high resolution of 0.09° (10 km) (<a href="http://arxiv.org/abs/2402.00059">arXiv:2402.00059</a>). However, this method has several drawbacks. Firstly, the high-resolution model does not align with standard criteria for operational regional forecasts, which typically prefer a resolution of 1-3 km. Secondly, training such a model is resource-intensive, especially if the primary interest is regional weather phenomena. Their model comprises 4 billion learnable parameters, which is 16 times the number of parameters we employ, despite our regional resolution being four times higher.</p>
+
+<h3 id="from-deterministic-to-probabilistic-models">From Deterministic to Probabilistic Models</h3>
+<p>Probabilistic models, particularly those relying on ensembles, have become a focal point in the field of machine learning for weather prediction, and for good reason. First, these models are capable of estimating the uncertainty of a forecast, a feature that current conventional operational models utilize by incorporating ensembles. Machine learning models trained with a mean-squared error loss often suffer from the double-penalty problem. This issue arises when a model predicts an event slightly off from its actual position in space and time, resulting in two penalties: one for predicting the event at the wrong location or time, and another for not predicting it at the correct location or time. Consequently, such models tend to smooth the fields rather than predicting sharp events, such as extreme wind and precipitation occurrences.</p>
+
+<p>Ensemble models, however, are evaluated using probabilistic metrics like the Continuous Ranked Probability Score (CRPS). This approach mitigates the double-penalty problem and allows for sharper predictions. The first presentation of the workshop, given by Simon Lang, discussed the integration of ensembles in the Artificial Intelligence Forecasting System (AIFS) code (<a href="http://arxiv.org/abs/2406.01465">arXiv:2406.01465</a>). He highlighted two methods for creating ensembles: optimizing probabilistic scores with CRPS loss and generating fields using a generative diffusion model. Lang demonstrated that the ensemble approach eliminates the smoothing problem and yields better results than leading conventional ensemble models.</p>
+
+<p>Martin Andrae presented an innovative concept where diffusion models are conditioned on lead time, enabling them to generate sequential forecasts in parallel (<a href="https://martinandrae.github.io/Continuous-Ensemble-Forecasting/">martinandrae.github.io/Continuous-Ensemble-Forecasting</a>). Although the idea is promising, I have reservations about the complexity and practicality of training such a model.</p>
+
+<div class="text-center">
+    <img src="/assets/img/lsdles/extreme_precip_watson.png" alt="Extreme precipitation" style="width: 70%;" />
+</div>
+<p><em>Machine learning diffusion models can predict extreme precipitation. The column on the left shows results from a convection-permitting model (CPM), while the last two columns display two samples generated by the diffusion model. The upper two rows depict extreme precipitation events during winter (December to February, DJF), and the lower two rows are for summer (June to August, JJA). “Wet” indicates a chosen rainy day, and “wettest” represents the wettest day in the test dataset. This slide is from Peter Watson’s talk (<a href="https://arxiv.org/abs/2407.14158">arXiv:2407.14158</a>).</em></p>
+
+<h3 id="extreme-weather-prediction">Extreme Weather Prediction</h3>
+<p>Forecasting extreme weather events is among the most critical responsibilities of meteorological institutes worldwide. To achieve accurate predictions, ensemble models must be developed as discussed earlier. Several presentations at the workshop addressed this topic, including Peter Watson’s “Extreme Precipitation,” which introduced and evaluated a probabilistic diffusion model for predicting extreme precipitation events (<a href="https://arxiv.org/abs/2407.14158">arXiv:2407.14158</a>). The model successfully predicted extreme precipitation, including the rainiest day in the test dataset (refer to the figure above).</p>
+
+<p>A poster by Leonardo Olivetti compared deterministic machine learning models for extreme weather prediction (<a href="https://cesoc.net/wp-content/uploads/2024/08/Leonardo_Olivetti_Poster_LSDES.pdf">see poster here</a>). These models were found to perform poorly on extreme events at long lead times, particularly for extreme wind speeds, mainly due to smoothing. Olivetti also mentioned that machine learning models struggle with wind predictions due to the u-v decomposition, although we observed no improvement when switching to polar coordinates for wind variables. The workshop concluded with a commitment to making extreme weather forecasting a more central topic in next year’s event.</p>
+
+<h3 id="direct-use-of-observations">Direct Use of Observations</h3>
+<p>Current data-driven models for weather prediction are typically trained on analyses provided by physics-based data assimilation (DA) systems. These systems create regular grids of key variables such as temperature, pressure, wind speed, and precipitation by interpolating between observations. However, during this process, a significant amount of observational data is discarded due to uncertainties and mismatches, leading to potential loss of valuable information. One central theme of the workshop was how to utilize observations directly in machine learning models. Direct observations refer to raw data collected straight from surface stations, satellites, and radars. The challenge lies in the sparse distribution of these observations, which requires the model to handle arbitrary grids. Graph Neural Networks (GNNs) have the capability to manage such inputs effectively.</p>
+
+<p>Direct observations can be integrated into machine learning models in three primary ways:</p>
+<ul>
+  <li>Enhancing the initial state for a forecast</li>
+  <li>Serving as additional input during training</li>
+  <li>Acting as the sole input for end-to-end machine learning models</li>
+</ul>
+
+<p>Christian Lessig presented on training and initializing models directly from observations. He suggested using both local and global neural networks for assimilation, and a separate network for forecasting (<a href="https://arxiv.org/abs/2407.15586">arXiv:2407.15586</a>). Training these networks involves a sophisticated pre-training procedure: Lessig advocated for masking observations to learn probability distributions between them. This method ensures that the network correctly interpolates between observations in space and time, a concept I find very intriguing. However, I’m skeptical about the necessity of having two separate networks for data assimilation and forecasting. A more elegant solution might be to input the observations directly into the forecasting network without converting the initial state into a regular grid. Of course, when rolling out a forecast, the input will eventually be on a regular grid for subsequent lead times as the network output, but the models don’t need to restrict themselves to a specific input grid.</p>
+
+<p>Anna Vaughan discussed the end-to-end model Aardvark, which follows a typical encoder-decoder architecture. They made a notable observation: the model’s performance improved by 25% when trained on both direct observations and ERA5, as opposed to only on direct observations. Additionally, the model showed similar performance to ECMWF’s HRES forecast, although this comparison was made at a 1.41° spatial resolution. It’s important to highlight that both models mentioned were proof-of-concept rather than fully optimized solutions.</p>
+
+<div class="text-center">
+    <img src="/assets/img/lsdles/direct_observations_lessig.png" alt="Direct observations" style="width: 70%;" />
+</div>
+<p><em>The task of converting sparse observations into comprehensive field predictions is formidable. Slide from Christian Lessig’s presentation (<a href="https://arxiv.org/abs/2407.15586">arXiv:2407.15586</a>).</em></p>
+
+<h2 id="conclusions">Conclusions</h2>
+<p>There is no doubt that data-driven models represent the future of weather forecasting. Despite the challenges that arise in developing these models, such as the smoothing problem, viable solutions exist to address these issues. Data-driven models are anticipated to be more versatile than traditional numerical weather prediction models, with the potential to directly incorporate raw observations, as previously discussed.</p>
+
+<p>The technology is now available to develop cutting-edge operational probabilistic models, both regional and global, that feature high spatial and temporal resolution. These models can incorporate direct inputs from a variety of sparse observations, including those from SYNOP stations, satellite radiances, radar, and airplanes. Although the development and testing of these models are time-consuming processes, the current focus on data-driven approaches in weather forecasting suggests that advancements will continue at a rapid pace.</p>
+
+<p>One of the primary responsibilities of meteorological institutes is to issue warnings for extreme weather to safeguard life and property. Therefore, I hope to see an even greater emphasis on extreme weather prediction at the next workshop on large-scale deep learning for the Earth system. I look forward to attending and contributing again next year!</p>
+
+<p>Feel free to drop a comment or question below if you have thoughts or experiences you’d like to share.</p>
+
+<div class="signature">
+    <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;" />
+</div>
+
+      </div>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#weather prediction">weather prediction</a>
+          
+            <a href="/tags#machine learning">machine learning</a>
+          
+            <a href="/tags#data-driven">data-driven</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2024-09-10-large-scale-deep-learning-earth-system%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2024-09-10-large-scale-deep-learning-earth-system%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2024-09-01-first-post/" data-toggle="tooltip" data-placement="top" title="My first blog post">
+            <i class="fas fa-arrow-left" alt="Previous Post"></i>
+            <span class="d-none d-sm-inline-block">Previous Post</span>
+          </a>
+        </li>
+        
+        
+        <li class="page-item next">
+          <a class="page-link" href="/2024-09-12-stretched-grid/" data-toggle="tooltip" data-placement="top" title="Regional Data-Driven Weather Modeling">
+            <span class="d-none d-sm-inline-block">Next Post</span>
+            <i class="fas fa-arrow-right" alt="Next Post"></i>
+          </a>
+        </li>
+        
+      </ul>
+      
+  <div class="disqus-comments">
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+	  var disqus_shortname = 'evennordhagen';
+	  /* ensure that pages with query string get the same discussion */
+	  var url_parts = window.location.href.split("?");
+	  var disqus_url = url_parts[0];
+	  (function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	  })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
+  
+  
+
+  
+
+
+  
+
+  
+
+
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:even.nordhagen@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/evenmn" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/evenmarius.nordhagen" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="tel:4748043633" title="Phone">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Phone</span>
+   </a>
+  </li><li class="list-inline-item">
+   <a href="https://orcid.org/0009-0005-3839-4011" title="ORCID">
+     <span class="fa-stack fa-lg" aria-hidden="true">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="fab fa-orcid fa-stack-1x fa-inverse"></i>
+     </span>
+     <span class="sr-only">ORCID</span>
+   </a>
+ </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=even.nordhagen@gmail.com" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li></ul>
+
+
+      
+      <p class="copyright text-muted">
+      
+        © Even Nordhagen
+        &nbsp;&bull;&nbsp;
+      
+      2025
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="/">evennordhagen.com</a>
+        </span>
+      
+
+      
+
+      
+
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
