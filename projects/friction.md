@@ -31,12 +31,12 @@ To investigate our hypothesis from above, we may perform experiments where we me
 
 (image -- gif of contact evolution)
 
-To gain new insights into time dependent friction, I have performed simulations of a single contact point as two surfaces get into contact. What we observed was that surface atoms tend to gather around the contact, increasing the actual contact area between the surfaces and making the interface stronger. This is possible because of surface diffusion and the fact that atoms are strongly bounded around the contact. I refer to {% cite nordhagen2023 %} for more details.
+To gain new insights into time dependent friction, I have performed simulations of a single contact point as two surfaces get into contact. What we observed was that surface atoms tend to gather around the contact, increasing the actual contact area between the surfaces and making the interface stronger. This is possible because of surface diffusion and the fact that atoms are strongly bounded around the contact. I refer to {% cite nordhagen2023a %} for more details.
 
 ## Sliding friction
 Most people think about sliding when friction is mentioned. I have already mentioned the connection between static and dynamic friction, and the theory above has some important implications on the behavior of sliding friction. At low relative velocities between surfaces, the surfaces will stick for a period, then slip and then stick again, conveniently called stick-slip friction. During the stick phase, the two surfaces are attached like they where stationary*, but with a contact time that decreases with increasing relative velocity (the contact time is inversely proportional to the velocity). Since friction increases with increasing contact times, friction will hence decrease with increasing velocity. This dependency has been known since the 1940's {% cite dokos1946 %}, but was not explained until later.
 
-*This is a logical assumption, but according to some recent works the interface may evolve differently under shear stress than normal stress, even though the interfaces initially are identical {% cite kilgore2009 %}
+*This is a logical assumption, but according to some recent works the interface may evolve differently under shear stress than normal stress, even though the interfaces initially are identical {% cite kilgore2012 kilgore2017 %}
 
 (image gif showing sliding asperity)
 

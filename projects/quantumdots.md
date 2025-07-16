@@ -22,7 +22,7 @@ To challenge the classical methods, we have developed a machine learning approac
 
 This important because it means we can optimize $$\Psi$$ with respect to minimizing $$E$$ in order to find the ground state. And once $$E$$ is minimized, we have the ground state wavefunction $$\Psi_0$$, which in principle provides all the information about the system.
 
-This idea is not innovative. In fact, the foundation of this methodology, known as variational Monte Carlo (VMC), was laid in the 1950's and has since been very successful {% cite metropolis1949 %}. However, the method requires an initial wavefunction guess, or a *trial wavefunction*, which again requires some insight about the system. Convergence of the method is sensitive to the trial wavefunction, which can be highly non-trivial for complex systems. One way to make the approach more general is to replace the trial wavefunction by a neural network, known for its flexibility {% cite hornik1986 %}. The idea was inspired by neural quantum states {% cite carleo2015 %} and FermiNet {% cite pfau2019 %}.
+This idea is not innovative. In fact, the foundation of this methodology, known as variational Monte Carlo (VMC), was laid in the 1950's and has since been very successful {% cite metropolis1949 %}. However, the method requires an initial wavefunction guess, or a *trial wavefunction*, which again requires some insight about the system. Convergence of the method is sensitive to the trial wavefunction, which can be highly non-trivial for complex systems. One way to make the approach more general is to replace the trial wavefunction by a neural network, known for its flexibility {% cite hornik1989 %}. The idea was inspired by neural quantum states {% cite carleo2017 %} and FermiNet {% cite pfau2020 %}.
 
 For our full paper, please see [*Front. Phys.*, 11:1061580](https://www.frontiersin.org/articles/10.3389/fphy.2023.1061580).
 
@@ -107,7 +107,7 @@ Here, it is important to draw the system samples from the correct probability di
 Once we have calculated the system energy $$E_T$$. However, to change $$\Psi_T$$ in order to minimize the energy $$E_T$$, we need to know how $$E_T$$ changes as we change the parameters in $$\Psi_T$$, $$\theta$$. We need to know $$dE_T(\theta)/d\theta$$. 
 
 ## References
-{% bibliography --query @article %}
+{% bibliography --file quantumdots %}
 
 Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 

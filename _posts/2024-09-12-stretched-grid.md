@@ -50,7 +50,7 @@ However, the model performs less effectively in predicting instantaneous wind, c
 We have developed a highly effective machine learning model for regional weather prediction. The model performs as well as or better than leading numerical weather prediction models in terms of temperature and precipitation. However, due to smoothing, it struggles to predict sharp features such as strong winds, convection, and other extreme events. We plan to address this by implementing an ensemble approach. Additionally, our model generates forecasts significantly faster than conventional numerical weather prediction models, enabling more frequent high-resolution forecasts.
 
 ## References
-{% bibliography --query @article %}
+{% bibliography --file stretched-grid %}
 
 Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 
