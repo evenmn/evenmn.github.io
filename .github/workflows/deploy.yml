@@ -1,4 +1,4 @@
-name: Build and Deploy Jekyll with Scholar
+name: Jekyll Build and Deploy with Scholar
 
 on:
   push:
@@ -12,16 +12,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-ruby@v1
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
+          ruby-version: '3.0'  # Ruby 3.0 works with Jekyll 3.10 and jekyll-scholar
+          bundler-cache: true
 
       - name: Install dependencies
         run: |
-          gem install bundler
           bundle install
 
-      - name: Build site
+      - name: Build the site
         run: bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
