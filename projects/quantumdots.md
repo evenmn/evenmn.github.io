@@ -6,7 +6,7 @@ mathjax: true
 ---
 
 <img src="/assets/img/quantum_dots/onebody.png" alt="One-body" class="mx-auto d-block">
-<p><em>The one-body density determines the probability of finding a particle at a certain distance from another particle. Here, applied on quantum dots with machine learning prediction to the left and classical method to the right</em></p>
+*The one-body density determines the probability of finding a particle at a certain distance from another particle. Here, applied on quantum dots with machine learning prediction to the left and classical method to the right*
 
 
 $$\hat{\mathcal{H}}\Psi=E\Psi$$
