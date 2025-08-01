@@ -42,6 +42,10 @@ Most people think about sliding when friction is mentioned. I have already menti
 
 ## Friction-velocity relationship
 I have performed simulations to investigate the friction-velocity relationship, where the approach is to slide a single contact at various velocities and temperatures. We observe that the friction-velocity curves feature multiple regimes, some where friction increases with velocity and some where friction decreases with velocity. [To be published].
+A decreasing friction with increasing sliding velocities at low velocities and increasing friction with increasing velocity at high velocities has been observed in many materials, and has even been suggested as a universal property across all materials {% cite bar-sinai2014 %}.
+
+## Wear-velocity relationship
+Similar to friction, also wear displays multiple velocity regimes. At low velocities, wear decreases with increasing velocity. At high velocities, wear increases with increasing velocity. This gives a local minimum in wear, similar to friction. Important implications. Not linear with friction.
 
 <img src="/assets/img/friction/paper2_fig2.png" alt="Relationship" class="img-responsive-center">
 <p><em>Friction vs. velocity</em></p>
