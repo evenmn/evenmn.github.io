@@ -8,7 +8,9 @@ Below follows an incomplete list of publications and preprints that I have co-au
 
 ## Journal Articles
 
-{% bibliography --query hornik1989 %}
+<a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c02768" style="color: black; text-decoration: none;">
+  <strong>EM Nordhagen, HA Sveinsson, A Malthe-Sørenssen</strong>. <em>Tailoring Frictional Properties of Surfaces Using Diffusion Models</em>. <strong>The Journal of Physical Chemistry C</strong> (2025).
+</a><br>
 
 <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.5c00722" style="color: black; text-decoration: none;">
   <strong>AVC Camposano, EM Nordhagen, A Malthe-Sørenssen, HA Sveinsson</strong>. <em>An Extended Energy-Biased Aggregation-Volume-Bias Monte Carlo (EB-AVBMC) Method for Nucleation Simulation of a Reactive Water Potential</em>. <strong>Journal of Chemical Theory and Computation</strong> (2025).
@@ -34,10 +36,6 @@ Below follows an incomplete list of publications and preprints that I have co-au
 
 <a href="http://arxiv.org/abs/2409.02891" style="color: black; text-decoration: none;">
   <strong>TN Nipen, HH Haugen, MS Ingstad, EM Nordhagen, AFS Salihi, et al.</strong> <em>Regional Data-driven Weather Modeling with a Global Stretched-Grid</em>. arXiv:2409.02891 (2024).
-</a><br>
-
-<a href="http://arxiv.org/abs/2401.05206" style="color: black; text-decoration: none;">
-  <strong>EM Nordhagen, HA Sveinsson, A Malthe-Sørenssen</strong>. <em>Tailoring Frictional Properties of Surfaces Using Diffusion Models</em>. arXiv:2401.05206 (2024).
 </a><br>
 
 <a href="https://www.researchsquare.com/article/rs-6330930/v1" style="color: black; text-decoration: none;">
