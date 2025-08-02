@@ -35,7 +35,7 @@ Here, $$\nabla_{\theta}$$ is the gradient of the system energy with respect to a
 *Caption*
 
 ## Application: Quantum dots
-This method is general, and can in principle be applied to any quantum mechanical system, such as atoms and molecules. However, the system size is limited by the computational cost of the system energy and gradients, and we are in practice restricted to small systems of a few atoms. As a proof of concept, we apply the methodology to quantum dots, which have natural and cheap to calculate basis functions in the Hermite polynomials. Also, the quantum dots have significant applications in the field of technology.
+This method is general, and can in principle be applied to any quantum mechanical system, such as atoms and molecules. However, the system size is limited by the computational cost of the system energy and gradients, and we are in practice restricted to small systems such as single atoms or small molecules. As a proof of concept, we apply the methodology to quantum dots, which have natural and cheap to calculate basis functions in the Hermite polynomials. Also, the quantum dots have significant applications in the field of technology.
 
 (show quantum dots)
 
