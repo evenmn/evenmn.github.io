@@ -29,7 +29,8 @@ Additionally, the students learn about static and dynamics friction as two indep
 ## Time dependent friction
 To investigate our hypothesis from above, we may perform experiments where we measure the static friction force at different contact times. In fact, these kinds of experiments have been performed since the 1950's {% cite rabinowicz1951 %}. They show the same behavior across a long range of materials: the longer an interface is in contact, the stronger friction. When you think about it, it is not very surprising. Imagine that you face some fresh, smoking hot asphalt. If you walk on the asphalt, you will probably not have a problem, but once you stop, your shoes will stick to the asphalt and if you wait long enough you may get stuck. You can think of it like the shoes gradually "grows" into the asphalt. Even though this is a quite extreme example, it is reminiscent to the process that happens in every friction process. Despite many suggestions, the underlying mechanisms of this time dependent behavior remains elusive. 
 
-(image -- gif of contact evolution)
+<img src="/assets/img/friction/contact_evolution.gif" alt="Sliding friction" class="img-responsive-center">
+<p><em>Contact evolution.</em></p>
 
 To gain new insights into time dependent friction, I have performed simulations of a single contact point as two surfaces get into contact. What we observed was that surface atoms tend to gather around the contact, increasing the actual contact area between the surfaces and making the interface stronger. This is possible because of surface diffusion and the fact that atoms are strongly bounded around the contact. I refer to {% cite nordhagen2023a %} for more details.
 
@@ -53,7 +54,10 @@ Similar to friction, also wear displays multiple velocity regimes. At low veloci
 <img src="/assets/img/friction/wear.jpg" alt="Frictional aging" class="img-responsive-center">
 <p><em>Wear for three different sliding velocities..</em></p>
 
-Even though friction and wear have similar characteristics with velocity, they are not linear - in fact it turns out that wear increases exponentially with friction. This is a mechanism that has been suggested by Jacobs and Carpick {% cite jacobs2011 %}.
+<img src="/assets/img/friction/wear.gif" alt="Sliding friction" class="img-responsive-center">
+<p><em>Wear.</em></p>
+
+Even though friction and wear have similar characteristics with velocity, they are not linear - in fact it turns out that wear increases exponentially with friction. This is a mechanism that has been suggested by Jacobs and Carpick {% cite jacobs2013 %}.
 
 ## References
 {% bibliography --file friction %}
