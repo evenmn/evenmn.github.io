@@ -48,7 +48,12 @@ A decreasing friction with increasing sliding velocities at low velocities and i
 <p><em>Friction vs. velocity</em></p>
 
 ## Wear-velocity relationship
-Similar to friction, also wear displays multiple velocity regimes. At low velocities, wear decreases with increasing velocity. At high velocities, wear increases with increasing velocity. This gives a local minimum in wear, similar to friction. The fact that wear is minimal at certain velocities has many important implications, especially in the industry. Not linear with friction.
+Similar to friction, also wear displays multiple velocity regimes. At low velocities, wear decreases with increasing velocity. At high velocities, wear increases with increasing velocity. This gives a local minimum in wear, similar to friction. The fact that wear is minimal at certain velocities has many important implications, with many industrial applications. 
+
+<img src="/assets/img/friction/wear.jpg" alt="Frictional aging" class="img-responsive-center">
+<p><em>Wear for three different sliding velocities..</em></p>
+
+Even though friction and wear have similar characteristics with velocity, they are not linear - in fact it turns out that wear increases exponentially with friction. This is a mechanism that has been suggested by Jacobs and Carpick {% cite jacobs2011 %}.
 
 ## References
 {% bibliography --file friction %}
