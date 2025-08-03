@@ -22,8 +22,6 @@ After completing my master’s, I pursued a PhD focused on [friction at the nano
 
 In May 2024, I joined MET Norway as a researcher, working on developing machine learning models for high-resolution weather forecasting in the Nordics. Machine learning has recently shown great promise in global weather forecasting due to its accuracy and efficiency, and we're building on this momentum with a regional model. (You can check out our preprint here: [arXiv:2409.02891](https://arxiv.org/abs/2409.02891)).
 
-Looking back, I’ve noticed a trend in my academic journey: the scale of the systems I’ve modeled keeps growing. I started with single atoms, moved on to nanoscale systems with millions of atoms, and now I’m working on atmospheric-scale weather systems. Maybe the next step is cosmological modeling?
-
 ## Summary
 ### Education
 
