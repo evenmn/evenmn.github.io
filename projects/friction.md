@@ -42,7 +42,8 @@ Most people think about sliding when friction is mentioned. I have already menti
 (image gif showing sliding asperity)
 
 ## Friction-velocity relationship
-I have performed simulations to investigate the friction-velocity relationship, where the approach is to slide a single contact at various velocities and temperatures. We observe that the friction-velocity curves feature multiple regimes, some where friction increases with velocity and some where friction decreases with velocity. [To be published].
+I have performed simulations to investigate the friction-velocity relationship, where the approach is to slide a single contact at various velocities and temperatures. We observe that the friction-velocity curves feature multiple regimes, some where friction increases with velocity and some where friction decreases with velocity (<a href="https://rdcu.be/ey2fz" style="color: black; text-decoration: none;"> <strong>EM Nordhagen, HA Sveinsson, A Malthe-Sørenssen</strong>. <em>Velocity-Dependent Dynamics of Friction and Wear</em> <strong>Tribology Letters</strong> 73, 115 (2025). </a><br>)
+
 A decreasing friction with increasing sliding velocities at low velocities and increasing friction with increasing velocity at high velocities has been observed in many materials, and has even been suggested as a universal property across all materials {% cite bar-sinai2014 %}.
 
 <img src="/assets/img/friction/paper2_fig2.png" alt="Relationship" class="img-responsive-center">
@@ -53,9 +54,6 @@ Similar to friction, also wear displays multiple velocity regimes. At low veloci
 
 <img src="/assets/img/friction/wear.jpg" alt="Frictional aging" class="img-responsive-center">
 <p><em>Wear for three different sliding velocities..</em></p>
-
-<img src="/assets/img/friction/wear.gif" alt="Sliding friction" class="img-responsive-center">
-<p><em>Wear.</em></p>
 
 Even though friction and wear have similar characteristics with velocity, they are not linear - in fact it turns out that wear increases exponentially with friction. This is a mechanism that has been suggested by Jacobs and Carpick {% cite jacobs2013 %}.
 
