@@ -8,7 +8,7 @@ Below follows an incomplete list of publications and preprints that I have co-au
 
 ## Journal Articles
 
-<a href="https://link.springer.com/article/10.1007/s11249-025-02045-5?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20250802&utm_content=10.1007%2Fs11249-025-02045-5" style="color: black; text-decoration: none;">
+<a href="https://rdcu.be/ey2fz" style="color: black; text-decoration: none;">
   <strong>EM Nordhagen, HA Sveinsson, A Malthe-Sørenssen</strong>. <em>Velocity-Dependent Dynamics of Friction and Wear</em> <strong>Tribology Letters</strong> 73, 115 (2025).
 </a><br>
 
