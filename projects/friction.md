@@ -24,7 +24,7 @@ where $$F_R$$ is the frictional force, $$\mu$$ is the friction coefficient and $
 Additionally, the students learn about static and dynamics friction as two independent phenomena, whereas static friction is the resistance force when two surfaces are stationary and dynamic friction is the resistance force of two substrates of relative motion. However, as no substrate is totally rigid, the substrates will deform when they are in contact and have a relative motion, making the interface in contact for a short time period. Consequently, dynamic friction is actually static, but with a very short contact time! So why do we observe a difference in the measured friction in the static and dynamic case then? The only logical explanation is that the contact time plays an important role.
 
 <img src="/assets/img/friction/fig0.png" alt="Frictional aging" class="img-responsive-center">
-<p><em>Frictional aging. The contsct area increases with contact time.</em></p>
+<p><em>Frictional aging. The contact area increases with contact time.</em></p>
 
 ## Time dependent friction
 To investigate our hypothesis from above, we may perform experiments where we measure the static friction force at different contact times. In fact, these kinds of experiments have been performed since the 1950's {% cite rabinowicz1951 %}. They show the same behavior across a long range of materials: the longer an interface is in contact, the stronger friction. When you think about it, it is not very surprising. Imagine that you face some fresh, smoking hot asphalt. If you walk on the asphalt, you will probably not have a problem, but once you stop, your shoes will stick to the asphalt and if you wait long enough you may get stuck. You can think of it like the shoes gradually "grows" into the asphalt. Even though this is a quite extreme example, it is reminiscent to the process that happens in every friction process. Despite many suggestions, the underlying mechanisms of this time dependent behavior remains elusive. 
@@ -53,7 +53,7 @@ A decreasing friction with increasing sliding velocities at low velocities and i
 Similar to friction, also wear displays multiple velocity regimes. At low velocities, wear decreases with increasing velocity. At high velocities, wear increases with increasing velocity. This gives a local minimum in wear, similar to friction. The fact that wear is minimal at certain velocities has many important implications, with many industrial applications. 
 
 <img src="/assets/img/friction/wear.jpg" alt="Frictional aging" class="img-responsive-center">
-<p><em>Wear for three different sliding velocities and two different temperatures. Note that wear is minimized at the two intermediate velocities for both temperatures.</em></p>
+<p><em>Wear for three different sliding velocities and two different temperatures. Note that wear is minimized at the intermediate velocity for both temperatures.</em></p>
 
 Even though friction and wear have similar characteristics with velocity, they are not linear - in fact it turns out that wear increases exponentially with friction. The mechanism behind thid has previously been suggested by Jacobs and Carpick {% cite jacobs2013 %}.
 
