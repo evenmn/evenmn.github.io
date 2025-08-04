@@ -11,14 +11,14 @@
 
   
 
-  <title>Inverse frictional design | Even Nordhagen</title>
+  <title>Inverse Frictional Design | Even Nordhagen</title>
 
   
   
   <meta name="author" content="Even Nordhagen">
   
 
-  <meta name="description" content="using diffusion models">
+  <meta name="description" content="Leveraging Diffusion Models">
 
   
 
@@ -103,8 +103,8 @@
 
   
   <meta property="og:site_name" content="Even Nordhagen">
-  <meta property="og:title" content="Inverse frictional design | Even Nordhagen">
-  <meta property="og:description" content="using diffusion models">
+  <meta property="og:title" content="Inverse Frictional Design | Even Nordhagen">
+  <meta property="og:description" content="Leveraging Diffusion Models">
 
   
   <meta property="og:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
@@ -122,8 +122,8 @@
   <meta name="twitter:site" content="@">
   <meta name="twitter:creator" content="@">
 
-  <meta property="twitter:title" content="Inverse frictional design | Even Nordhagen">
-  <meta property="twitter:description" content="using diffusion models">
+  <meta property="twitter:title" content="Inverse Frictional Design | Even Nordhagen">
+  <meta property="twitter:description" content="Leveraging Diffusion Models">
 
   
   <meta name="twitter:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
@@ -305,8 +305,8 @@
         }, \
        \
         { \
-          "title"    : "Inverse frictional design", \
-          "desc"     : "Inverse frictional design", \
+          "title"    : "Inverse Frictional Design", \
+          "desc"     : "Inverse Frictional Design", \
           "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
           "url"      : "/projects/inversedesign/", \
           "date"     : "January 1, 1970" \
@@ -378,11 +378,11 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="page-heading">
-          <h1>Inverse frictional design</h1>
+          <h1>Inverse Frictional Design</h1>
           
             
               <hr class="small">
-              <span class="page-subheading">using diffusion models</span>
+              <span class="page-subheading">Leveraging Diffusion Models</span>
             
           
           
@@ -407,44 +407,58 @@
 
       <hr />
 
-<p>Measuring the frictional coefficient between two surfaces is a trivial task, and has been performed for many centuries. Given the surface’s topology, the frictional coefficient can be found by experiments or simulations.</p>
+<p>Measuring the frictional coefficient between two surfaces is a well-established task, performed for centuries through both experiments and simulations.<br />
+However, the inverse problem—<strong>designing a surface that yields a desired frictional coefficient</strong>—is far more challenging. We refer to this task as <em>inverse frictional design</em>. Traditional approaches rely on computationally intensive algorithms and deep physical insight.</p>
 
-<p>The inverse operation where a surface … We call this inverse frictional design. Existing inverse design algorithms are computationally intensive, and require significant insights about the physics of the problem. Here, we propose a machine learning approach based on a conditional diffusion model where surfaces are skillfully generated for given friction coefficient.</p>
+<p>Here, we propose a novel machine learning approach using a <strong>conditional diffusion model</strong> to generate surfaces that exhibit target frictional properties.</p>
 
-<p>To be continued.</p>
+<p><img src="/assets/img/inversedesign/img1.jpeg" alt="Inverse design" style="width: 50%;" /></p>
+<p><em>Molecular dynamics simulations are used to evaluate the frictional properties of generated surfaces.</em></p>
+
+<h2 id="methodology">Methodology</h2>
+<p>Our approach falls within the category of generative AI, borrowing techniques from image synthesis. Specifically, we use a <strong>diffusion model</strong> capable of iteratively denoising a random sample until it matches the learned distribution.<br />
+In this context, the sample corresponds to a surface topography, and the model is conditioned on the <strong>static friction force</strong>. Similar strategies have recently been applied in material science, such as by Bastek &amp; Kochmann <a class="citation" href="#bastek2023">(Bastek &amp; Kochmann, 2023)</a>.</p>
+
+<h3 id="dataset">Dataset</h3>
+<p>To construct our training dataset, we generated surface topographies using <strong>simplex noise</strong> <a class="citation" href="#perlin2002">(Perlin, 2002)</a>, which produces visually realistic structures.<br />
+Each surface served as the initial condition for molecular dynamics simulations, where we measured the resulting static friction force.<br />
+The dataset—comprising <strong>10,000 surfaces paired with frictional measurements</strong>—represented the most computationally demanding part of this work.</p>
+
+<p><img src="/assets/img/inversedesign/img2.jpeg" alt="Inverse design" style="width: 90%;" /></p>
+<p><em>Methodology overview.</em></p>
+
+<h3 id="model-training">Model Training</h3>
+<p>We employ a <strong>UNet architecture</strong> as the denoising backbone of our diffusion model.<br />
+Once trained, the network can generate a surface designed to exhibit a specified static friction force.<br />
+We validate this by simulating the generated surfaces and comparing the measured friction to the target values.</p>
+
+<h2 id="results">Results</h2>
+<p>The generated surfaces closely match the desired static friction forces.</p>
+
+<p><img src="/assets/img/inversedesign/img3.jpeg" alt="Inverse design" class="img-responsive-center" /></p>
+<p><em>Comparison between real surfaces (upper three rows) and generated surfaces (lower three rows).</em></p>
+
+<p>Interestingly, we find that <strong>cluster size</strong> is the dominant factor affecting friction when the real contact area is standardized.<br />
+Contrary to common expectations, a <strong>few large contact clusters</strong> produce stronger frictional interfaces than many small ones.</p>
+
+<hr />
+
+<p>Read the full article here:<br />
+<a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c02768" style="color: black; text-decoration: none;">
+  <strong>EM Nordhagen, HA Sveinsson, A Malthe-Sørenssen</strong>.<br />
+  <em>Tailoring Frictional Properties of Surfaces Using Diffusion Models</em>.<br />
+  <strong>The Journal of Physical Chemistry C</strong> (2025).
+</a><br /></p>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><span id="perlin2002">Perlin, K. (2002). Improving Noise. <i>ACM Transactions on Graphics</i>, 681–682. https://doi.org/10.1145/566570.566636</span></li>
+<li><span id="bastek2023">Bastek, J.-H., &amp; Kochmann, D. M. (2023). Inverse design of nonlinear mechanical metamaterials via video denoising diffusion models. <i>Nature Machine Intelligence</i>, <i>5</i>(12), 1466–1475. https://doi.org/10.1038/s42256-023-00762-x</span></li></ol>
+
 
 
       
 
       
-  <div class="disqus-comments">
-  <div class="comments">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-	  var disqus_shortname = 'evennordhagen';
-	  /* ensure that pages with query string get the same discussion */
-	  var url_parts = window.location.href.split("?");
-	  var disqus_url = url_parts[0];
-	  (function() {
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	  })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</div>
-  
-  
-
-  
-
-
-  
-
-  
-
-
 
     </div>
   </div>
