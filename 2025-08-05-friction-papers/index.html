@@ -11,14 +11,14 @@
 
   
 
-  <title>New Paper Out | Even Nordhagen</title>
+  <title>Two New Friction Papers Published | Even Nordhagen</title>
 
   
   
   <meta name="author" content="Even Nordhagen">
   
 
-  <meta name="description" content="Quantifying Nucleation Processes in Water">
+  <meta name="description" content="Exploring velocity effects and AI-driven surface design">
 
   
 
@@ -103,11 +103,11 @@
 
   
   <meta property="og:site_name" content="Even Nordhagen">
-  <meta property="og:title" content="New Paper Out | Even Nordhagen">
-  <meta property="og:description" content="Quantifying Nucleation Processes in Water">
+  <meta property="og:title" content="Two New Friction Papers Published | Even Nordhagen">
+  <meta property="og:description" content="Exploring velocity effects and AI-driven surface design">
 
   
-  <meta property="og:image" content="/assets/img/avbmc/thumbnail.jpeg">
+  <meta property="og:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
   
 
   
@@ -115,22 +115,22 @@
   
   <meta property="og:article:author" content="Even Nordhagen">
   
-  <meta property="og:article:published_time" content="2025-07-06T00:00:00-04:00">
-  <meta property="og:url" content="/2025-07-06-avbmc/">
-  <link rel="canonical" href="/2025-07-06-avbmc/">
+  <meta property="og:article:published_time" content="2025-08-05T00:00:00-04:00">
+  <meta property="og:url" content="/2025-08-05-friction-papers/">
+  <link rel="canonical" href="/2025-08-05-friction-papers/">
   
 
   
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   
   <meta name="twitter:site" content="@">
   <meta name="twitter:creator" content="@">
 
-  <meta property="twitter:title" content="New Paper Out | Even Nordhagen">
-  <meta property="twitter:description" content="Quantifying Nucleation Processes in Water">
+  <meta property="twitter:title" content="Two New Friction Papers Published | Even Nordhagen">
+  <meta property="twitter:description" content="Exploring velocity effects and AI-driven surface design">
 
   
-  <meta name="twitter:image" content="/assets/img/avbmc/thumbnail.jpeg">
+  <meta name="twitter:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
   
 
   
@@ -390,10 +390,10 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>New Paper Out</h1>
+          <h1>Two New Friction Papers Published</h1>
           
             
-              <h2 class="post-subheading">Quantifying Nucleation Processes in Water</h2>
+              <h2 class="post-subheading">Exploring velocity effects and AI-driven surface design</h2>
             
           
           
@@ -401,7 +401,7 @@
             
               By <strong>Even Nordhagen</strong><br>
             
-            <span class="post-meta">Posted on July 6, 2025</span>
+            <span class="post-meta">Posted on August 5, 2025</span>
             
             
           
@@ -441,29 +441,57 @@
       
 
       <div class="blog-post">
-        <p>Nucleation marks the onset of phase transitions – for instance, when water vapor begins to condense into liquid droplets. These processes are critical across many scientific domains, especially in atmospheric science.</p>
+        <p>I’m excited to share that two of my research papers on <strong>friction</strong> have been published this past week. Both works are tied to my PhD thesis, and I’m very pleased with how they turned out.</p>
 
 <div class="text-center">
-    <img src="/assets/img/avbmc/cover.jpeg" alt="AVBMC Vashishta water nucleation Monte Carlo Metropolis" style="width: 70%;" />
+    <img src="/assets/img/friction-papers/paper1.png" alt="Friction" style="width: 70%;" />
 </div>
+<p><em>Sliding friction of a single contact. The inset shows a typical stick–slip friction curve.</em></p>
 
-<p>In a <a href="https://evennordhagen.com/projects/building-water-model/">previous project</a>, we used molecular dynamics to parameterize an interatomic potential that accurately reproduces liquid water properties such as density, diffusion, pH, and local force features. However, applying the same approach to nucleation is far more challenging: nucleation events are rare, and capturing them directly with molecular dynamics would require infeasible computational effort.</p>
+<h3 id="1-velocity-dependent-friction-and-wear">1. Velocity-Dependent Friction and Wear</h3>
+<p>The first article, <em>“Velocity-Dependent Dynamics of Friction and Wear,”</em> explores how sliding velocity influences friction and wear using molecular dynamics simulations.<br />
+We identified <strong>three distinct velocity regimes</strong>, with a surprising local minimum in both friction and wear.<br />
+One key implication: <strong>adjusting velocity could reduce both friction and wear</strong> — an insight with potential relevance for everything from nanoscale devices to industrial machinery.</p>
+
+<p>📄 Read the full paper in <em>Tribology Letters</em>:<br />
+<a href="https://rdcu.be/ey2fz" style="color: black; text-decoration: none;">
+  <strong>EM Nordhagen, HA Sveinsson, A Malthe-Sørenssen</strong>.<br />
+  <em>Velocity-Dependent Dynamics of Friction and Wear</em>.<br />
+  <strong>Tribology Letters</strong> 73, 115 (2025).
+</a></p>
 
 <div class="text-center">
-    <img src="/assets/img/avbmc/fig1.jpeg" alt="AVBMC Vashishta water nucleation Monte Carlo Metropolis" style="width: 70%;" />
+    <img src="/assets/img/friction-papers/paper2.jpeg" alt="Friction" style="width: 70%;" />
 </div>
-<p><em>We introduce two new Monte Carlo moves for inserting and deleting reactive molecules in/from droplets.</em></p>
+<p><em>Inverse frictional design.</em></p>
 
-<p>In our new paper, we tackle this problem using <strong>biased Monte Carlo sampling</strong>. Building on the aggregation-biased Monte Carlo (AVBMC) method, we extend it to handle reactive water systems. This allows us to estimate key thermodynamic quantities like the <strong>saturation vapor density</strong> and <strong>surface tension</strong> for a given potential—both crucial for simulating accurate phase behavior.</p>
+<h3 id="2-ai-driven-surface-design-for-friction-control">2. AI-Driven Surface Design for Friction Control</h3>
+<p>The second paper is more of a <strong>proof-of-concept</strong>. Here, we demonstrate how surfaces can be designed to achieve <strong>target friction properties</strong> using an automated, iteration-free method.<br />
+Inspired by <strong>generative AI and image synthesis</strong>, we trained a <strong>conditional diffusion model</strong> that maps static friction coefficients to corresponding surface structures.</p>
 
-<p>Read the full article here:<br />
-<a href="https://pubs.acs.org/doi/10.1021/acs.jctc.5c00722">Camposano, Nordhagen, Malthe-Sørenssen, and Sveinsson — <em>Journal of Chemical Theory and Computation</em>, Article ASAP, DOI: 10.1021/acs.jctc.5c00722</a></p>
+<p>This opens a door to <strong>inverse design in tribology</strong>, where we specify the desired outcome and let the model generate the right solution.</p>
 
-<p>Feel free to drop a comment or question below if you have thoughts or experiences you’d like to share.</p>
+<p>📄 Read the full paper in <em>The Journal of Physical Chemistry C</em>:<br />
+<a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c02768" style="color: black; text-decoration: none;">
+  <strong>EM Nordhagen, HA Sveinsson, A Malthe-Sørenssen</strong>.<br />
+  <em>Tailoring Frictional Properties of Surfaces Using Diffusion Models</em>.<br />
+  <strong>The Journal of Physical Chemistry C</strong> (2025).
+</a></p>
+
+<hr />
+
+<p>For a more popular-science introduction, check out the dedicated project pages:</p>
+<ul>
+  <li><a href="https://evennordhagen.com/projects/friction/">Friction Project</a></li>
+  <li><a href="https://evennordhagen.com/projects/inversedesign/">Inverse Design Project</a></li>
+</ul>
+
+<p>I’d love to hear your thoughts or experiences — feel free to leave a comment below!</p>
 
 <div class="signature">
     <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;" />
 </div>
+
 
       </div>
 
@@ -471,17 +499,15 @@
         <div class="blog-tags">
           <span>Tags:</span>
           
-            <a href="/tags#water">water</a>
+            <a href="/tags#molecular dynamics">molecular dynamics</a>
           
-            <a href="/tags#nucleation">nucleation</a>
+            <a href="/tags#machine learning">machine learning</a>
           
             <a href="/tags#Vashishta">Vashishta</a>
           
-            <a href="/tags#Monte Carlo">Monte Carlo</a>
+            <a href="/tags#diffusion models">diffusion models</a>
           
-            <a href="/tags#Metropolis">Metropolis</a>
-          
-            <a href="/tags#AVBMC">AVBMC</a>
+            <a href="/tags#tribology">tribology</a>
           
         </div>
       
@@ -500,7 +526,7 @@
   
 
   
-    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2025-07-06-avbmc%2F"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2025-08-05-friction-papers%2F"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -508,7 +534,7 @@
   
 
   
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2025-07-06-avbmc%2F"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2025-08-05-friction-papers%2F"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -528,19 +554,12 @@
       <ul class="pagination blog-pager">
         
         <li class="page-item previous">
-          <a class="page-link" href="/2025-05-04-ai-reflections/" data-toggle="tooltip" data-placement="top" title="Langtangen Was Right">
+          <a class="page-link" href="/2025-07-06-avbmc/" data-toggle="tooltip" data-placement="top" title="New Paper Out">
             <i class="fas fa-arrow-left" alt="Previous Post"></i>
             <span class="d-none d-sm-inline-block">Previous Post</span>
           </a>
         </li>
         
-        
-        <li class="page-item next">
-          <a class="page-link" href="/2025-08-05-friction-papers/" data-toggle="tooltip" data-placement="top" title="Two New Friction Papers Published">
-            <span class="d-none d-sm-inline-block">Next Post</span>
-            <i class="fas fa-arrow-right" alt="Next Post"></i>
-          </a>
-        </li>
         
       </ul>
       
