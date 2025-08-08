@@ -25,7 +25,7 @@ remove-ads: true
 navbar-links:
   About me: "aboutme"
   Projects:
-    - Friction modelling: "projects/friction"
+    - Friction modeling: "projects/friction"
     - Inverse design: "projects/inversedesign"
     - Quantum dots: "projects/quantumdots"
     - Water model: "projects/building-water-model"
