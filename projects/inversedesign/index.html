@@ -413,14 +413,26 @@
     <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
       
 
-      <hr />
+      <style>
+/* Link styling for paper references */
+.paper-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.paper-link:hover {
+  color: #cc3300; /* Same hover color as publications */
+}
+</style>
 
 <p>Measuring the frictional coefficient between two surfaces is a well-established task, performed for centuries through both experiments and simulations.<br />
 However, the inverse problem—<strong>designing a surface that yields a desired frictional coefficient</strong>—is far more challenging. We refer to this task as <em>inverse frictional design</em>. Traditional approaches rely on computationally intensive algorithms and deep physical insight.</p>
 
 <p>Here, we propose a novel machine learning approach using a <strong>conditional diffusion model</strong> to generate surfaces that exhibit target frictional properties.</p>
-
-<p><img src="/assets/img/inversedesign/img1.jpeg" alt="Inverse design" style="width: 50%;" /></p>
+<div style="text-align: center;">
+    <img src="/assets/img/inversedesign/img1.jpeg" alt="Inverse design" style="width: 60%;" />
+</div>
 <p><em>Molecular dynamics simulations are used to evaluate the frictional properties of generated surfaces.</em></p>
 
 <h2 id="methodology">Methodology</h2>
@@ -432,7 +444,7 @@ In this context, the sample corresponds to a surface topography, and the model i
 Each surface served as the initial condition for molecular dynamics simulations, where we measured the resulting static friction force.<br />
 The dataset—comprising <strong>10,000 surfaces paired with frictional measurements</strong>—represented the most computationally demanding part of this work.</p>
 
-<p><img src="/assets/img/inversedesign/img2.jpeg" alt="Inverse design" style="width: 90%;" /></p>
+<p><img src="/assets/img/inversedesign/img2.jpeg" alt="Inverse design" style="width: 100%;" /></p>
 <p><em>Methodology overview.</em></p>
 
 <h3 id="model-training">Model Training</h3>
@@ -452,7 +464,7 @@ Contrary to common expectations, a <strong>few large contact clusters</strong> p
 <hr />
 
 <p>Read the full article here:<br />
-<a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c02768" style="color: black; text-decoration: none;">
+<a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c02768" class="paper-link">
   <strong>EM Nordhagen, HA Sveinsson, A Malthe-Sørenssen</strong>.<br />
   <em>Tailoring Frictional Properties of Surfaces Using Diffusion Models</em>.<br />
   <strong>The Journal of Physical Chemistry C</strong> (2025).
