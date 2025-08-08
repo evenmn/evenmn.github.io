@@ -39,7 +39,8 @@ Most people think about sliding when friction is mentioned. We have already disc
 
 *This is a logical assumption, but according to some recent works the interface may evolve differently under shear stress than normal stress, even though the interfaces initially are identical {% cite kilgore2012 kilgore2017 %}
 
-(image gif showing sliding asperity)
+<img src="/assets/img/friction/deform.gif" alt="Frictional aging" class="img-responsive-center">
+<p><em>The onset of asperity sliding.</em></p>
 
 ## Friction-velocity relationship
 I have performed simulations to investigate the friction-velocity relationship, where the approach is to slide a single contact at various velocities and temperatures. We observe that the friction-velocity curves feature multiple regimes, some where friction increases with velocity and some where friction decreases with velocity {% cite nordhagen2025 %}.
