@@ -9,14 +9,27 @@ comments: false
 mathjax: true
 author: Even Nordhagen
 ---
----
+
+<style>
+/* Link styling for paper references */
+.paper-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.paper-link:hover {
+  color: #cc3300; /* Same hover color as publications */
+}
+</style>
 
 Measuring the frictional coefficient between two surfaces is a well-established task, performed for centuries through both experiments and simulations.  
 However, the inverse problem—**designing a surface that yields a desired frictional coefficient**—is far more challenging. We refer to this task as *inverse frictional design*. Traditional approaches rely on computationally intensive algorithms and deep physical insight.  
 
 Here, we propose a novel machine learning approach using a **conditional diffusion model** to generate surfaces that exhibit target frictional properties.
-
-<img src="/assets/img/inversedesign/img1.jpeg" alt="Inverse design" style="width: 50%;">
+<div style="text-align: center;">
+    <img src="/assets/img/inversedesign/img1.jpeg" alt="Inverse design" style="width: 60%;">
+</div>
 <p><em>Molecular dynamics simulations are used to evaluate the frictional properties of generated surfaces.</em></p>
 
 ## Methodology
@@ -28,7 +41,7 @@ To construct our training dataset, we generated surface topographies using **sim
 Each surface served as the initial condition for molecular dynamics simulations, where we measured the resulting static friction force.  
 The dataset—comprising **10,000 surfaces paired with frictional measurements**—represented the most computationally demanding part of this work.
 
-<img src="/assets/img/inversedesign/img2.jpeg" alt="Inverse design" style="width: 90%;">
+<img src="/assets/img/inversedesign/img2.jpeg" alt="Inverse design" style="width: 100%;">
 <p><em>Methodology overview.</em></p>
 
 ### Model Training
@@ -48,7 +61,7 @@ Contrary to common expectations, a **few large contact clusters** produce strong
 ---
 
 Read the full article here:  
-<a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c02768" style="color: black; text-decoration: none;">
+<a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c02768" class="paper-link">
   <strong>EM Nordhagen, HA Sveinsson, A Malthe-Sørenssen</strong>.  
   <em>Tailoring Frictional Properties of Surfaces Using Diffusion Models</em>.  
   <strong>The Journal of Physical Chemistry C</strong> (2025).
