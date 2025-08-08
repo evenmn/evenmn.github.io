@@ -11,6 +11,8 @@ mathjax: true
 author: Even Nordhagen
 ---
 
+I'm excited to share that two of my research papers on **friction** have been published this past week. Both works are tied to my PhD thesis, and I’m very pleased with how they turned out.
+
 <style>
 /* Link styling for paper references */
 .paper-link {
@@ -23,8 +25,6 @@ author: Even Nordhagen
   color: #cc3300; /* Same hover color as publications */
 }
 </style>
-
-I'm excited to share that two of my research papers on **friction** have been published this past week. Both works are tied to my PhD thesis, and I’m very pleased with how they turned out.
 
 <div class="text-center">
     <img src="/assets/img/friction-papers/paper1.png" alt="Friction" style="width: 70%;">
