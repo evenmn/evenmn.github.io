@@ -29,8 +29,6 @@ For our full paper, please see [*Front. Phys.*, 11:1061580](https://www.frontier
 ## Machine learning terminology
 In machine learning terminology, the trial wavefunction, $$\Psi_T$$, is our *model*. It is represented by a neural network, which contains all the variational parameters that are optimized during training. The associated energy, known as the *trial energy*, $$E$$, will be treated as our *loss function* and is lower bounded by the ground state energy. I have written a [blog post](https://evennordhagen.com/2025-05-04-ai-reflections/) about machine learning, components and terminology. 
 
-(cool image)
-*Caption*
 <img src="/assets/img/quantum_dots/brain.png" alt="Water molecule" class="img-responsive-center">
 <p><em>I asked ChatGPT to generate a brain, where the neurons where replaced by molecules.</em></p>
 
