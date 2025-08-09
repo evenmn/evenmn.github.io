@@ -13,7 +13,7 @@ $$\hat{\mathcal{H}}\Psi=E\Psi$$
 
 The Schrödinger equation, used to describe quantum mechanical systems such as atoms and sub-atomic systems, is often perceived as the most accurate equation in physics. By solving the time-independent Schrödinger equation presented above, we can in principle get all information about the system it was solved for. However, solving the equation is often a highly non-trivial task, and only systems with up to two objects can be solved with analytical methods, known as the three-body problem. Many sophisticated methods have been developed to find approximate solutions to the equation, but they need to trade-off between accuracy and computational cost. The most accurate methods are very computational intensive, and can only be applied on tiny systems like small atoms.
 
-<img src="/assets/img/quantum_dots/onebody.png" alt="One-body" class="mx-auto d-block">
+<img src="/assets/img/quantum_dots/cost.png" alt="One-body" class="mx-auto d-block">
 *Computational cost of different quantum mechanics methods. Note the position of Neural Network Variational Monte Carlo (NN VMC).*
 
 To challenge the classical methods, we have developed a machine learning approach to solving the Schrödinger equation. Machine learning is well-suited for this task due to the underlying principles of quantum mechanics:
@@ -31,8 +31,8 @@ In machine learning terminology, the trial wavefunction, $$\Psi_T$$, is our *mod
 
 (cool image)
 *Caption*
-<img src="/assets/img/building-water-model/dissociative_water.png" alt="Water molecule" class="img-responsive-center">
-<p><em>Real water molecules can react with the surroundings. Most water models do not capture this chemical nature of water</em></p>
+<img src="/assets/img/quantum_dots/brain.png" alt="Water molecule" class="img-responsive-center">
+<p><em>I asked ChatGPT to generate a brain, where the neurons where replaced by molecules.</em></p>
 
 ## Methodology
 Machine learning is all about optimizing parameters with respect to minimizing a metric, such as the energy. This is typically done with a gradient method:
