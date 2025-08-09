@@ -13,8 +13,8 @@ $$\hat{\mathcal{H}}\Psi=E\Psi$$
 
 The Schrödinger equation, used to describe quantum mechanical systems such as atoms and sub-atomic systems, is often perceived as the most accurate equation in physics. By solving the time-independent Schrödinger equation presented above, we can in principle get all information about the system it was solved for. However, solving the equation is often a highly non-trivial task, and only systems with up to two objects can be solved with analytical methods, known as the three-body problem. Many sophisticated methods have been developed to find approximate solutions to the equation, but they need to trade-off between accuracy and computational cost. The most accurate methods are very computational intensive, and can only be applied on tiny systems like small atoms.
 
-(insert accuracy as a function of computational cost plot)
-*Caption*
+<img src="/assets/img/quantum_dots/onebody.png" alt="One-body" class="mx-auto d-block">
+*Computational cost of different quantum mechanics methods. Note the position of Neural Network Variational Monte Carlo (NN VMC).*
 
 To challenge the classical methods, we have developed a machine learning approach to solving the Schrödinger equation. Machine learning is well-suited for this task due to the underlying principles of quantum mechanics:
 
@@ -57,14 +57,11 @@ which numerically is possible when we know the wave function $$\Psi$$. The algor
 
 Computation of the energy and the gradients here is the computationally intensive part, and also the mathematically most involved one. This is not needed to follow this blog post, but if you're curious, feel free to look into the last section.
 
-(show convergence)
-*Caption*
+<img src="/assets/img/quantum_dots/convergence.jpg" alt="Water molecule" class="img-responsive-center">
+<p><em>Convergence.</em></p>
 
 ## Application: Quantum dots
 This method is general, and can in principle be applied to any quantum mechanical system, such as atoms and molecules. However, the system size is limited by the computational cost of the system energy and gradients, and we are in practice restricted to small systems of a few atoms. As a proof of concept, we apply the methodology to quantum dots, which have natural and cheap to calculate basis functions in the Hermite polynomials. Also, the quantum dots have significant applications in the field of technology.
-
-(show quantum dots)
-*Caption*
 
 ## Sampling the energy and gradients*
 I will try to keep this post easy to read without too many details, but some math is needed to explain how this method works. However, if you are not familiar with quantum mechanics, feel free to skip this section. 
@@ -108,8 +105,6 @@ Once we have calculated the system energy $$E_T$$. However, to change $$\Psi_T$$
 
 ## References
 {% bibliography --file quantumdots %}
-
-Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 
 <div class="signature">
     <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;">
