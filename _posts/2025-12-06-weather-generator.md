@@ -48,8 +48,6 @@ To be able to repeat this for weather forecasting, one needs access to huge amou
 
 Most of today's LLMs are based on a transformer architecture, with a self-attention mechanism. This was for a long time very costly, as the nature of attention made it hard to split up the tasks in small sub-tasks and run them in parallel. A turning point came in 2017, when [highly parallelizable transformers](www.evenmn.github.io) where made available. This made it possible to train LLMs on large infrastructures with thousands of graphics processing units. 
 
-(LLM illustration)
-
 Meteorological observations are in general extremely sparse and inbalanced. The synoptical stations, radars and lidars on the surface are not evenly distributed, aviation data is mostly at certain altitudes and satelite data is sparse in both space and time. How can we deal with this? The aim for this project is to use representation learning/self-supervised learning/masked token learning to make the model fill in missing data. The way it works is that we mask the available data and let the model fill in the masks. It is penalized if the masks are incorrectly filled in. This is also used when training chatbots like ChatGPT, where words are masked in sentences.
 
 ![Representation Learning Masked Token Modelling WeatherGenerator Machine Learning Weather Forecasting](/assets/img/weather-generator/masked_token_modelling.png)
@@ -66,8 +64,6 @@ So far, most of the basic research on machine learning has been centered around 
 The European Union's Horizon project is in some ways an answer to this question, where a lot of money is devoted to machine learning. It is apparent that EU have realized that we are behind and want to solve it by throwing money on machine learning.
 
 In meteorology the situation is quite special, as ECMWF has been the leading provider of global weather forecasting for decades, a position that is now being threatened by American and Asian big-tech companies. However, like already mentioned, huge amounts of data and computing resources is needed to develop and train LLMs. Europe has large amounts of high quality meteorological data, in particular located at the ECMWF storage facilities. Europe also have competing high performance computing infrastructure, with 4 of the most powerful super computers according to the TOP500 list at the time writing. The last ingredient we need to make a state-of-the-art foundation model is the skills needed to develop such models. I believe that we do, and that chances are good that we can develop the next generation weather forecasting model. I'm more doubious about other domains where we cannot compete with the data availability. 
-
-(ECMWF leading illustration)
 
 ## Conclusions
 The WeatherGenerator is a project that aims to build the next generation weather forecasting model. This is important to warn against the ever more frequent extreme weather events and secure Europe's position as the leading provider of global weather forecasting. Given the available data and computer resources in Europe, it is likely that we will be able to do this. 
