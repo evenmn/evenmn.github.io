@@ -70,7 +70,7 @@ In meteorology the situation is quite special, as ECMWF has been the leading pro
 (ECMWF leading illustration)
 
 ## Conclusions
-The WeatherGenerator is a project that aims to build the next generation weather forecasting model. This is important to warn against the ever more frequent extreme weather events and secure Europe's position as the leading provider of global weather forecasting. Given the available data and computer resources in Europe, it is likely that we will be able to do this. The project is funded by the European Union and has a total cost frame of 2.3B€.
+The WeatherGenerator is a project that aims to build the next generation weather forecasting model. This is important to warn against the ever more frequent extreme weather events and secure Europe's position as the leading provider of global weather forecasting. Given the available data and computer resources in Europe, it is likely that we will be able to do this. 
 
 For more information about the initiative, visit [this ECMWF blog post](https://www.ecmwf.int/en/about/media-centre/news/2024/weathergenerator-project-aims-recast-machine-learning-earth-system).
 
