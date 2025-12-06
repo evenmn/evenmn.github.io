@@ -33,7 +33,7 @@ In methodology, WeatherGenerator can be compared to recent large language models
 
 Think about how the smartphone replaced many task-specific deviced such as digital cameras, watches/stop watches/alarm clocks, MP3/music players, and recorders. In many ways, foundation models are equally large advances, but for softwares.
 
-There are already some examples on foundation models for weather and climate that proves the concept and demonstrate their capabilities. In particular, Microsoft have developed Aurora {% cite bodnar2024 %}, a foundation model for climate, weather and air pollution featuring 1.3 billion parameters trained on diverse data. However, compared to the ORBIT model {% cite wang2024 %} featuring 113 billion parameters, that is a tiny model. Notably, both these models were developed in the United States. WeatherGenerator is expected to contain up to 100 billion parameters, placing itself close to the ORBIT model.
+There are already some examples on foundation models for weather and climate that proves the concept and demonstrate their capabilities. In particular, Microsoft have developed Aurora {% cite bodnar2024 %}, a foundation model for climate, weather and air pollution featuring 1.3 billion parameters trained on diverse data. However, compared to the ORBIT model {% cite wang2024a %} featuring 113 billion parameters, that is a tiny model. Notably, both these models were developed in the United States. WeatherGenerator is expected to contain up to 100 billion parameters, placing itself close to the ORBIT model.
 
 ![WeatherGenerator Applications](/assets/img/weather-generator/weathergenerator_applications.png){: .mx-auto.d-block :}
 *The WeatherGenerator will be able to take reanalysis data, simulation data and observations as inputs, and output predictions, state estimates and high-impact applications. Inputs and outputs can be 100m or 100km, global or local and from the past, present or future with arbitrary temporal resolution.*
@@ -74,16 +74,13 @@ The WeatherGenerator is a project that aims to build the next generation weather
 
 For more information about the initiative, visit [this ECMWF blog post](https://www.ecmwf.int/en/about/media-centre/news/2024/weathergenerator-project-aims-recast-machine-learning-earth-system).
 
+![Signature](/assets/img/signature.png){: .mx-auto.d-block :}
+
 Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 
 *The WeatherGenerator project (grant agreement No. 101187947) is funded by the European Union. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the European Union or the Commission. Neither the European Union nor the granting authority can be held responsible for them.*
 
 ![Funded by EU](/assets/img/weather-generator/EN-Funded by the EU-POS.png){: .mx-auto.d-block :}
 
-![Signature](/assets/img/signature.png){: .mx-auto.d-block :}
-
 ## References
 {% bibliography --file weathergenerator %}
-- [Bodnar 2024] : Bodnar et al., Aurora: A Foundation Model of the Atmosphere, [arXiv:2405.13063](https://arxiv.org/abs/2405.13063) [physics] (2024)
-- [Wang 2024] : Wang et al., ORBIT: Oak Ridge Base Foundation Model for  Earth System Predictability, [arXiv:2404.14712](https://arxiv.org/abs/2404.14712) [physics] (2024)
-
