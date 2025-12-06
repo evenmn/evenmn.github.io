@@ -70,7 +70,7 @@
         <title>Regional Data-Driven Weather Modeling</title>
         <description>
           with a Global Stretched-Grid Approach - 
-          We have developed the most accurate model for regional weather prediction available, thanks to recent advances in machine learning weather modeling. Our model is based on graph neural networks and employs a stretched grid with higher resolution over the target regional domain. Our latest Preprint: arXiv:2409.02891 Machine Learning Weather Prediction...
+          We have developed an accurate model for regional weather prediction, thanks to recent advances in machine learning weather modeling. Our model is based on graph neural networks and employs a stretched grid with higher resolution over the target regional domain. Our latest Preprint: arXiv:2409.02891 Machine Learning Weather Prediction Recent machine...
         </description>
         <pubDate>Thu, 12 Sep 2024 00:00:00 -0400</pubDate>
         <link>/2024-09-12-stretched-grid/</link>
