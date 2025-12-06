@@ -11,14 +11,14 @@
 
   
 
-  <title>Playing with Europe&apos;s Biggest Supercomputers | Even Nordhagen</title>
+  <title>WeatherGenerator | Even Nordhagen</title>
 
   
   
   <meta name="author" content="Even Nordhagen">
   
 
-  <meta name="description" content="Some experiences">
+  <meta name="description" content="Advancing Earth System Science with Innovative AI">
 
   
 
@@ -103,11 +103,11 @@
 
   
   <meta property="og:site_name" content="Even Nordhagen">
-  <meta property="og:title" content="Playing with Europe&apos;s Biggest Supercomputers | Even Nordhagen">
-  <meta property="og:description" content="Some experiences">
+  <meta property="og:title" content="WeatherGenerator | Even Nordhagen">
+  <meta property="og:description" content="Advancing Earth System Science with Innovative AI">
 
   
-  <meta property="og:image" content="/assets/img/eurohpc/eurohpc_3.jpeg">
+  <meta property="og:image" content="/assets/img/weather-generator/weathergenerator_logo.png">
   
 
   
@@ -115,9 +115,9 @@
   
   <meta property="og:article:author" content="Even Nordhagen">
   
-  <meta property="og:article:published_time" content="2024-10-27T00:00:00-04:00">
-  <meta property="og:url" content="/2024-10-27-european-tier-0/">
-  <link rel="canonical" href="/2024-10-27-european-tier-0/">
+  <meta property="og:article:published_time" content="2025-02-10T00:00:00-05:00">
+  <meta property="og:url" content="/2025-02-10-weather-generator/">
+  <link rel="canonical" href="/2025-02-10-weather-generator/">
   
 
   
@@ -126,11 +126,11 @@
   <meta name="twitter:site" content="@">
   <meta name="twitter:creator" content="@">
 
-  <meta property="twitter:title" content="Playing with Europe&apos;s Biggest Supercomputers | Even Nordhagen">
-  <meta property="twitter:description" content="Some experiences">
+  <meta property="twitter:title" content="WeatherGenerator | Even Nordhagen">
+  <meta property="twitter:description" content="Advancing Earth System Science with Innovative AI">
 
   
-  <meta name="twitter:image" content="/assets/img/eurohpc/eurohpc_3.jpeg">
+  <meta name="twitter:image" content="/assets/img/weather-generator/weathergenerator_logo.png">
   
 
   
@@ -419,7 +419,7 @@
     
     
     
-      data-img-src-1="/assets/img/eurohpc/eurohpc_4.jpeg"
+      data-img-src-1="/assets/img/weather-generator/weathergenerator_cover.png"
     
     
     
@@ -433,10 +433,10 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>Playing with Europe's Biggest Supercomputers</h1>
+          <h1>WeatherGenerator</h1>
           
             
-              <h2 class="post-subheading">Some experiences</h2>
+              <h2 class="post-subheading">Advancing Earth System Science with Innovative AI</h2>
             
           
           
@@ -444,7 +444,7 @@
             
               By <strong>Even Nordhagen</strong><br>
             
-            <span class="post-meta">Posted on October 27, 2024</span>
+            <span class="post-meta">Posted on February 10, 2025</span>
             
             
           
@@ -484,95 +484,76 @@
       
 
       <div class="blog-post">
-        <p>I just came back from the <strong>EuroHPC User Day 2024</strong>, held in Amsterdam on October 22-23, where I had the honor of presenting the outcomes of our research on the EuroHPC supercomputers. For those who may not be familiar, the <strong>European High-Performance Computing Joint Undertaking</strong> (<strong>EuroHPC JU</strong>) oversees the installation, operation, maintenance, and distribution of Europe’s most powerful supercomputers, commissioned by the European Union. This network includes three of the current top 10 supercomputers globally: <strong>LUMI</strong>, <strong>Leonardo</strong>, and <strong>MareNostrum 5</strong>. Additionally, <strong>Jupiter</strong>, which is currently being installed, is expected to soon rank as the world’s second most powerful supercomputer. The conference was primarily user-focused, which is why I was invited to share our work there.</p>
+        <p>The WeatherGenerator is a 2B€ <strong>[DOUBLE-CHECK]</strong> four-year EU-funded initiative that aims to build a European foundation model for weather and climate.</p>
 
-<div class="text-center">
-    <img src="/assets/img/eurohpc/LUMI.jpg" alt="LUMI" style="width: 70%;" />
-</div>
-<p><em>LUMI is Europe’s most powerful computer, and means ‘snow’ in Finnish.</em></p>
+<p>Today, weather forecasting is a complicated beast that consists of several components. First, observations are fetched from surface measurements, satelites, radars etc … and assimilated into a grid. Then this grid is used as the initial state of numerical weather prediction (NWP) models to produce predictions. Thereafter, the predictions are typically post-processed before the final forecast is produced. Not only is this entire framework complex and makes development demanding, but it is also slow, requiring hours to produce a medium-range forecast. There is also a myriad of different models, with often specific applications. Some models focus on the atmosphere, some focus on surface variables and other focus of season-to-season forecasting. The WeatherGenerator aims to cover all these applications in one single model.</p>
 
-<p>This post will delve into my experiences with the EuroHPC supercomputing facilities, drawing also on the collaborative research that my team and I have detailed in a scientific paper that’s presently undergoing peer review.</p>
+<p>(some illustration of the weather generator that attracts attention and makes the reader continue reading. Cover illustration should be generated by dall-e)</p>
 
-<div class="text-center">
-    <img src="/assets/img/eurohpc/EYE.jpg" alt="EYE" style="width: 70%;" />
-</div>
-<p><em>The EuroHPC User Day 2024 was held at the EYE Film Museum, Amsterdam.</em></p>
+<p>The WeatherGenerator is an initiative coordinated by the European Centre for Medium-Range Weather Forecasting (ECMWF), and has received 2.3B€ funding from the European Union’s Horizon project over a four-year period, starting from February 2025. The project is lead by Peter Dueben and Christian Lessig at ECMWF with 16 partners involved. The proposal got full score form the European Council, witnessing an extremely important project.</p>
 
-<h2 id="what-got-me-hooked">What Got Me Hooked</h2>
+<h1 id="what-is-so-special-about-the-weather-generator">What is so special about the weather generator?</h1>
+<p>We already have quite good models for the weather and climate. What is so special about this project making it worth 2.3B€? The potential of a foundation model is enormous, as it aims to combine all the different weather models into one model. And at the same time do it better than the state-of-the-art models today. And be able to predict things that is not possible with today’s model. Its applications span weather and climate prediction, renewable energy, flood forecasting, food security, health, and biosphere studies, encompassing 22 specific application areas. The WeatherGenerator will be able to simplify complex pipelines significantly. The project is ambitious, but the upside is huge.</p>
 
-<p>First, let me share how I became so fascinated with supercomputers. My journey began in 2017 when I was first introduced to computer clusters. I gained access to the Norwegian <strong>Abel</strong> computer, which at the time was ranked among the world’s top 100 supercomputers. Although the scale of our jobs back then was relatively small by today’s standards, the simulation procedures were quite similar.</p>
+<p>To be able to do this, WeatherGenerator will be trained on an extensive list of datasets, including reanalysis datasets like ERA5 and CERRA, weather forecasts like ECMWF’s Integrated Forecasting System (IFS) and the Destination Earth digital twins, and observed data from satellites and surface stations.</p>
 
-<p>In 2020, when Abel was decommissioned, the condensed matter group at the University of Oslo acquired part of the system. I was tasked with relocating and setting up this portion in our physics department, giving me valuable hands-on experience in cluster installation and maintenance. This event significantly fueled my interest in high-performance computing.</p>
+<p>In methodology, WeatherGenerator can be compared to recent large language models (LLMs) such as ChatGPT, Gemini and llama. They have partly or entirely replaced a long range of tools and services, including translators, grammar correctors, code linters, personal assistants and much more. Not only do they offer a fast, reliable and easy to use service, but they also outperforms the old methods on many tasks.</p>
 
-<div class="text-center">
-    <img src="/assets/img/eurohpc/eurohpc.jpeg" alt="EuroHPC" style="width: 70%;" />
-</div>
-<p><em>Location of the EuroHPC supercomputers. Photo from the first presentation at EuroHPC User Day 2024.</em></p>
+<p>There are already some examples on foundation models for weather and climate that proves the concept and demonstrate their capabilities. In particular, Microsoft have developed Aurora [Bodnar 2024], a foundation model for climate, weather and air pollution featuring 1.3 billion parameters trained on diverse data. However, compared to the ORBIT model [Wang 2024], featuring 113 billion parameters, that is a tiny model. Notably, both these models were developed in the United States. WeatherGenerator is expected to contain up to 100 billion parameters, placing itself close to the ORBIT model.</p>
 
-<h2 id="first-impressions">First impressions</h2>
+<p><img src="/assets/img/weather-generator/weathergenerator_applications.png" alt="WeatherGenerator Applications" class="mx-auto d-block" />
+<em>The WeatherGenerator will be able to take reanalysis data, simulation data and observations as inputs, and output predictions, state estimates and high-impact applications. Inputs and outputs can be 100m or 100km, global or local and from the past, present or future with arbitrary temporal resolution.</em></p>
 
-<p>I’m not going to hide that running jobs on large supercomputers is a cool experience. Witnessing 10,000 GPUs working simultaneously is truly unique and awe-inspiring. Knowing that these machines are behind much of today’s cutting-edge technology adds an extra level of excitement. The societal impact of supercomputers is immense, especially considering the ongoing AI revolution.</p>
+<h2 id="exactly-how-does-it-work">Exactly how does it work?</h2>
+<p>The recent success of LLMs is greatly powered by advances in machine learning and processing units, <a href="https://evennordhagen.com/2025-05-04-ai-reflections/">like discussed in a previous post</a>. The idea is to start from a model with a large degrees of freedom, being very flexible. This model is usually an artificial neural network, as they can be fit to almost anything and we know how to train them. The model is then told to do regression, fitting the model to the desired data. With this training procedure, the essential information from the datasets is stored in the parameters. Large amounts of data requires a large amount of parameters to store the important information, even though the information is densely compressed. In other words, the important information from the training data is stored in the model. This is called pre-training. To be able to fetch useful information from it, a decoder must to be added to get the desired information.</p>
 
-<p>For instance, large language models (LLMs) like ChatGPT have become household names, highlighting the role of AI in our daily lives. Beyond conversational AI, machine learning is increasingly vital in the healthcare industry. It holds promise for potentially saving millions of lives by enhancing cancer detection and combating antibiotic resistance. For example, recent studies have demonstrated remarkable success in detecting cancer and fighting antibiotic resistance using machine learning algorithms. The best presentation award at EuroHPC User Day 2024 went to Andrea Di Gioacchino for demonstrating how different microorganisms develop antibiotics using machine learning.</p>
+<p>To be able to repeat this for weather forecasting, one needs access to huge amounts of data and computational resources. Fortunately, this is something we do in the weather forecasting community. The idea is to train an LLM on large amounts of meteorological data, including reanalysis, simulation data and observations from synoptical stations, radars, lidars, satelites and aviation. We will then utilize the EuroHPC computing infrastructures, like LUMI, Leonardo and the upcoming Jupiter clusters, for development, training and testing. I have written about EuroHPC and my experiences with running on the infrastructure <a href="https://evennordhagen.com/2024-10-27-european-tier-0/">in a recent post</a>.</p>
 
-<p>But the thrill of running on these colossal computers goes beyond their societal implications. It’s also about the sheer wonder of the technology itself: billions of computations per second, intricate algorithms optimizing performance, and the quest to push the boundaries of what’s possible.</p>
+<p><img src="/assets/img/weather-generator/llm1.png" alt="Large Language Models WeatherGenerator Machine Learning Weather Forecasting" />
+<em>LLMs compress the input data to a lower-dimensional latent space, where…</em></p>
 
-<div class="text-center">
-    <img src="/assets/img/eurohpc/abel.png" alt="Abel" style="width: 70%;" />
-</div>
-<p><em>Me and Anders Malthe-Sørenssen collecting nodes from the Abel computer. Photo: Sebastian Winther-Larsen.</em></p>
+<p>Most of today’s LLMs are based on a transformer architecture, with a self-attention mechanism. This was for a long time very costly, as the nature of attention made it hard to split up the tasks in small sub-tasks and run them in parallel. A turning point came in 2017, when <a href="www.evenmn.github.io">highly parallelizable transformers</a> where made available. This made it possible to train LLMs on large infrastructures with thousands of graphics processing units.</p>
 
-<h2 id="how-these-computers-work">How These Computers Work</h2>
+<p>(LLM illustration)</p>
 
-<p>So, how do these supercomputers actually function? Despite their mysterious name, there’s no magic involved in how they operate. Fundamentally, they consist of many standard compute nodes connected via high-speed communication networks. To harness their immense power, tasks must be divided so that different parts can run independently across separate nodes (this is known as parallel processing).</p>
+<p>Meteorological data is in general extremely sparse and inbalanced. The synoptical stations, radars and lidars on the surface are not evenly distributed, aviation data is mostly at certain altitudes and satelite data is sparse in both space and time. How can we deal with this? The aim for this project is to use representation learning/self-supervised learning to make the model fill in missing data. The way it works is that we mask the available data and let the model fill in the masks. It is penalized if the masks are incorrectly filled in. (masked token representation?) <strong>[NEED TO LEARN MORE ABOUT THIS]</strong></p>
 
-<p>Imagine you need to count the number of trees worldwide using satellite images and an image analysis algorithm. This task would be nearly impossible to complete sequentially; analyzing each image one by one would take an inordinate amount of time. Thankfully, this problem is well-suited for parallel processing!</p>
+<p><img src="/assets/img/weather-generator/masked_token_modelling.png" alt="Representation Learning Masked Token Modelling WeatherGenerator Machine Learning Weather Forecasting" />
+<em>Masked token modelling</em></p>
 
-<p>Here’s how it works: You can dedicate different parts of the supercomputer to analyze images from each continent. One segment of the supercomputer could focus on Europe, another on Asia, and so on. This division alone would vastly speed up the task.</p>
+<p>The WeatherGenerator is expected to contain up to 100 billion parameters, one of the largest LLMs for weather and climate.</p>
 
-<p>But we can push this even further by assigning each country to different segments of the supercomputer. Now, many parts of the computer are working simultaneously, each focused on a smaller task. This way, the analysis of the satellite images can be conducted much faster compared to a sequential approach.</p>
+<h2 id="is-europe-lagging-behind">Is Europe lagging behind?</h2>
+<p>So far, most of the basic research on machine learning has been centered around Northern America, and private companies with massive financial muscles like Google, Microsoft, OpenAI and Meta have been central. At the same time, the Chinese government has invested heavily <strong>[is this correct and consistent with illustration below?]</strong> in development of machine learning, with [fill in…] This has, among other things, led to the DeepSeek LLM which at the moment outperforms the leading American LLMs ChatGPT, Genini and llama. One European success history is the british company DeepMind, who have been influential, but are now owned by Google. Are Europe lagging behind USA and Asia when it comes to development of machine learning? Are we about to lose the AI race?</p>
 
-<div class="text-center">
-    <img src="/assets/img/eurohpc/lumi_sinfo.png" alt="SINFO" style="width: 100%;" />
-</div>
-<p><em>Screen shot of the GPU resources on LUMI. Note that 1,830 nodes are allocated and 811 are draining, each featuring 4 powerful GPUs.</em></p>
+<p><img src="/assets/img/weather-generator/oecd_preqin.png" alt="AI Investments US China EU27 UK" />
+<em>The investments in AI is close to 10 times as high in the US compared to the European Union. Chinese investments are also significantly higher than in EU. Source: <a href="https://oecd.ai/en/data?selectedArea=investments-in-ai-and-data&amp;selectedVisualization=vc-investments-in-ai-by-country&amp;visualizationFiltersHash=eyJkYXRlIjpbIjIwMTIiLCIyMDI0Il0sImNvbnRyb2xzIjp7ImxvZ1NjYWxlIjpmYWxzZX0sImZpbHRlcnMiOnsiSU5EVVNUUlkiOiItLSBBbGwgaW5kdXN0cmllcyAtLSJ9LCJlbnRpdGllcyI6eyJDb3VudHJ5Q29kZSI6WyJVU0EiLCJDSE4iLCJFVTI3IiwiR0JSIl19LCJpbmRpY2F0b3JzIjp7IkluZGljYXRvciI6IlN1bV9vZl9kZWFscyJ9fQ%3D%3D">OECD/Preqin</a></em></p>
 
-<p>This is the fundamental principle behind supercomputers: partitioning the machine so that each small segment handles a dedicated task, with many such tasks running in parallel. This method dramatically reduces the wall-clock time, making it feasible to tackle colossal computations that would otherwise be impractical.</p>
+<p>The European Union’s Horizon project is in some ways an answer to this question, where this much money is invested. It is apparent that EU have realized that we are behind and want to solve it by throwing money on machine learning.</p>
 
-<h2 id="experiences">Experiences</h2>
+<p>In meteorology the situation is quite special, as ECMWF has been the leading provider of global weather forecasting for decades, a position that is now being threatened by American and Asian big-tech companies. However, like already mentioned, huge amounts of data and computing resources is needed to develop and train LLMs. Europe has large amounts of high quality meteorological data, in particular located at the ECMWF storage facilities. Europe also have competing high performance computing infrastructure, with 4 of the most powerful super computers according to the TOP500 list at the time writing. The last ingredient we need to make a state-of-the-art foundation model is the skills needed to develop such models. I believe that we do, and that chances are good that we can develop the next generation weather forecasting model. I’m more doubious about other domains where we cannot compete with the data availability.</p>
 
-<p>All the EuroHPC computers, and in fact, all other supercomputers, run on the Linux operating system. This robust OS is ideal for high-performance computing due to its flexibility and stability. Resource distribution on these systems is managed by the queueing system known as SLURM (Simple Linux Utility for Resource Management). SLURM efficiently queues jobs based on a multi-factor priority list, allocates the necessary resources, and provides comprehensive accounting statistics.</p>
+<p>(ECMWF leading illustration)</p>
 
-<p>From my experience, SLURM works exceptionally well. The queue times are generally reasonable, ensuring that computational jobs are processed efficiently without significant delays. However, like all systems, there are challenges, one of the most common being the transfer of large data sets over long distances. This is usually not a cluster-specific problem, as the bottleneck is cables and not bandwidth. If you cannot change the hardware, one way to transfer data faster is by compressing the data.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>The WeatherGenerator is a project that aims to build the next generation weather forecasting model. This is important to warn against the ever more frequent extreme weather events and secure Europe’s position as the leading provider of global weather forecasting. Given the available data and computer resources in Europe, it is likely that we will be able to do this. The project is funded by the European Union and has a total cost frame of 2.3B€.</p>
 
-<h2 id="some-improvements">Some Improvements</h2>
-
-<p>The human brain is hardwired to favor familiarity; we feel more comfortable in environments we’ve encountered before. This tendency is why store and restaurant chains design their spaces to look similar or identical, reducing the cognitive load for their customers. However, EuroHPC hasn’t fully capitalized on this psychological principle, resulting in varied user experiences across different systems.</p>
-
-<p>Some differences are unavoidable due to hardware variations. For example, LUMI uses AMD GPUs, while most other EuroHPC supercomputers are equipped with NVIDIA GPUs. This hardware distinction naturally leads to differences in the software side of things, necessitating unique configurations and varying user experiences. However, other discrepancies are less rational. One notable example is the divergent firewall policies across these supercomputers. In practice, some systems provide internet access from all nodes (like LUMI), while others restrict internet access to just the login nodes (such as Leonardo). There’s even a system like MareNostrum 5, which offers no external communication whatsoever.</p>
-
-<p>These variations translate into differing user experiences, which isn’t ideal. There’s a balance to be struck between security and user-friendliness, and in this case, different national computing centers have found different equilibriums. As a result, users must adapt to different environments when transitioning between systems, which can be inefficient and cumbersome.</p>
-
-<div class="text-center">
-    <img src="/assets/img/eurohpc/eurohpc_2.jpeg" alt="EuroHPC" style="width: 70%;" />
-</div>
-<p><em>Some statistics from the EuroHPC User Day 2024. One important message (for us in particular) is that Earth System Sciences and Environmental Studies is slightly underrepresented in the applications compared to computational physics, material and chemical sciences and engineering.</em></p>
-
-<p>The unnecessary differences between supercomputers extend to file system architectures and login procedures, impacting user workflows. Some systems use Lustre filesystems, which excel at handling large files but struggle with many small files. This necessitates the use of containers for software dependencies on Lustre systems like LUMI. On other systems, virtual environments might be more efficient.</p>
-
-<p>Moreover, login procedures vary, with some systems requiring two-factor authentication (2FA) for extra security while others do not. This inconsistency in file system use and security protocols creates a fragmented user experience, complicating transitions between different EuroHPC systems.</p>
-
-<p>In our conference paper, we advocate for a more unified policy regarding system setup. Standardizing policies and procedures across EuroHPC systems would simplify transitions from one supercomputer to another, fostering a more consistent and user-friendly experience. This could greatly enhance productivity and reduce the learning curve for users operating across multiple supercomputing systems. Standardizing these elements would allow users to focus more on their research rather than adapting to different system requirements.</p>
-
-<h2 id="moving-forward">Moving Forward</h2>
-
-<p>The good news is that our requests have been heard. EuroHPC plans to implement a unified system policy in 2025. This is a significant leap in the right direction, though I await its actual implementation with cautious optimism. Even with these changes, challenges like large file transfers will remain.</p>
+<p>For more information about the initiative, visit <a href="https://www.ecmwf.int/en/about/media-centre/news/2024/weathergenerator-project-aims-recast-machine-learning-earth-system">this ECMWF blog post</a>.</p>
 
 <p>Feel free to drop a comment or question below if you have thoughts or experiences you’d like to share.</p>
 
-<div class="signature">
-    <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;" />
-</div>
+<p><em>The WeatherGenerator project (grant agreement No. 101187947) is funded by the European Union. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the European Union or the Commission. Neither the European Union nor the granting authority can be held responsible for them.</em></p>
+
+<p><img src="/assets/img/weather-generator/EN-Funded by the EU-POS.png" alt="Funded by EU" class="mx-auto d-block" /></p>
+
+<p><img src="/assets/img/signature.png" alt="Signature" class="mx-auto d-block" /></p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li>[Bodnar 2024] : Bodnar et al., Aurora: A Foundation Model of the Atmosphere, <a href="https://arxiv.org/abs/2405.13063">arXiv:2405.13063</a> [physics] (2024)</li>
+  <li>[Wang 2024] : Wang et al., ORBIT: Oak Ridge Base Foundation Model for  Earth System Predictability, <a href="https://arxiv.org/abs/2404.14712">arXiv:2404.14712</a> [physics] (2024)</li>
+</ul>
+
 
       </div>
 
@@ -580,13 +561,13 @@
         <div class="blog-tags">
           <span>Tags:</span>
           
-            <a href="/tags#EuroHPC">EuroHPC</a>
+            <a href="/tags#WeatherGenerator">WeatherGenerator</a>
           
-            <a href="/tags#tier-0">tier-0</a>
+            <a href="/tags#weather">weather</a>
           
-            <a href="/tags#LUMI">LUMI</a>
+            <a href="/tags#climate">climate</a>
           
-            <a href="/tags#Leonardo">Leonardo</a>
+            <a href="/tags#foundation model">foundation model</a>
           
         </div>
       
@@ -605,7 +586,7 @@
   
 
   
-    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2024-10-27-european-tier-0%2F"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2025-02-10-weather-generator%2F"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -613,7 +594,7 @@
   
 
   
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2024-10-27-european-tier-0%2F"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2025-02-10-weather-generator%2F"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -633,7 +614,7 @@
       <ul class="pagination blog-pager">
         
         <li class="page-item previous">
-          <a class="page-link" href="/2024-09-12-stretched-grid/" data-toggle="tooltip" data-placement="top" title="Regional Data-Driven Weather Modeling">
+          <a class="page-link" href="/2024-12-27-deode/" data-toggle="tooltip" data-placement="top" title="Destination Earth - On-Demand Extremes (DE330)">
             <i class="fas fa-arrow-left" alt="Previous Post"></i>
             <span class="d-none d-sm-inline-block">Previous Post</span>
           </a>
@@ -641,7 +622,7 @@
         
         
         <li class="page-item next">
-          <a class="page-link" href="/2024-12-27-deode/" data-toggle="tooltip" data-placement="top" title="Destination Earth - On-Demand Extremes (DE330)">
+          <a class="page-link" href="/2025-05-04-ai-reflections/" data-toggle="tooltip" data-placement="top" title="Langtangen Was Right">
             <span class="d-none d-sm-inline-block">Next Post</span>
             <i class="fas fa-arrow-right" alt="Next Post"></i>
           </a>
