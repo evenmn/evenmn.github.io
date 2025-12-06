@@ -15,66 +15,82 @@ author: Even Nordhagen
 
 The WeatherGenerator is a four-year EU-funded initiative that aims to build a European foundation model for weather and climate.
 
-Today, weather forecasting is a complicated beast that consists of several components. First, observations are fetched from surface measurements, satellites, radars etc.. and assimilated into a grid. Then this grid is used as the initial state of numerical weather prediction (NWP) models to produce predictions. Thereafter, the predictions are typically post-processed before the final forecast is produced. Not only is this entire framework complex and makes development demanding, but it is also slow, requiring hours to produce a medium-range forecast. There is also a myriad of different models, with often specific applications. Some models focus on the atmosphere, some focus on surface variables and other focus of season-to-season forecasting. Different models focus on different resolution. The WeatherGenerator aims to cover all these applications in one single model, the model is *task independent*.  
+Today, weather forecasting is a complicated beast consisting of many components. First, observations are collected from surface measurements, satellites, radars, etc., and assimilated into a grid. This grid is then used as the initial state of numerical weather prediction (NWP) models to produce forecasts. Afterwards, the predictions are typically post-processed before the final forecast is produced. Not only is this entire framework complex, making development demanding, but it is also slow, often requiring hours to produce a medium-range forecast.
+
+There is also a myriad of different models, each with specific applications. Some focus on the atmosphere, some on surface variables, others on seasonal forecasting. Some run at very high resolution, others at coarse resolution. The WeatherGenerator aims to cover all these applications in a single task-independent model.
 
 <div class="text-center">
     <img src="/assets/img/weather-generator/wg_illustration.png" alt="WeatherGenerator" style="width: 70%;">
 </div>
-*WeatherGenerator is able to do a long range of tasks, including forecasting and downscaling.*
+*WeatherGenerator can perform a wide range of tasks, including forecasting and downscaling.*
 
-The WeatherGenerator is an initiative coordinated by the European Centre for Medium-Range Weather Forecasting (ECMWF), and has received funding from the European Union's Horizon project over a four-year period, starting from February 2025. The project is lead by Peter Dueben and Christian Lessig at ECMWF with 16 partners involved. The proposal got full score from the European Council, witnessing an extremely important project.
+The initiative is coordinated by the European Centre for Medium-Range Weather Forecasts (ECMWF) and funded by the European Union’s Horizon programme over four years starting in February 2025. The project is led by Peter Dueben and Christian Lessig at ECMWF, with 16 partners involved. The proposal received a full score from the European Council, underscoring the importance of this effort.
 
 # What is so special about the WeatherGenerator?
-We already have quite good models for the weather and climate. What is so special about this project? A foundation model for the weather systems is a game changer, and the potential benefits of a foundation model is enormous. Not only will it simplify the modelling pipelines, but, given the recent impressive performance demonstrated by machine learning models for weather forecasting, it also a good chance that the WeatherGenerator will be equal to or better than the current state-of-the-art weather prediction systems. Its applications span weather and climate prediction, renewable energy, flood forecasting, food security, health, and biosphere studies, encompassing 22 specific application areas. The WeatherGenerator will be able to simplify complex pipelines significantly. The project is ambitious, but the upside is huge.
 
-WeatherGenerator will be trained on an extensive list of datasets, including reanalysis datasets like ERA5 and CERRA, weather forecasts like ECMWF's Integrated Forecasting System (IFS) and the Destination Earth digital twins, and observed data from satellites, radars and surface stations.
+We already have strong operational models for weather and climate. So what makes this project special?
 
-In methodology, WeatherGenerator can be compared to recent large language models (LLMs) such as ChatGPT, Gemini and llama. They have partly or entirely replaced a long range of task-specific tools and services, including translators, grammar correctors, code linters, personal assistants and much more. Not only do they offer a fast, reliable and easy to use service, but they also outperform the old methods on many tasks.
+A foundation model for Earth system data is a genuine game changer. The potential benefits are enormous. Not only will it simplify modelling pipelines, but, given the impressive performance of recent machine-learning-based forecasting models, there is a real possibility that WeatherGenerator will match or surpass today’s state-of-the-art prediction systems.
 
-Think about how the smartphone replaced many task-specific deviced such as digital cameras, watches/stop watches/alarm clocks, MP3/music players, and recorders. In many ways, foundation models are equally large advances, but for softwares.
+Its applications span weather and climate prediction, renewable energy, flood forecasting, food security, health, and biosphere studies — 22 distinct application areas in total. A single, unified model could drastically simplify complex pipelines.
 
-There are already some examples on foundation models for weather and climate that proves the concept and demonstrate their capabilities. In particular, Microsoft have developed Aurora {% cite bodnar2024 %}, a foundation model for climate, weather and air pollution featuring 1.3 billion parameters trained on diverse data. However, compared to the ORBIT model {% cite wang2024a %} featuring 113 billion parameters, that is a tiny model. Notably, both these models were developed in the United States. WeatherGenerator is expected to contain up to 100 billion parameters, placing itself close to the ORBIT model.
+WeatherGenerator will be trained on an extensive list of datasets, including reanalyses like ERA5 and CERRA, forecasts from ECMWF’s Integrated Forecasting System (IFS) and the Destination Earth digital twins, and observational data from satellites, radars, and surface stations.
+
+Methodologically, WeatherGenerator is similar to large language models (LLMs) such as ChatGPT, Gemini, and Llama. These models have replaced a huge range of task-specific tools—translators, grammar checkers, code linters, personal assistants, and more. They are fast, easy to use, and often outperform the old tools.
+
+Think about how the smartphone replaced many task-specific devices such as digital cameras, watches, MP3 players, and recorders. Foundation models are a similar leap, but for software.
+
+There are already foundation models for weather and climate that demonstrate the concept. Microsoft developed Aurora {% cite bodnar2024 %}, a 1.3‑billion‑parameter model for climate, weather, and air pollution. The ORBIT model {% cite wang2024a %}, however, has 113 billion parameters. WeatherGenerator is expected to reach up to 100 billion parameters, placing it close to ORBIT.
 
 ![WeatherGenerator Applications](/assets/img/weather-generator/weathergenerator_applications.png){: .mx-auto.d-block :}
-*The WeatherGenerator will be able to take reanalysis data, simulation data and observations as inputs, and output predictions, state estimates and high-impact applications. Inputs and outputs can be 100m or 100km, global or local and from the past, present or future with arbitrary temporal resolution.*
+*WeatherGenerator can take reanalyses, simulations, and observations as inputs, and output predictions, state estimates, and high‑impact applications. Inputs and outputs can range from 100 m to 100 km resolution, global or local, past or future.*
 
 ## Exactly how does it work?
-The recent success of LLMs is greatly powered by advances in machine learning and processing units, [like discussed in a previous post](https://evennordhagen.com/2025-05-04-ai-reflections/). The idea is to start from a model with a large degrees of freedom, being very flexible. This model is usually an artificial neural network, as they can be fit to almost anything and we know how to train them. The model is then told to do regression, fitting the model to the desired data. With this training procedure, the essential information from the datasets is stored in the parameters. Large amounts of data requires a large amount of parameters to store the important information, even though the information is densely compressed. In other words, the important information from the training data is stored in the model. This is called pre-training. To be able to fetch useful information from it, a decoder must to be added to get the desired information.
 
-To be able to repeat this for weather forecasting, one needs access to huge amounts of data and computational resources. Fortunately, this is something we do in the weather forecasting community. The idea is to train an LLM on large amounts of meteorological data, including reanalysis, simulation data and observations from synoptical stations, radars, lidars, satelites and aviation. We will then utilize the EuroHPC computing infrastructures, like LUMI, Leonardo and the upcoming Jupiter clusters, for development, training and testing. I have written about EuroHPC and my experiences with running on the infrastructure [in a recent post](https://evennordhagen.com/2024-10-27-european-tier-0/). 
+The recent success of LLMs is powered by advances in machine learning and computing hardware. The idea is to start with a model with a huge number of degrees of freedom, making it extremely flexible. This model is usually an artificial neural network, as they can approximate almost anything and we know how to train them.
+
+The model is then trained via regression to fit large datasets. This pre‑training stores essential information from the data in the model’s parameters. Large datasets require many parameters, even if the information is compressed. To extract useful outputs, a suitable decoder is added.
+
+To do this for weather forecasting, we need massive amounts of data and computational resources. WeatherGenerator will be trained on reanalyses, simulations, and observations from synoptic stations, radars, lidars, satellites, and aviation. Training will use EuroHPC systems such as LUMI, Leonardo, and the upcoming Jupiter.
 
 ![Large Language Models WeatherGenerator Machine Learning Weather Forecasting](/assets/img/weather-generator/llm1.png)
-*LLMs compress the input data to a lower-dimensional latent space, where...*
+*LLMs compress input data into a lower-dimensional latent space.*
 
-Most of today's LLMs are based on a transformer architecture, with a self-attention mechanism. This was for a long time very costly, as the nature of attention made it hard to split up the tasks in small sub-tasks and run them in parallel. A turning point came in 2017, when [highly parallelizable transformers](www.evenmn.github.io) where made available. This made it possible to train LLMs on large infrastructures with thousands of graphics processing units. 
+Most modern LLMs rely on transformer architectures with self‑attention. A major turning point came in 2017 when highly parallelizable transformers became available, making large‑scale training feasible using thousands of GPUs.
 
-Meteorological observations are in general extremely sparse and inbalanced. The synoptical stations, radars and lidars on the surface are not evenly distributed, aviation data is mostly at certain altitudes and satelite data is sparse in both space and time. How can we deal with this? The aim for this project is to use representation learning/self-supervised learning/masked token learning to make the model fill in missing data. The way it works is that we mask the available data and let the model fill in the masks. It is penalized if the masks are incorrectly filled in. This is also used when training chatbots like ChatGPT, where words are masked in sentences.
+Meteorological observations are extremely sparse and imbalanced. Surface stations, radars, and lidars are unevenly distributed; aviation data exists only along flight paths; satellites have gaps in space and time. To handle this, we use representation learning or masked‑token modelling: parts of the input are masked and the model learns to reconstruct them, just like ChatGPT is trained.
 
 ![Representation Learning Masked Token Modelling WeatherGenerator Machine Learning Weather Forecasting](/assets/img/weather-generator/masked_token_modelling.png)
-*Masked token modelling*
+*Masked token modelling.*
 
-The WeatherGenerator is expected to contain up to 100 billion parameters, one of the largest LLMs for weather and climate.
+WeatherGenerator is expected to contain up to 100 billion parameters, making it one of the largest LLMs built for weather and climate.
 
-## Is Europe lagging behind?
-So far, most of the basic research on machine learning has been centered around Northern America, and private companies with massive financial muscles like Google, Microsoft, OpenAI and Meta have been central. At the same time, the Chinese government has invested heavily **[is this correct and consistent with illustration below?]** in development of machine learning, with [fill in...] This has, among other things, led to the DeepSeek LLM which at the moment outperforms the leading American LLMs ChatGPT, Genini and llama. One European success history is the british company DeepMind, who have been influential, but are now owned by Google. Are Europe lagging behind USA and Asia when it comes to development of machine learning? Are we about to lose the AI race?
+# Is Europe lagging behind?
+
+Most foundational machine‑learning research has been concentrated in North America, where private companies like Google, Microsoft, OpenAI, and Meta have enormous financial resources. China has also invested heavily in AI development, leading to models such as DeepSeek, which currently outperform some leading American LLMs.
+
+One European success story is DeepMind, though it is now owned by Google. This raises the question: is Europe falling behind the US and Asia?
 
 ![AI Investments US China EU27 UK](/assets/img/weather-generator/oecd_preqin.png)
-*The investments in AI is close to 10 times as high in the US compared to the European Union. Chinese investments are also significantly higher than in EU. Source: [OECD/Preqin](https://oecd.ai/en/data?selectedArea=investments-in-ai-and-data&selectedVisualization=vc-investments-in-ai-by-country&visualizationFiltersHash=eyJkYXRlIjpbIjIwMTIiLCIyMDI0Il0sImNvbnRyb2xzIjp7ImxvZ1NjYWxlIjpmYWxzZX0sImZpbHRlcnMiOnsiSU5EVVNUUlkiOiItLSBBbGwgaW5kdXN0cmllcyAtLSJ9LCJlbnRpdGllcyI6eyJDb3VudHJ5Q29kZSI6WyJVU0EiLCJDSE4iLCJFVTI3IiwiR0JSIl19LCJpbmRpY2F0b3JzIjp7IkluZGljYXRvciI6IlN1bV9vZl9kZWFscyJ9fQ%3D%3D)*
+*Investments in AI are far higher in the US and China compared to the EU. Source: OECD/Preqin.*
 
-The European Union's Horizon project is in some ways an answer to this question, where a lot of money is devoted to machine learning. It is apparent that EU have realized that we are behind and want to solve it by throwing money on machine learning.
+The EU’s Horizon programme is, in many ways, a response to this gap. Significant funding is now directed toward AI research, indicating a recognition of the need to catch up.
 
-In meteorology the situation is quite special, as ECMWF has been the leading provider of global weather forecasting for decades, a position that is now being threatened by American and Asian big-tech companies. However, like already mentioned, huge amounts of data and computing resources is needed to develop and train LLMs. Europe has large amounts of high quality meteorological data, in particular located at the ECMWF storage facilities. Europe also have competing high performance computing infrastructure, with 4 of the most powerful super computers according to the TOP500 list at the time writing. The last ingredient we need to make a state-of-the-art foundation model is the skills needed to develop such models. I believe that we do, and that chances are good that we can develop the next generation weather forecasting model. I'm more doubious about other domains where we cannot compete with the data availability. 
+Meteorology is a special case, however. ECMWF has been the global leader in weather forecasting for decades, though this position is now challenged by big‑tech efforts. Training large foundation models requires massive datasets, huge compute, and the expertise to use them effectively. Europe has all three, particularly in meteorology.
 
-## Conclusions
-The WeatherGenerator is a project that aims to build the next generation weather forecasting model. This is important to warn against the ever more frequent extreme weather events and secure Europe's position as the leading provider of global weather forecasting. Given the available data and computer resources in Europe, it is likely that we will be able to do this. 
+This gives Europe a realistic chance to build the next generation of weather‑forecasting systems. Other domains may be more challenging due to limited data availability.
 
-For more information about the initiative, visit [this ECMWF blog post](https://www.ecmwf.int/en/about/media-centre/news/2024/weathergenerator-project-aims-recast-machine-learning-earth-system).
+# Conclusions
+
+WeatherGenerator aims to build the next generation of weather‑forecasting models. This is crucial for warning against increasingly frequent extreme weather events and for maintaining Europe’s position as a world leader in global weather prediction. Given Europe’s unparalleled meteorological datasets and HPC resources, there is good reason to believe we can achieve this.
+
+For more information, see the official ECMWF blog post.
 
 ![Signature](/assets/img/signature.png){: .mx-auto.d-block :}
 
-Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
+Feel free to leave a comment or question below.
 
-*The WeatherGenerator project (grant agreement No. 101187947) is funded by the European Union. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the European Union or the Commission. Neither the European Union nor the granting authority can be held responsible for them.*
+*The WeatherGenerator project (grant agreement No. 101187947) is funded by the European Union. Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the Commission.*
 
 ![Funded by EU](/assets/img/weather-generator/EN-Funded by the EU-POS.png){: .mx-auto.d-block :}
 
