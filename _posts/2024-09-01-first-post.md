@@ -7,7 +7,7 @@ gh-badge: [follow]
 tags: [first post]
 comments: true
 mathjax: true
-author: Even Marius Nordhagen
+author: Even Nordhagen
 ---
 
 ## Purpose of the Website
@@ -22,4 +22,6 @@ I look forward to an exciting autumn. Stay tuned for more updates.
 
 Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 
-![Signature](/assets/img/signature.png){: .mx-auto.d-block :}
+<div class="signature">
+    <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;">
+</div>

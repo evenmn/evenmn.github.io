@@ -4,28 +4,23 @@ title: About me
 subtitle:
 ---
 
-Hi! I'm Even, a physicist by profesion, but currently working on weather modeling using data-driven models at the [Norwegian Meteorological Institute (MET Norway)](https://met.no/en). I have a keen interest in physics in general, modeling, visualization and machine learning, and find myself often solving problems with code. Do not hesitate reaching out to me if you ever want to discuss the aformentioned topics.
+Hi! I'm Even — a physicist by training, currently working on weather modeling with data-driven approaches at the [Norwegian Meteorological Institute (MET Norway)](https://met.no/en). I’m passionate about physics, modeling, visualization, and machine learning, and I often find myself solving problems through code. If you’re ever up for a chat about any of those topics, don’t hesitate to reach out!
 
-In my spare time I enjoy being active and social, spending time on CrossFit, gravel cycling and playing chess (I'm the ultimate freak in other words).
-
-![Even](/assets/img/EVEN-2.png)
-*Even (pronounced /ˈɛvən/), which translates to "happy victor," is a traditional Norwegian name with origins in Old Norse. Satellite images that looks like letters. From the left: Bellona plateau, Mapleton (Maine), Sea of Okhotskis, Yapacani (Bolivia). The images are taken from [NASA Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/index.html).*
+In my spare time, I enjoy staying active and social — you’ll often find me doing CrossFit, gravel cycling, or playing chess.
 
 ## My background
-I grew up in the small village of Auli in the meteropolean area of Oslo, Norway, and moved to Oslo to study physics at the University of Oslo (UiO) in 2014. I obtained my bachelor degree in 2017, where I spent an exchange semester at Nanyang Technological University (NTU), Singapore.
+I grew up in a small town just outside Oslo, Norway, and moved to the city in 2014 to study physics at the University of Oslo (UiO). I earned my bachelor’s degree in 2017, including an exchange semester at Nanyang Technological University (NTU) in Singapore.
 
-For my master's degree I studied how to solve the Schrodinger equation using machine learning. In quantum mechanics, the variational principle tells us that any wave function that yields solution to the Schrodinger equation will give a local energy larger or equal (in the case of the ground state) to the ground state energy. Thus, a trial wave function with variational parameters may be optimized with respect to minimizing the local energy in order to find the ground state of a quantum system. This is a natural machine learning problem, as the wave function naturally can be represented by a neural network and the local energy is a natural cost function that we want to minimize. The master thesis ended up in [a publication](https://www.frontiersin.org/articles/10.3389/fphy.2023.1061580).
+For my master’s degree, I explored [how to solve the Schrödinger equation using machine learning](https://evennordhagen.com/projects/quantumdots/). The variational principle in quantum mechanics states that any trial wave function will yield an energy equal to or higher than the true ground state energy. By representing the wave function with a neural network, we optimized variational parameters to minimize the local energy — effectively treating the problem as a machine learning task. This work resulted in [a publication](https://www.frontiersin.org/articles/10.3389/fphy.2023.1061580).
 
-Alongside my studies, I got the opportunety to have the perfect part time job as a teaching assistent at UiO. I taught various courses at the department of physics, including classical mechanics, electromagnetism and computational physics (see complete list below). I got a summer internship at Andøya Space Center (ASC) in the summer of 2018, where my job was to develop an automatized framework for detect clouds. To be able to launch rockets, the atmospheric winds have to be evaluated using LIDARs, which only works when the sky is clear. The cloud coverage was back then estimated manually, which was both inaccurate and error-prone. By using an all-sky camera, we managed to make software for automatic detection of clouds. As a side note, ASC just became [the first site in Europe to launch satellites](https://andoyaspace.no/news-articles/andoya-spaceport-officially-opened/)!
+Alongside my studies, I had what I’d consider the ideal part-time job: teaching assistant at UiO. I taught a range of physics courses including classical mechanics, electromagnetism, and computational physics (full list below). During the summer of 2018, I interned at Andøya Space Center (ASC), where I developed an automated framework for cloud detection. Rocket launches depend on precise atmospheric measurements using LIDARs — which require clear skies — so we created software using an all-sky camera to replace the manual, error-prone cloud assessments. As a side note, ASC just became [the first site in Europe to launch satellites](https://andoyaspace.no/news-articles/andoya-spaceport-officially-opened/)!
 
-![ASC](/assets/img/asc.jpg)
-*Here, I am holding the lens system of the all-sky camera, which is utilized to detect clouds at Andøya Space Center.*
+<img src="/assets/img/aboutme/asc.jpg" alt="ASC" class="img-responsive-center">
+<p><em>Here in 2018, holding the lens system of the all-sky camera used for cloud detection at Andøya Space Center.</em></p>
 
-After my masters, I embarked on a PhD degree where I measured friction on the nanoscale using molecular dynamics (MD) simulations. MD simulations offer resolution in space and time superior to what is possible in real experiments, and thus provide information that else is unavailable. I observed that frictional silicon carbide interfaces strengthen with time due to surface diffusion, which explains how sliding friction decreases with larger sliding velocities ([E. M. Nordhagen, H. A. Sveinsson, A. M. Sørenssen, "Diffusion-driven Frictional Aging in Silicon Carbide", *Tribology letters* **71**, 95 (2023)](https://doi.org/10.1007/s11249-023-01762-z)). I also got very interested in generative machine learning modeling, and based on that I found a way to solve the inverse friction design problem. I defended my PhD in August 2024. 
+After completing my master’s, I pursued a PhD focused on [friction at the nanoscale](https://evennordhagen.com/projects/friction/) using molecular dynamics (MD) simulations. These simulations offer space-time resolution far beyond what's possible in experiments, allowing deeper insights. I discovered that frictional silicon carbide interfaces strengthen over time due to surface diffusion — explaining why friction decreases at higher sliding velocities. This work culminated in a [publication in Tribology Letters](https://doi.org/10.1007/s11249-023-01762-z). During my PhD, I also delved into generative machine learning, which led me to address the [inverse frictional design problem](https://evennordhagen.com/projects/inversedesign/). I defended my thesis in August 2024.
 
-In May 2024, I started in a research position at the Norwegian Meteorological Institute (MET Norway) with the goal of developing a machine learning model for accurate regional weather prediction over the Nordics. Machine learning models in global weather forecasting has recently gained massive attention due to their accuracy and relatively low computational cost. We aim to build on this work, making a regional counterpart (preprint available: [arXiv:2409.02891](https://arxiv.org/abs/2409.02891)).
-
-I have observed that, throughout my brief academic career, I have progressively modeled increasingly larger systems. Beginning with single atoms, I advanced to nanoscale systems containing thousands to millions of atoms, and then to weather systems, which operate on a vastly different scale. Perhaps the next step is cosmological modeling?
+In May 2024, I joined MET Norway as a researcher, working on developing machine learning models for high-resolution weather forecasting in the Nordics. Machine learning has recently shown great promise in global weather forecasting due to its accuracy and efficiency, and we're building on this momentum with a regional model. (You can check out our preprint here: [arXiv:2409.02891](https://arxiv.org/abs/2409.02891)).
 
 ## Summary
 ### Education
@@ -40,8 +35,6 @@ I have observed that, throughout my brief academic career, I have progressively 
 - **2024-today: Researcher,** Norwegian Meteorological Institute
 - **2018: Summer internship,** Andøya Space Center
 - **2018-2019: Teaching Assistant,** University of Oslo
-- **2018: Private Tutor,** UNAK
-- **2013-2017: Employee,** Circle K, Lørenfallet, Lillestrøm
 
 ### Courses taught
 - **FYS4460,** Percolation and Disordered Systems, 2024
@@ -53,13 +46,13 @@ I have observed that, throughout my brief academic career, I have progressively 
 
 ### Skills
 
-- **Programming languages:** Python (Advanced), C++ (Advanced)
+- **Programming languages:** Python, C++
 - **Software and Tools:** Linux, HPC, Data Analysis, Machine Learning
 
 ### Languages
 
-- **Norwegian** (native)
-- **English** (fluent)
+- **Norwegian**
+- **English**
 
 ### Presentations
 - **EuroHPC User Day 2024,** Amsterdam, Netherlands

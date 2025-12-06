@@ -2,38 +2,43 @@
 layout: post
 title: Playing with Europe's Biggest Supercomputers
 subtitle: Some experiences 
-cover-img: /assets/img/eurohpc_4.jpeg
-thumbnail-img: /assets/img/eurohpc_3.jpeg
-share-img: /assets/img/eurohpc_3.jpeg
+cover-img: /assets/img/eurohpc/eurohpc_4.jpeg
+thumbnail-img: /assets/img/eurohpc/eurohpc_3.jpeg
+share-img: /assets/img/eurohpc/eurohpc_3.jpeg
 gh-repo: evenmn/evenmn.github.io
 gh-badge: [follow]
 tags: [EuroHPC, tier-0, LUMI, Leonardo]
 comments: true
 mathjax: true
-author: Even Marius Nordhagen
+author: Even Nordhagen
 ---
 
 I just came back from the **EuroHPC User Day 2024**, held in Amsterdam on October 22-23, where I had the honor of presenting the outcomes of our research on the EuroHPC supercomputers. For those who may not be familiar, the **European High-Performance Computing Joint Undertaking** (**EuroHPC JU**) oversees the installation, operation, maintenance, and distribution of Europe’s most powerful supercomputers, commissioned by the European Union. This network includes three of the current top 10 supercomputers globally: **LUMI**, **Leonardo**, and **MareNostrum 5**. Additionally, **Jupiter**, which is currently being installed, is expected to soon rank as the world's second most powerful supercomputer. The conference was primarily user-focused, which is why I was invited to share our work there.
 
-![LUMI](/assets/img/LUMI.jpg){: .mx-auto.d-block :}
-
+<div class="text-center">
+    <img src="/assets/img/eurohpc/LUMI.jpg" alt="LUMI" style="width: 70%;">
+</div>
 *LUMI is Europe's most powerful computer, and means 'snow' in Finnish.*
 
 This post will delve into my experiences with the EuroHPC supercomputing facilities, drawing also on the collaborative research that my team and I have detailed in a scientific paper that’s presently undergoing peer review.
 
-![EYE](/assets/img/EYE.jpg){: .mx-auto.d-block :}
+<div class="text-center">
+    <img src="/assets/img/eurohpc/EYE.jpg" alt="EYE" style="width: 70%;">
+</div>
 *The EuroHPC User Day 2024 was held at the EYE Film Museum, Amsterdam.*
 
-## What Got Me Hooked:
+## What Got Me Hooked
 
 First, let me share how I became so fascinated with supercomputers. My journey began in 2017 when I was first introduced to computer clusters. I gained access to the Norwegian **Abel** computer, which at the time was ranked among the world’s top 100 supercomputers. Although the scale of our jobs back then was relatively small by today's standards, the simulation procedures were quite similar.
 
 In 2020, when Abel was decommissioned, the condensed matter group at the University of Oslo acquired part of the system. I was tasked with relocating and setting up this portion in our physics department, giving me valuable hands-on experience in cluster installation and maintenance. This event significantly fueled my interest in high-performance computing.
 
-![EuroHPC](/assets/img/eurohpc.jpeg){: .mx-auto.d-block :}
+<div class="text-center">
+    <img src="/assets/img/eurohpc/eurohpc.jpeg" alt="EuroHPC" style="width: 70%;">
+</div>
 *Location of the EuroHPC supercomputers. Photo from the first presentation at EuroHPC User Day 2024.*
 
-## First impressions:
+## First impressions
 
 I’m not going to hide that running jobs on large supercomputers is a cool experience. Witnessing 10,000 GPUs working simultaneously is truly unique and awe-inspiring. Knowing that these machines are behind much of today’s cutting-edge technology adds an extra level of excitement. The societal impact of supercomputers is immense, especially considering the ongoing AI revolution.
 
@@ -41,10 +46,12 @@ For instance, large language models (LLMs) like ChatGPT have become household na
 
 But the thrill of running on these colossal computers goes beyond their societal implications. It's also about the sheer wonder of the technology itself: billions of computations per second, intricate algorithms optimizing performance, and the quest to push the boundaries of what's possible.
 
-![Abel](/assets/img/abel.png){: .mx-auto.d-block :}
+<div class="text-center">
+    <img src="/assets/img/eurohpc/abel.png" alt="Abel" style="width: 70%;">
+</div>
 *Me and Anders Malthe-Sørenssen collecting nodes from the Abel computer. Photo: Sebastian Winther-Larsen.*
 
-## How These Computers Work:
+## How These Computers Work
 
 So, how do these supercomputers actually function? Despite their mysterious name, there’s no magic involved in how they operate. Fundamentally, they consist of many standard compute nodes connected via high-speed communication networks. To harness their immense power, tasks must be divided so that different parts can run independently across separate nodes (this is known as parallel processing). 
 
@@ -54,18 +61,20 @@ Here's how it works: You can dedicate different parts of the supercomputer to an
 
 But we can push this even further by assigning each country to different segments of the supercomputer. Now, many parts of the computer are working simultaneously, each focused on a smaller task. This way, the analysis of the satellite images can be conducted much faster compared to a sequential approach.
 
-![SINFO](/assets/img/lumi_sinfo.png){: .mx-auto.d-block :}
+<div class="text-center">
+    <img src="/assets/img/eurohpc/lumi_sinfo.png" alt="SINFO" style="width: 100%;">
+</div>
 *Screen shot of the GPU resources on LUMI. Note that 1,830 nodes are allocated and 811 are draining, each featuring 4 powerful GPUs.*
 
 This is the fundamental principle behind supercomputers: partitioning the machine so that each small segment handles a dedicated task, with many such tasks running in parallel. This method dramatically reduces the wall-clock time, making it feasible to tackle colossal computations that would otherwise be impractical.
 
-## Experiences:
+## Experiences
 
 All the EuroHPC computers, and in fact, all other supercomputers, run on the Linux operating system. This robust OS is ideal for high-performance computing due to its flexibility and stability. Resource distribution on these systems is managed by the queueing system known as SLURM (Simple Linux Utility for Resource Management). SLURM efficiently queues jobs based on a multi-factor priority list, allocates the necessary resources, and provides comprehensive accounting statistics. 
 
 From my experience, SLURM works exceptionally well. The queue times are generally reasonable, ensuring that computational jobs are processed efficiently without significant delays. However, like all systems, there are challenges, one of the most common being the transfer of large data sets over long distances. This is usually not a cluster-specific problem, as the bottleneck is cables and not bandwidth. If you cannot change the hardware, one way to transfer data faster is by compressing the data. 
 
-## Some Improvements:
+## Some Improvements
 
 The human brain is hardwired to favor familiarity; we feel more comfortable in environments we've encountered before. This tendency is why store and restaurant chains design their spaces to look similar or identical, reducing the cognitive load for their customers. However, EuroHPC hasn't fully capitalized on this psychological principle, resulting in varied user experiences across different systems.
 
@@ -73,7 +82,9 @@ Some differences are unavoidable due to hardware variations. For example, LUMI u
 
 These variations translate into differing user experiences, which isn’t ideal. There's a balance to be struck between security and user-friendliness, and in this case, different national computing centers have found different equilibriums. As a result, users must adapt to different environments when transitioning between systems, which can be inefficient and cumbersome.
 
-![EuroHPC](/assets/img/eurohpc_2.jpeg){: .mx-auto.d-block :}
+<div class="text-center">
+    <img src="/assets/img/eurohpc/eurohpc_2.jpeg" alt="EuroHPC" style="width: 70%;">
+</div>
 *Some statistics from the EuroHPC User Day 2024. One important message (for us in particular) is that Earth System Sciences and Environmental Studies is slightly underrepresented in the applications compared to computational physics, material and chemical sciences and engineering.*
 
 The unnecessary differences between supercomputers extend to file system architectures and login procedures, impacting user workflows. Some systems use Lustre filesystems, which excel at handling large files but struggle with many small files. This necessitates the use of containers for software dependencies on Lustre systems like LUMI. On other systems, virtual environments might be more efficient.
@@ -83,10 +94,12 @@ Moreover, login procedures vary, with some systems requiring two-factor authenti
 In our conference paper, we advocate for a more unified policy regarding system setup. Standardizing policies and procedures across EuroHPC systems would simplify transitions from one supercomputer to another, fostering a more consistent and user-friendly experience. This could greatly enhance productivity and reduce the learning curve for users operating across multiple supercomputing systems. Standardizing these elements would allow users to focus more on their research rather than adapting to different system requirements.
 
 
-## Moving Forward:
+## Moving Forward
 
 The good news is that our requests have been heard. EuroHPC plans to implement a unified system policy in 2025. This is a significant leap in the right direction, though I await its actual implementation with cautious optimism. Even with these changes, challenges like large file transfers will remain.
 
 Feel free to drop a comment or question below if you have thoughts or experiences you'd like to share.
 
-![Signature](/assets/img/signature.png){: .mx-auto.d-block :}
+<div class="signature">
+    <img src="/assets/img/signature.png" alt="Signature" style="width: 50%;">
+</div>
