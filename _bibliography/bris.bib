@@ -1,0 +1,139 @@
+
+@article{lam2023,
+	title = {Learning skillful medium-range global weather forecasting},
+	volume = {382},
+	issn = {0036-8075, 1095-9203},
+	url = {https://www.science.org/doi/10.1126/science.adi2336},
+	doi = {10.1126/science.adi2336},
+	abstract = {Global medium-range weather forecasting is critical to decision-making across many social and economic domains. Traditional numerical weather prediction uses increased compute resources to improve forecast accuracy but does not directly use historical weather data to improve the underlying model. Here, we introduce GraphCast, a machine learning–based method trained directly from reanalysis data. It predicts hundreds of weather variables for the next 10 days at 0.25° resolution globally in under 1 minute. GraphCast significantly outperforms the most accurate operational deterministic systems on 90\% of 1380 verification targets, and its forecasts support better severe event prediction, including tropical cyclone tracking, atmospheric rivers, and extreme temperatures. GraphCast is a key advance in accurate and efficient weather forecasting and helps realize the promise of machine learning for modeling complex dynamical systems.
+          , 
+            Editor’s summary
+            
+              The numerical models used to predict weather are large, complex, and computationally demanding and do not learn from past weather patterns. Lam
+              et al
+              . introduced a machine learning–based method that has been trained directly from reanalysis data of past atmospheric conditions. In this way, the authors were able to quickly predict hundreds of weather variables globally up to 10 days in advance and at high resolution. Their predictions were more accurate than those of traditional weather models in 90\% of tested cases and displayed better severe event prediction for tropical cyclones, atmospheric rivers, and extreme temperatures. —H. Jesse Smith
+            
+          , 
+            Machine learning leads to better, faster, and cheaper weather forecasting.},
+	language = {en},
+	number = {6677},
+	urldate = {2024-04-24},
+	journal = {Science},
+	author = {Lam, Remi and Sanchez-Gonzalez, Alvaro and Willson, Matthew and Wirnsberger, Peter and Fortunato, Meire and Alet, Ferran and Ravuri, Suman and Ewalds, Timo and Eaton-Rosen, Zach and Hu, Weihua and Merose, Alexander and Hoyer, Stephan and Holland, George and Vinyals, Oriol and Stott, Jacklynn and Pritzel, Alexander and Mohamed, Shakir and Battaglia, Peter},
+	month = dec,
+	year = {2023},
+	keywords = {AIFS, weather},
+	pages = {1416--1421},
+	file = {Lam et al. - 2023 - Learning skillful medium-range global weather fore.pdf:/home/evnor2743/Zotero/storage/2P3EFMEX/Lam et al. - 2023 - Learning skillful medium-range global weather fore.pdf:application/pdf},
+}
+
+@article{bi2023,
+	title = {Accurate medium-range global weather forecasting with {3D} neural networks},
+	volume = {619},
+	copyright = {2023 The Author(s)},
+	issn = {1476-4687},
+	url = {https://www.nature.com/articles/s41586-023-06185-3},
+	doi = {10.1038/s41586-023-06185-3},
+	abstract = {Weather forecasting is important for science and society. At present, the most accurate forecast system is the numerical weather prediction (NWP) method, which represents atmospheric states as discretized grids and numerically solves partial differential equations that describe the transition between those states1. However, this procedure is computationally expensive. Recently, artificial-intelligence-based methods2 have shown potential in accelerating weather forecasting by orders of magnitude, but the forecast accuracy is still significantly lower than that of NWP methods. Here we introduce an artificial-intelligence-based method for accurate, medium-range global weather forecasting. We show that three-dimensional deep networks equipped with Earth-specific priors are effective at dealing with complex patterns in weather data, and that a hierarchical temporal aggregation strategy reduces accumulation errors in medium-range forecasting. Trained on 39 years of global data, our program, Pangu-Weather, obtains stronger deterministic forecast results on reanalysis data in all tested variables when compared with the world’s best NWP system, the operational integrated forecasting system of the European Centre for Medium-Range Weather Forecasts (ECMWF)3. Our method also works well with extreme weather forecasts and ensemble forecasts. When initialized with reanalysis data, the accuracy of tracking tropical cyclones is also higher than that of ECMWF-HRES.},
+	language = {en},
+	number = {7970},
+	urldate = {2024-05-14},
+	journal = {Nature},
+	author = {Bi, Kaifeng and Xie, Lingxi and Zhang, Hengheng and Chen, Xin and Gu, Xiaotao and Tian, Qi},
+	month = jul,
+	year = {2023},
+	note = {Publisher: Nature Publishing Group},
+	keywords = {AIFS, Atmospheric dynamics, Computer science},
+	pages = {533--538},
+	file = {Full Text PDF:/home/evnor2743/Zotero/storage/Q6ZH4I69/Bi et al. - 2023 - Accurate medium-range global weather forecasting w.pdf:application/pdf},
+}
+
+@misc{bonev2025,
+	title = {{FourCastNet} 3: {A} geometric approach to probabilistic machine-learning weather forecasting at scale},
+	shorttitle = {{FourCastNet} 3},
+	url = {http://arxiv.org/abs/2507.12144},
+	doi = {10.48550/arXiv.2507.12144},
+	abstract = {FourCastNet 3 advances global weather modeling by implementing a scalable, geometric machine learning (ML) approach to probabilistic ensemble forecasting. The approach is designed to respect spherical geometry and to accurately model the spatially correlated probabilistic nature of the problem, resulting in stable spectra and realistic dynamics across multiple scales. FourCastNet 3 delivers forecasting accuracy that surpasses leading conventional ensemble models and rivals the best diffusion-based methods, while producing forecasts 8 to 60 times faster than these approaches. In contrast to other ML approaches, FourCastNet 3 demonstrates excellent probabilistic calibration and retains realistic spectra, even at extended lead times of up to 60 days. All of these advances are realized using a purely convolutional neural network architecture tailored for spherical geometry. Scalable and efficient large-scale training on 1024 GPUs and more is enabled by a novel training paradigm for combined model- and data-parallelism, inspired by domain decomposition methods in classical numerical models. Additionally, FourCastNet 3 enables rapid inference on a single GPU, producing a 60-day global forecast at 0.25\{{\textbackslash}deg\}, 6-hourly resolution in under 4 minutes. Its computational efficiency, medium-range probabilistic skill, spectral fidelity, and rollout stability at subseasonal timescales make it a strong candidate for improving meteorological forecasting and early warning systems through large ensemble predictions.},
+	urldate = {2025-08-13},
+	publisher = {arXiv},
+	author = {Bonev, Boris and Kurth, Thorsten and Mahesh, Ankur and Bisson, Mauro and Kossaifi, Jean and Kashinath, Karthik and Anandkumar, Anima and Collins, William D. and Pritchard, Michael S. and Keller, Alexander},
+	month = jul,
+	year = {2025},
+	note = {arXiv:2507.12144 [cs]},
+	keywords = {Computer Science - Machine Learning, Physics - Atmospheric and Oceanic Physics},
+	file = {Preprint PDF:/home/evnor2743/Zotero/storage/IZZQ6QYE/Bonev et al. - 2025 - FourCastNet 3 A geometric approach to probabilistic machine-learning weather forecasting at scale.pdf:application/pdf;Snapshot:/home/evnor2743/Zotero/storage/LLUE63BF/2507.html:text/html},
+}
+
+@misc{lang2024a,
+	title = {{AIFS}-{CRPS}: {Ensemble} forecasting using a model trained with a loss function based on the {Continuous} {Ranked} {Probability} {Score}},
+	shorttitle = {{AIFS}-{CRPS}},
+	url = {http://arxiv.org/abs/2412.15832},
+	doi = {10.48550/arXiv.2412.15832},
+	abstract = {Over the last three decades, ensemble forecasts have become an integral part of forecasting the weather. They provide users with more complete information than single forecasts as they permit to estimate the probability of weather events by representing the sources of uncertainties and accounting for the day-to-day variability of error growth in the atmosphere. This paper presents a novel approach to obtain a weather forecast model for ensemble forecasting with machine-learning. AIFS-CRPS is a variant of the Artificial Intelligence Forecasting System (AIFS) developed at ECMWF. Its loss function is based on a proper score, the Continuous Ranked Probability Score (CRPS). For the loss, the almost fair CRPS is introduced because it approximately removes the bias in the score due to finite ensemble size yet avoids a degeneracy of the fair CRPS. The trained model is stochastic and can generate as many exchangeable members as desired and computationally feasible in inference. For medium-range forecasts AIFS-CRPS outperforms the physics-based Integrated Forecasting System (IFS) ensemble for the majority of variables and lead times. For subseasonal forecasts, AIFS-CRPS outperforms the IFS ensemble before calibration and is competitive with the IFS ensemble when forecasts are evaluated as anomalies to remove the influence of model biases.},
+	urldate = {2025-01-02},
+	publisher = {arXiv},
+	author = {Lang, Simon and Alexe, Mihai and Clare, Mariana C. A. and Roberts, Christopher and Adewoyin, Rilwan and Bouallègue, Zied Ben and Chantry, Matthew and Dramsch, Jesper and Dueben, Peter D. and Hahner, Sara and Maciel, Pedro and Prieto-Nemesio, Ana and O'Brien, Cathal and Pinault, Florian and Polster, Jan and Raoult, Baudouin and Tietsche, Steffen and Leutbecher, Martin},
+	month = dec,
+	year = {2024},
+	note = {arXiv:2412.15832 [physics]},
+	keywords = {mlwp, global, gnn, ensembles, crps, era5},
+	annote = {ECMWF
+},
+	annote = {Main take aways:
+
+
+Train with a modified loss (almost fair CRPS)
+
+
+Train and initialize ensemble members from deterministic ERA5
+
+
+Gaussian processor grids
+
+
+Impossible to see if they have the same problem as us with different precipitation fields
+
+
+Training on H100 Malenustraum5 in Spain
+
+
+},
+	file = {Preprint PDF:/home/evnor2743/Zotero/storage/QJRL8ALG/Lang et al. - 2024 - AIFS-CRPS Ensemble forecasting using a model trai.pdf:application/pdf;Snapshot:/home/evnor2743/Zotero/storage/4BD5FA8R/2412.html:text/html},
+}
+
+@article{lorenz1963,
+	title = {Deterministic {Nonperiodic} {Flow}.},
+	volume = {20},
+	issn = {0022-4928},
+	url = {https://ui.adsabs.harvard.edu/abs/1963JAtS...20..130L},
+	doi = {10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2},
+	abstract = {Finite systems of deterministic ordinary nonlinear differential equations may be designed to represent forced dissipative hydrodynamic flow. Solutions of these equations can be identified with trajectories in phase space. For those systems with bounded solutions, it is found that nonperiodic solutions are ordinarily unstable with respect to small modifications, so that slightly differing initial states can evolve into considerably different states. Systems with bounded solutions are shown to possess bounded numerical solutions.A simple system representing cellular convection is solved numerically. All of the solutions are found to be unstable, and almost all of them are nonperiodic.The feasibility of very-long-range weather prediction is examined in the light of these results.},
+	urldate = {2025-01-27},
+	journal = {Journal of the Atmospheric Sciences},
+	author = {Lorenz, Edward N.},
+	month = mar,
+	year = {1963},
+	note = {Publisher: AMS
+ADS Bibcode: 1963JAtS...20..130L},
+	keywords = {butterfly effect},
+	pages = {130--148},
+	annote = {The Butterfly Effect
+},
+	file = {lorenz1962.pdf:/home/evnor2743/Zotero/storage/EJRDAZEC/lorenz1962.pdf:application/pdf},
+}
+
+@misc{nordhagen2025a,
+	title = {High-{Resolution} {Probabilistic} {Data}-{Driven} {Weather} {Modeling} with a {Stretched}-{Grid}},
+	url = {http://arxiv.org/abs/2511.23043},
+	doi = {10.48550/arXiv.2511.23043},
+	abstract = {We present a probabilistic data-driven weather model capable of providing an ensemble of high spatial resolution realizations of 87 variables at arbitrary forecast length and ensemble size. The model uses a stretched grid, dedicating 2.5 km resolution to a region of interest, and 31 km resolution elsewhere. Based on a stochastic encoder-decoder architecture, the model is trained using a loss function based on the Continuous Ranked Probability Score (CRPS) evaluated point-wise in real and spectral space. The spectral loss components is shown to be necessary to create fields that are spatially coherent. The model is compared to high-resolution operational numerical weather prediction forecasts from the MetCoOp Ensemble Prediction System (MEPS), showing competitive forecasts when evaluated against observations from surface weather stations. The model produced fields that are more spatially coherent than mean squared error based models and CRPS based models without the spectral component in the loss.},
+	urldate = {2025-12-29},
+	publisher = {arXiv},
+	author = {Nordhagen, Even Marius and Haugen, Håvard Homleid and Salihi, Aram Farhad Shafiq and Ingstad, Magnus Sikora and Nipen, Thomas Nils and Seierstad, Ivar Ambjørn and Frogner, Inger-Lise and Clare, Mariana and Lang, Simon and Chantry, Matthew and Dueben, Peter and Kristiansen, Jørn},
+	month = nov,
+	year = {2025},
+	note = {arXiv:2511.23043 [physics]},
+	keywords = {Computer Science - Artificial Intelligence, Physics - Atmospheric and Oceanic Physics},
+	annote = {Comment: 14 pages, 8 figures},
+	file = {Preprint PDF:/home/evnor2743/Zotero/storage/3IFKN9C6/Nordhagen et al. - 2025 - High-Resolution Probabilistic Data-Driven Weather Modeling with a Stretched-Grid.pdf:application/pdf;Snapshot:/home/evnor2743/Zotero/storage/GLZNA9Q5/2511.html:text/html},
+}
