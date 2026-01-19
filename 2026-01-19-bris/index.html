@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  
+
+  <title>Bris | Even Nordhagen</title>
+
+  
+  
+  <meta name="author" content="Even Nordhagen">
+  
+
+  <meta name="description" content="High-Resolution Probabilistic Data-Driven Weather Modeling">
+
+  
+
+  
+  <meta name="keywords" content="Even Marius Nordhagen, Nordhagen, Even Nordhagen, machine learning, friction, molecular dynamics simulations, weather models">
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="Even Nordhagen" href="/feed.xml">
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ6Q8NX2RD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GZ6Q8NX2RD');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript">
+  MathJax = {
+    options: {
+      skipHtmlTags: [
+        'script', 'noscript', 'style', 'textarea', 'pre', 'code'
+      ]
+    }
+  };
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Even Nordhagen">
+  <meta property="og:title" content="Bris | Even Nordhagen">
+  <meta property="og:description" content="High-Resolution Probabilistic Data-Driven Weather Modeling">
+
+  
+  <meta property="og:image" content="/assets/img/bris/bris.png">
+  
+
+  
+  <meta property="og:type" content="article">
+  
+  <meta property="og:article:author" content="Even Nordhagen">
+  
+  <meta property="og:article:published_time" content="2026-01-19T00:00:00-05:00">
+  <meta property="og:url" content="/2026-01-19-bris/">
+  <link rel="canonical" href="/2026-01-19-bris/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Bris | Even Nordhagen">
+  <meta property="twitter:description" content="High-Resolution Probabilistic Data-Driven Weather Modeling">
+
+  
+  <meta name="twitter:image" content="/assets/img/bris/bris.png">
+  
+
+  
+
+
+  
+
+  
+  
+  <link rel="icon" href="/favicon.ico" />
+  
+
+  
+
+</head>
+
+
+<body>
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand navbar-brand-logo" href="/"><img alt="Even Nordhagen Logo" src="/assets/img/signature.png"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About me</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/projects/friction">Friction modeling</a>
+                  <a class="dropdown-item" href="/projects/inversedesign">Inverse design</a>
+                  <a class="dropdown-item" href="/projects/quantumdots">Quantum dots</a>
+                  <a class="dropdown-item" href="/projects/building-water-model">Water model</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/portrait_nordhagen_machine_learning.jpg" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "Bris", \
+          "desc"     : "Bris", \
+          "category" : "Brisweatherforecastingmachine learningdata-driven models", \
+          "url"      : "/2026-01-19-bris/", \
+          "date"     : "January 19, 2026" \
+        }, \
+       \
+        { \
+          "title"    : "WeatherGenerator", \
+          "desc"     : "WeatherGenerator", \
+          "category" : "WeatherGeneratorweatherclimatefoundation model", \
+          "url"      : "/2025-12-06-weather-generator/", \
+          "date"     : "December  6, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Two New Friction Papers Published", \
+          "desc"     : "Two New Friction Papers Published", \
+          "category" : "molecular dynamicsmachine learningVashishtadiffusion modelstribology", \
+          "url"      : "/2025-08-05-friction-papers/", \
+          "date"     : "August  5, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "New Paper Out", \
+          "desc"     : "New Paper Out", \
+          "category" : "waternucleationVashishtaMonte CarloMetropolisAVBMC", \
+          "url"      : "/2025-07-06-avbmc/", \
+          "date"     : "July  6, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Langtangen Was Right", \
+          "desc"     : "Langtangen Was Right", \
+          "category" : "AI boomartificial intelligencemachine learningHans Petter Langtangen", \
+          "url"      : "/2025-05-04-ai-reflections/", \
+          "date"     : "May  4, 2025" \
+        }, \
+       \
+        { \
+          "title"    : "Destination Earth - On-Demand Extremes (DE330)", \
+          "desc"     : "Destination Earth - On-Demand Extremes (DE330)", \
+          "category" : "Destination EarthDestinEDE330DEODEextreme weather", \
+          "url"      : "/2024-12-27-deode/", \
+          "date"     : "December 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "desc"     : "Playing with Europe&#39;s Biggest Supercomputers", \
+          "category" : "EuroHPCtier-0LUMILeonardo", \
+          "url"      : "/2024-10-27-european-tier-0/", \
+          "date"     : "October 27, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Regional Data-Driven Weather Modeling", \
+          "desc"     : "Regional Data-Driven Weather Modeling", \
+          "category" : "AIFSstretched-grid", \
+          "url"      : "/2024-09-12-stretched-grid/", \
+          "date"     : "September 12, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "desc"     : "Workshop on Large-scale Deep Learning for the Earth System", \
+          "category" : "weather predictionmachine learningdata-driven", \
+          "url"      : "/2024-09-10-large-scale-deep-learning-earth-system/", \
+          "date"     : "September 10, 2024" \
+        }, \
+       \
+        { \
+          "title"    : "My first blog post", \
+          "desc"     : "My first blog post", \
+          "category" : "first post", \
+          "url"      : "/2024-09-01-first-post/", \
+          "date"     : "September  1, 2024" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "About me", \
+          "desc"     : "About me", \
+          "category" : "page", \
+          "url"      : "/aboutme/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Building a Flexible Water Model", \
+          "desc"     : "Building a Flexible Water Model", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/building-water-model/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Contact Me", \
+          "desc"     : "Contact Me", \
+          "category" : "page", \
+          "url"      : "/contact/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Friction modeling", \
+          "desc"     : "Friction modeling", \
+          "category" : "page", \
+          "url"      : "/projects/friction/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Inverse Frictional Design", \
+          "desc"     : "Inverse Frictional Design", \
+          "category" : "dissociativewatermolecular dynamicsVashishtagenetic algorithm", \
+          "url"      : "/projects/inversedesign/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Publications", \
+          "desc"     : "Publications", \
+          "category" : "page", \
+          "url"      : "/publications/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "The Schrödinger equation", \
+          "desc"     : "The Schrödinger equation", \
+          "category" : "page", \
+          "url"      : "/projects/quantumdots/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Software", \
+          "desc"     : "Software", \
+          "category" : "page", \
+          "url"      : "/software/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Tag Index", \
+          "desc"     : "Tag Index", \
+          "category" : "page", \
+          "url"      : "/tags/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Even Nordhagen", \
+          "desc"     : "Even Nordhagen", \
+          "category" : "page", \
+          "url"      : "/page2/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+    
+      data-img-src-1="/assets/img/bris/bris_diana_dark.png"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+<div class="intro-header  big-img ">
+  
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Bris</h1>
+          
+            
+              <h2 class="post-subheading">High-Resolution Probabilistic Data-Driven Weather Modeling</h2>
+            
+          
+          
+           
+            
+              By <strong>Even Nordhagen</strong><br>
+            
+            <span class="post-meta">Posted on January 19, 2026</span>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <span class='img-desc'></span>
+</div>
+
+
+
+</header>
+
+
+<main class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+        
+        
+        
+
+        <div id="header-gh-btns">
+          
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=evenmn&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              
+            
+          
+        </div>
+      
+
+      
+
+      <div class="blog-post">
+        <p>Can recent breakthroughs in data-driven weather forecasting be replicated at <em>high spatial resolution</em>?</p>
+
+<p>Over the last few years, data-driven weather models have shown impressive forecast skill at a fraction of the computational cost of traditional numerical weather prediction (NWP) systems. Most of these models, however, are trained on ERA5 reanalysis data with a relatively coarse horizontal resolution of about 31 km. This raises a natural and important question: <strong>can similar performance be achieved at much higher resolution, where fine-scale weather phenomena are explicitly resolved?</strong></p>
+
+<p>In this post, I introduce <strong>Bris</strong>, a high-resolution probabilistic data-driven weather model trained on the MetCoOp Ensemble Prediction System (MEPS) analysis at 2.5 km resolution. The name <em>Bris</em> means <em>breeze</em> in Norwegian and is pronounced accordingly—it is not an acronym. The work is a collaboration between the Norwegian Meteorological Institute (MET Norway) and the European Centre for Medium-Range Weather Forecasts (ECMWF).</p>
+
+<p>To generate physically realistic weather scenarios, we designed a training objective that combines probabilistic accuracy with spatial and spectral consistency. The resulting model matches the forecast skill of MEPS while running roughly <strong>20–30× faster</strong>. Below, I outline the motivation, model design, and key results, and discuss where this approach is headed next.</p>
+
+<p>I aim to explain the ideas in accessible language. For a more technical treatment, see our recent preprint <a class="citation" href="#nordhagen2025a">(Nordhagen et al., 2025)</a>. The methodology also builds on the stretched-grid approach discussed in <a href="https://evennordhagen.com/2024-09-12-stretched-grid/">an earlier post</a>.</p>
+
+<div class="text-center">
+    <img src="/assets/img/bris/bris_diana.png" alt="Bris example field" style="width: 70%;" />
+</div>
+<p><em>Example forecast field produced by Bris. Color palete indicates 2m temperature, contour lines are mean sea level pressure and streamlines indicate 10m wind.</em></p>
+
+<h2 id="the-case-for-high-resolution">The case for high resolution</h2>
+
+<p>Why invest in high-resolution models when state-of-the-art global models already perform so well?</p>
+
+<p>The answer depends on both the variable and the application. Some atmospheric quantities, such as precipitation, near-surface wind, and local temperature extremes, vary strongly over short distances. Accurately representing this variability requires high spatial resolution. This is why many national meteorological and hydrological services operate convection-permitting regional models.</p>
+
+<p>Other variables, such as mean sea level pressure, are dominated by large-scale atmospheric structures. For these, increasing resolution yields limited benefit. To illustrate this contrast, we compare Bris (2.5 km resolution) with ECMWF’s data-driven model AIFS-CRPS at 31 km resolution <a class="citation" href="#lang2024a">(Lang et al., 2024)</a>:</p>
+
+<div class="text-center">
+    <img src="/assets/img/bris/crps.png" alt="CRPS comparison" style="width: 70%;" />
+</div>
+<p><em>Continuous Ranked Probability Score (CRPS) for 2 m temperature, 10 m wind speed, 6-hour accumulated precipitation, and mean sea level pressure, verified against synoptic stations in Norway. Lower scores indicate better performance.</em></p>
+
+<p>CRPS is a proper scoring rule for probabilistic forecasts; it measures both accuracy and uncertainty. Bris shows clear improvements for temperature, wind speed, and precipitation, while performing slightly worse for mean sea level pressure. Since AIFS-CRPS is a state-of-the-art global model, this comparison highlights where high resolution adds real value.</p>
+
+<p>High resolution is especially important for extreme weather events, such as heavy precipitation and strong winds, which cause significant societal impacts each year. Given that protecting life and property is a core responsibility of national meteorological services, high-resolution probabilistic forecasting remains essential.</p>
+
+<h2 id="why-probabilistic-forecasting">Why probabilistic forecasting?</h2>
+
+<p>Weather models can be either <strong>deterministic</strong>, producing a single forecast, or <strong>probabilistic</strong>, estimating the likelihood of multiple possible outcomes.</p>
+
+<p>The atmosphere is a chaotic system influenced by inherently unpredictable processes such as turbulence. In the language of chaos theory, it is often described as a level-1 chaotic system: its future evolution is sensitive to random processes beyond our control. Even if the governing equations were perfectly deterministic, measurement errors and incomplete knowledge of the initial state would still limit predictability.</p>
+
+<p>Edward Lorenz famously illustrated this sensitivity using a simple nonlinear system, showing that tiny perturbations can lead to vastly different trajectories - the so-called <em>butterfly effect</em>:</p>
+
+<video autoplay="" loop="" muted="" playsinline="" preload="metadata" width="720" controls="">
+  <source src="/assets/img/bris/lorenz_web.mp4" type="video/mp4" />
+</video>
+<p><em>Two nearly identical initial states diverge rapidly, illustrating sensitivity to initial conditions.</em></p>
+
+<p>Because of this intrinsic uncertainty, forecasting probabilities rather than single outcomes provides a more faithful description of future weather. Probabilistic forecasts offer three key advantages:</p>
+
+<ol>
+  <li>Explicit quantification of uncertainty</li>
+  <li>Sharper, more physically consistent forecast fields</li>
+  <li>Improved representation of rare and extreme events</li>
+</ol>
+
+<div class="text-center">
+    <img src="/assets/img/bris/precip_fields.png" alt="Precipitation fields" style="width: 70%;" />
+</div>
+<p><em>Precipitation forecasts at 2.5 km resolution. Panels show (a) MEPS, (b) a deterministic model, (c) Bris trained with a simplified loss, and (d) Bris trained with the full probabilistic objective.</em></p>
+
+<p>Probabilistic forecasts are commonly implemented as ensemble prediction systems (EPS), where each ensemble member represents a plausible future trajectory. Probabilities are derived by analyzing the distribution of these members.</p>
+
+<p>Deterministic models are typically trained using mean squared error, which encourages predictions close to the ensemble mean. While effective in many settings, this often produces overly smooth fields that do not correspond to any physically realistic atmospheric state, a phenomenon known as the <em>double penalty effect</em>.</p>
+
+<h2 id="how-bris-works">How Bris works</h2>
+
+<p>Bris follows an <strong>encoder–processor–decoder</strong> architecture, with each component implemented as a graph neural network (GNN):</p>
+
+<div class="text-center">
+    <img src="/assets/img/bris/enc-proc-dec.pdf" alt="Model schematic" style="width: 70%;" />
+</div>
+<p><em>Bris is based on an encoder-processor-decoder design, like other leading data-driven models for weather prediction.</em></p>
+
+<h3 id="model-architecture">Model architecture</h3>
+
+<p>The model takes atmospheric states at −6 h and 0 h as input, with shape \((2, N_\text{grid}, N_\text{var}),\) where \(N_\text{grid} \approx 1.4 \times 10^6\) and \(N_\text{var} = 103\). The encoder maps these fields to a latent representation of shape \((N_\text{mesh}, N_\text{channels}),\) with \(N_\text{mesh} \approx 2.8 \times 10^5\) and \(N_\text{channels} = 1024.\)</p>
+
+<p>This design reduces spatial dimensionality while increasing representational depth. The latent space is intentionally rich: rather than heavily compressing the input, we allow the model to represent complex nonlinear dynamics as approximately linear interactions in a high-dimensional space. Empirically, this significantly improves forecast skill.</p>
+
+<h3 id="graph-neural-network-formulation">Graph neural network formulation</h3>
+
+<p>The model operates on a graph where nodes represent spatial locations and edges represent interactions:</p>
+
+<div class="text-center">
+    <img src="/assets/img/bris/gnn.png" alt="GNN illustration" style="width: 50%;" />
+</div>
+<p><em>Grid nodes are connected to latent nodes by encoder edges; latent nodes interact via processor edges; decoder edges map back to grid space.</em></p>
+
+<p>All trainable parameters reside in the edge functions. Encoder edges, processor edges, and decoder edges each share parameters across space, making the model largely position-agnostic. This has two major benefits:</p>
+
+<ol>
+  <li>Strong generalization across regions, terrains, and climates</li>
+  <li>Flexibility to change the underlying graph between training and inference</li>
+</ol>
+
+<p>In practice, this allows us to pretrain on a global domain and fine-tune on a high-resolution regional grid, or to deploy the model in new regions with minimal modification.</p>
+
+<div class="text-center">
+    <img src="/assets/img/bris/model.pdf" alt="Model schematic" style="width: 90%;" />
+</div>
+<p><em>Schematic of the encoder-processor-decoder design and ensemble training. (a) Inputs are past (\(t_{−6h}\)) and current (\(t_{0h}\)) states from MEPS and ERA5, replicated M times for ensemble members. (b) The encoder-processor-decoder architecture injects noise (z) into the latent space to model stochasticity. (c) Predictions are evaluated using point-wise and spectral loss functions.</em></p>
+
+<h3 id="ensemble-generation-and-training-objective">Ensemble generation and training objective</h3>
+
+<p>To generate an ensemble, we inject stochastic noise into the latent space. Physically, this represents unresolved and stochastic atmospheric processes.</p>
+
+<p>A well-calibrated ensemble has small spread when predictability is high and larger spread when uncertainty increases. During training, we explicitly optimize for this behavior using the <strong>Continuous Ranked Probability Score (CRPS)</strong>, a proper scoring rule defined as</p>
+
+\[\mathrm{CRPS}(F, y)
+=
+\int_{-\infty}^{\infty}
+\left(
+F(z) - \mathbf{1}\{z \ge y\}
+\right)^2 \, \mathrm{d}z.\]
+
+<p>For an ensemble \(\{x_1, \ldots, x_M\}\), CRPS can be decomposed into accuracy and spread terms <a class="citation" href="#gneiting2007">(Gneiting &amp; Raftery, 2007)</a>:</p>
+
+\[\mathrm{CRPS}
+=
+\frac{1}{M} \sum_{m=1}^{M} |x_m - y|
+-
+\frac{1}{2M^2}
+\sum_{m=1}^{M}
+\sum_{n=1}^{M}
+|x_m - x_n|.\]
+
+<p>Optimizing CRPS point-wise ensures good marginal distributions, but alone it can lead to noisy spatial fields. To address this, we also evaluate CRPS in spectral space using the fast Fourier transform (FFT). The final loss combines point-wise and spectral terms over global and regional domains:</p>
+
+\[\mathcal{L}
+=
+\sum_v \sum_t w_v
+\Big[
+\mathrm{CRPS}_\text{global}
++ 
+\lambda_r
+\big(
+\mathrm{CRPS}_\text{regional}
++ 
+\lambda_f \,
+\mathrm{CRPS}_\text{spectral}
+\big)
+\Big].\]
+
+<p>This combination preserves probabilistic calibration while enforcing spatial coherence.</p>
+
+<h2 id="comparison-with-nwp">Comparison with NWP</h2>
+
+<p>We evaluate Bris against the operational MEPS ensemble, focusing on variables most relevant for public forecasting: temperature, wind speed, precipitation, and mean sea level pressure.</p>
+
+<div class="text-center">
+    <img src="/assets/img/bris/spreadrmse.png" alt="Spread and RMSE" style="width: 80%;" />
+</div>
+<p><em>Ensemble spread and RMSE of the ensemble mean for Bris and MEPS. In a perfectly calibrated system, the curves overlap.</em></p>
+
+<p>Bris achieves lower RMSE than MEPS for most variables, with particularly strong improvements for temperature at lead times up to 36 hours. Wind speed performance is comparable, with a slight degradation in some ranges. Both systems exhibit underdispersion, though Bris has systematically smaller spread—an issue we are actively addressing.</p>
+
+<h2 id="operational-status">Operational status</h2>
+
+<p>Bris has been running operationally four times per day at MET Norway since October 2025 for internal evaluation. It produces the same core outputs as the operational NWP system:</p>
+
+<div class="text-center">
+    <img src="/assets/img/bris/yr.png" alt="Operational output" style="width: 90%;" />
+</div>
+<p><em>Example temperature and precipitation forecasts with uncertainty.</em></p>
+
+<p>Although Bris operates at 6-hour temporal resolution, we use a learned time interpolator to produce hourly forecasts. This interpolator is trained on hourly data and will be discussed in a future post.</p>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>Bris demonstrates that high-resolution probabilistic data-driven models can be competitive with state-of-the-art NWP systems while being orders of magnitude faster. By combining graph-based architectures with a physically informed probabilistic training objective, we obtain sharp, coherent, and well-calibrated forecasts at convection-permitting scales.</p>
+
+<hr />
+
+<p><strong>DOI:</strong> https://doi.org/10.5281/zenodo.1234567<br />
+<strong>Archived version:</strong> Zenodo<br />
+<strong>Canonical version:</strong> https://evennordhagen.com/2026-01-19-bris/</p>
+
+<p><img src="/assets/img/signature.png" alt="Signature" class="mx-auto d-block" /></p>
+
+<p>Feel free to leave a comment or question below.</p>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><span id="lam2023">Lam, R., Sanchez-Gonzalez, A., Willson, M., Wirnsberger, P., Fortunato, M., Alet, F., Ravuri, S., Ewalds, T., Eaton-Rosen, Z., Hu, W., Merose, A., Hoyer, S., Holland, G., Vinyals, O., Stott, J., Pritzel, A., Mohamed, S., &amp; Battaglia, P. (2023). Learning skillful medium-range global weather forecasting. <i>Science</i>, <i>382</i>(6677), 1416–1421. https://doi.org/10.1126/science.adi2336</span></li>
+<li><span id="bi2023">Bi, K., Xie, L., Zhang, H., Chen, X., Gu, X., &amp; Tian, Q. (2023). Accurate medium-range global weather forecasting with 3D neural networks. <i>Nature</i>, <i>619</i>(7970), 533–538. https://doi.org/10.1038/s41586-023-06185-3</span></li>
+<li><span id="nordhagen2025a">Nordhagen, E. M., Haugen, H. H., Salihi, A. F. S., Ingstad, M. S., Nipen, T. N., Seierstad, I. A., Frogner, I.-L., Clare, M., Lang, S., Chantry, M., Dueben, P., &amp; Kristiansen, J. (2025). <i>High-Resolution Probabilistic Data-Driven Weather Modeling with a Stretched-Grid</i>. arXiv. https://doi.org/10.48550/arXiv.2511.23043</span></li>
+<li><span id="lorenz1963">Lorenz, E. N. (1963). Deterministic Nonperiodic Flow. <i>Journal of the Atmospheric Sciences</i>, <i>20</i>, 130–148. https://doi.org/10.1175/1520-0469(1963)020&lt;0130:DNF&gt;2.0.CO;2</span></li>
+<li><span id="lang2024a">Lang, S., Alexe, M., Clare, M. C. A., Roberts, C., Adewoyin, R., Bouallègue, Z. B., Chantry, M., Dramsch, J., Dueben, P. D., Hahner, S., Maciel, P., Prieto-Nemesio, A., O’Brien, C., Pinault, F., Polster, J., Raoult, B., Tietsche, S., &amp; Leutbecher, M. (2024). <i>AIFS-CRPS: Ensemble forecasting using a model trained with a loss function based on the Continuous Ranked Probability Score</i>. arXiv. https://doi.org/10.48550/arXiv.2412.15832</span></li>
+<li><span id="bonev2025">Bonev, B., Kurth, T., Mahesh, A., Bisson, M., Kossaifi, J., Kashinath, K., Anandkumar, A., Collins, W. D., Pritchard, M. S., &amp; Keller, A. (2025). <i>FourCastNet 3: A geometric approach to probabilistic machine-learning weather forecasting at scale</i>. arXiv. https://doi.org/10.48550/arXiv.2507.12144</span></li>
+<li><span id="gneiting2007">Gneiting, T., &amp; Raftery, A. E. (2007). Strictly Proper Scoring Rules, Prediction, and Estimation. <i>Journal of the American Statistical Association</i>, <i>102</i>(477), 359–378. https://doi.org/10.1198/016214506000001437</span></li></ol>
+
+      </div>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#Bris">Bris</a>
+          
+            <a href="/tags#weather">weather</a>
+          
+            <a href="/tags#forecasting">forecasting</a>
+          
+            <a href="/tags#machine learning">machine learning</a>
+          
+            <a href="/tags#data-driven models">data-driven models</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2026-01-19-bris%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2026-01-19-bris%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2025-12-06-weather-generator/" data-toggle="tooltip" data-placement="top" title="WeatherGenerator">
+            <i class="fas fa-arrow-left" alt="Previous Post"></i>
+            <span class="d-none d-sm-inline-block">Previous Post</span>
+          </a>
+        </li>
+        
+        
+      </ul>
+      
+  <div class="disqus-comments">
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+	  var disqus_shortname = 'evennordhagen';
+	  /* ensure that pages with query string get the same discussion */
+	  var url_parts = window.location.href.split("?");
+	  var disqus_url = url_parts[0];
+	  (function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	  })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
+  
+  
+
+  
+
+
+  
+
+  
+
+
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:even.nordhagen@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/evenmn" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/evenmarius.nordhagen" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="tel:4748043633" title="Phone">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Phone</span>
+   </a>
+  </li><li class="list-inline-item">
+   <a href="https://orcid.org/0009-0005-3839-4011" title="ORCID">
+     <span class="fa-stack fa-lg" aria-hidden="true">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="fab fa-orcid fa-stack-1x fa-inverse"></i>
+     </span>
+     <span class="sr-only">ORCID</span>
+   </a>
+ </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=even.nordhagen@gmail.com" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li></ul>
+
+
+      
+      <p class="copyright text-muted">
+      
+        © Even Nordhagen
+        &nbsp;&bull;&nbsp;
+      
+      2026
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="/">evennordhagen.com</a>
+        </span>
+      
+
+      
+
+      
+
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

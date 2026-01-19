@@ -12,6 +12,17 @@
     
     
       <item>
+        <title>Bris</title>
+        <description>
+          High-Resolution Probabilistic Data-Driven Weather Modeling - 
+          Can recent breakthroughs in data-driven weather forecasting be replicated at high spatial resolution? Over the last few years, data-driven weather models have shown impressive forecast skill at a fraction of the computational cost of traditional numerical weather prediction (NWP) systems. Most of these models, however, are trained on ERA5 reanalysis...
+        </description>
+        <pubDate>Mon, 19 Jan 2026 00:00:00 -0500</pubDate>
+        <link>/2026-01-19-bris/</link>
+        <guid isPermaLink="true">/2026-01-19-bris/</guid>
+      </item>
+    
+      <item>
         <title>WeatherGenerator</title>
         <description>
           Advancing Earth System Science with Innovative AI - 
