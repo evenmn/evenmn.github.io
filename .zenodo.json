@@ -1,0 +1,26 @@
+{
+  "title": "Bris - High-Resolution Probabilistic Data-Driven Weather Modeling",
+  "description": "Data-driven weather forecasting has over the last few years stunned people, showing competetive predictions at the fraction of the cost of conventional state-of-the-art models. However, most data-driven models are trained on ERA5 with ~31 km horizontal resolution. Is it possible to replicate the results in a high-resolution setting? We introduce Bris - a high-resolution probabilistic data-driven model trained on the MetCoOp Ensemble Prediction System (MEPS) analysis at 2.5 km. Bris means *breeze* in Norwegian, and is also pronounced similarly (no abbreviation/acronym). The work is carried out at the Norwegian Meteorological Institute in collaboration with the European Centre for Medium-range Weather Forecasting (ECMWF)."
+,
+  "creators": [
+    {
+      "name": "Even Nordhagen",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0005-3839-4011"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "machine learning",
+    "weather modeling",
+    "stochastic processes"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isOriginalFormOf",
+      "identifier": "https://evennordhagen.com/2026-01-11-bris/",
+      "scheme": "url"
+    }
+  ]
+}
+
