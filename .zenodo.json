@@ -13,12 +13,15 @@
   "keywords": [
     "machine learning",
     "weather modeling",
-    "stochastic processes"
+    "stochastic processes",
+    "probabilistic forecasting",
+    "high-resolution",
+    "deep learning"
   ],
   "related_identifiers": [
     {
       "relation": "isOriginalFormOf",
-      "identifier": "https://evennordhagen.com/2026-01-11-bris/",
+      "identifier": "https://evennordhagen.com/2026-01-19-bris/",
       "scheme": "url"
     }
   ]
