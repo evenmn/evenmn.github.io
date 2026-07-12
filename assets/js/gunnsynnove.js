@@ -105,6 +105,7 @@ export function initDatePlanner(planner) {
   const continueButton = planner.querySelector('[data-action="continue"]');
   const respinButton = planner.querySelector('[data-action="respin"]');
   const calendarButton = planner.querySelector('[data-action="calendar"]');
+  const sendButton = planner.querySelector('[data-action="send"]');
   const wheel = planner.querySelector('[data-wheel]');
   const wheelResult = planner.querySelector('[data-wheel-result]');
   const dateInput = planner.querySelector('[data-date]');
@@ -117,28 +118,12 @@ export function initDatePlanner(planner) {
   const formActivity = planner.querySelector('[data-form-activity]');
   const formDate = planner.querySelector('[data-form-date]');
   const formTime = planner.querySelector('[data-form-time]');
-  const iframe = planner.querySelector('[data-submission-frame]');
   const formEndpoint = 'https://formsubmit.co/even.nordhagen@gmail.com';
+  const ajaxFormEndpoint = 'https://formsubmit.co/ajax/even.nordhagen@gmail.com';
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let selectedActivity = '';
   let rotation = 0;
   let spinning = false;
-  let bootstrapLoadPending = true;
-  let awaitingSubmission = false;
-
-  iframe.addEventListener('load', () => {
-    if (bootstrapLoadPending) {
-      bootstrapLoadPending = false;
-      return;
-    }
-
-    if (awaitingSubmission) {
-      confirmation.hidden = false;
-      awaitingSubmission = false;
-    }
-  });
-  iframe.src = 'about:blank';
-
   form.action = formEndpoint;
   dateInput.min = localIsoDate();
 
@@ -163,7 +148,6 @@ export function initDatePlanner(planner) {
     formTime.value = '';
     formError.hidden = true;
     confirmation.hidden = true;
-    awaitingSubmission = false;
     summary.textContent = 'Velg dato og klokkeslett, så reserverer vi litt magi.';
     calendarButton.disabled = true;
   }
@@ -281,7 +265,7 @@ export function initDatePlanner(planner) {
     URL.revokeObjectURL(url);
   });
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     updateBooking();
     if (!bookingIsValid()) {
       event.preventDefault();
@@ -290,9 +274,30 @@ export function initDatePlanner(planner) {
       return;
     }
 
+    event.preventDefault();
     formError.hidden = true;
     confirmation.hidden = true;
-    awaitingSubmission = true;
+    sendButton.disabled = true;
+
+    try {
+      const response = await fetch(ajaxFormEndpoint, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      const result = await response.json();
+
+      if (!response.ok || (result.success !== true && result.success !== 'true')) {
+        throw new Error('FormSubmit did not accept the submission');
+      }
+
+      confirmation.hidden = false;
+    } catch (error) {
+      formError.textContent = 'Det gikk ikke å sende akkurat nå. Prøv igjen om litt.';
+      formError.hidden = false;
+    } finally {
+      sendButton.disabled = false;
+    }
   });
 }
 

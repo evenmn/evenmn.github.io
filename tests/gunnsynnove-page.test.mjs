@@ -19,17 +19,21 @@ const requiredMarkup = [
   'type="time"',
   'https://formsubmit.co/even.nordhagen@gmail.com',
   'method="POST"',
-  'target="date-form-result"',
   'name="_subject"',
   'name="_template"',
   'role="alert"',
   '>Fullkroppsmassasje<',
+  'data-action="send"',
 ];
 
 const missing = requiredMarkup.filter((snippet) => !page.includes(snippet));
 
 if (missing.length > 0) {
   throw new Error(`Date planner shell is missing: ${missing.join(', ')}`);
+}
+
+if (page.includes('data-submission-frame') || page.includes('date-form-result')) {
+  throw new Error('The JavaScript submission flow must not retain the hidden iframe transport');
 }
 
 console.log('Date planner invitation shell is present');
@@ -49,7 +53,9 @@ const requiredControllerBehavior = [
   "download = 'date-med-even.ics'",
   'URL.createObjectURL',
   'getWheelRotationForIndex',
-  "iframe.addEventListener('load'",
+  'fetch(',
+  'https://formsubmit.co/ajax/even.nordhagen@gmail.com',
+  'new FormData(form)',
 ];
 const missingBehavior = requiredControllerBehavior.filter((snippet) => !script.includes(snippet));
 
@@ -61,9 +67,13 @@ if (script.includes('Math.floor(Math.random() * 360)')) {
   throw new Error('Wheel alignment must not use an arbitrary angle offset');
 }
 
+if (script.includes('iframe')) {
+  throw new Error('The JavaScript submission flow must not retain the hidden iframe transport');
+}
+
 const submitHandler = script.slice(script.indexOf("form.addEventListener('submit'"));
-if (!submitHandler.includes('confirmation.hidden = true;') || !submitHandler.includes('awaitingSubmission = true;')) {
-  throw new Error('Send confirmation must wait for the submission iframe load');
+if (!submitHandler.includes('response.ok') || !submitHandler.includes('result.success')) {
+  throw new Error('Send confirmation must wait for a successful FormSubmit AJAX response');
 }
 
 console.log('Date planner controller is present');

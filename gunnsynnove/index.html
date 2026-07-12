@@ -60,7 +60,7 @@ title: Gunn Synnøve
           <p class="booking-choice">Valgt: <strong data-selected-activity>—</strong></p>
           <button class="text-button" type="button" data-action="respin">← Snurr hjulet på nytt</button>
 
-          <form class="booking-form" data-booking-form action="https://formsubmit.co/even.nordhagen@gmail.com" method="POST" target="date-form-result" novalidate>
+          <form class="booking-form" data-booking-form action="https://formsubmit.co/even.nordhagen@gmail.com" method="POST" novalidate>
             <input type="hidden" name="activity" data-form-activity>
             <input type="hidden" name="date" data-form-date>
             <input type="hidden" name="time" data-form-time>
@@ -81,13 +81,12 @@ title: Gunn Synnøve
             <p class="formsubmit-note">Første sending via FormSubmit må bekreftes av Even på e-post. Etter det kommer dateplanene rett frem.</p>
             <div class="booking-actions">
               <button class="planner-button planner-button--coral" type="button" data-action="calendar" disabled>Legg i kalender</button>
-              <button class="planner-button planner-button--yes" type="submit">Send</button>
+              <button class="planner-button planner-button--yes" type="submit" data-action="send">Send</button>
             </div>
           </form>
           <p class="submit-confirmation" data-submit-confirmation role="status" hidden>Takk, dateforslaget er sendt til Even! ✨</p>
         </div>
       </section>
-      <iframe class="submission-frame" data-submission-frame name="date-form-result" title="Skjult svar fra skjematjenesten"></iframe>
     </main>
     <script type="module" src="/assets/js/gunnsynnove.js"></script>
   </body>
