@@ -97,7 +97,7 @@ function formatBookingSummary(date, time) {
   }).format(dateTime);
 }
 
-function initDatePlanner(planner) {
+export function initDatePlanner(planner) {
   const views = [...planner.querySelectorAll('[data-view]')];
   const acceptButton = planner.querySelector('[data-action="accept"]');
   const declineButton = planner.querySelector('[data-action="decline"]');
@@ -123,8 +123,21 @@ function initDatePlanner(planner) {
   let selectedActivity = '';
   let rotation = 0;
   let spinning = false;
-  let iframeReady = false;
+  let bootstrapLoadPending = true;
   let awaitingSubmission = false;
+
+  iframe.addEventListener('load', () => {
+    if (bootstrapLoadPending) {
+      bootstrapLoadPending = false;
+      return;
+    }
+
+    if (awaitingSubmission) {
+      confirmation.hidden = false;
+      awaitingSubmission = false;
+    }
+  });
+  iframe.src = 'about:blank';
 
   form.action = formEndpoint;
   dateInput.min = localIsoDate();
@@ -266,18 +279,6 @@ function initDatePlanner(planner) {
     link.click();
     link.remove();
     URL.revokeObjectURL(url);
-  });
-
-  iframe.addEventListener('load', () => {
-    if (!iframeReady) {
-      iframeReady = true;
-      return;
-    }
-
-    if (awaitingSubmission) {
-      confirmation.hidden = false;
-      awaitingSubmission = false;
-    }
   });
 
   form.addEventListener('submit', (event) => {
