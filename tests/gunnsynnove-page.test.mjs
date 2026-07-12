@@ -23,6 +23,7 @@ const requiredMarkup = [
   'name="_subject"',
   'name="_template"',
   'role="alert"',
+  '>Fullkroppsmassasje<',
 ];
 
 const missing = requiredMarkup.filter((snippet) => !page.includes(snippet));
@@ -47,11 +48,22 @@ const requiredControllerBehavior = [
   '4000',
   "download = 'date-med-even.ics'",
   'URL.createObjectURL',
+  'getWheelRotationForIndex',
+  "iframe.addEventListener('load'",
 ];
 const missingBehavior = requiredControllerBehavior.filter((snippet) => !script.includes(snippet));
 
 if (missingBehavior.length > 0) {
   throw new Error(`Date planner controller is missing: ${missingBehavior.join(', ')}`);
+}
+
+if (script.includes('Math.floor(Math.random() * 360)')) {
+  throw new Error('Wheel alignment must not use an arbitrary angle offset');
+}
+
+const submitHandler = script.slice(script.indexOf("form.addEventListener('submit'"));
+if (!submitHandler.includes('confirmation.hidden = true;') || !submitHandler.includes('awaitingSubmission = true;')) {
+  throw new Error('Send confirmation must wait for the submission iframe load');
 }
 
 console.log('Date planner controller is present');

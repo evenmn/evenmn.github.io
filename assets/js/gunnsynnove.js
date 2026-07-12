@@ -41,6 +41,15 @@ export function selectWheelDate(index, options = DATE_OPTIONS) {
   return options[index % options.length];
 }
 
+export function getWheelRotationForIndex(index, currentRotation = 0, fullRotations = 6) {
+  const segmentDegrees = 360 / DATE_OPTIONS.length;
+  const normalizedIndex = ((index % DATE_OPTIONS.length) + DATE_OPTIONS.length) % DATE_OPTIONS.length;
+  const pointerAlignment = (360 - normalizedIndex * segmentDegrees) % 360;
+  const currentFullTurns = currentRotation - (((currentRotation % 360) + 360) % 360);
+
+  return currentFullTurns + fullRotations * 360 + pointerAlignment;
+}
+
 export function buildFormFields({ activity, date, time }) {
   return {
     activity,
@@ -108,11 +117,14 @@ function initDatePlanner(planner) {
   const formActivity = planner.querySelector('[data-form-activity]');
   const formDate = planner.querySelector('[data-form-date]');
   const formTime = planner.querySelector('[data-form-time]');
+  const iframe = planner.querySelector('[data-submission-frame]');
   const formEndpoint = 'https://formsubmit.co/even.nordhagen@gmail.com';
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let selectedActivity = '';
   let rotation = 0;
   let spinning = false;
+  let iframeReady = false;
+  let awaitingSubmission = false;
 
   form.action = formEndpoint;
   dateInput.min = localIsoDate();
@@ -138,6 +150,7 @@ function initDatePlanner(planner) {
     formTime.value = '';
     formError.hidden = true;
     confirmation.hidden = true;
+    awaitingSubmission = false;
     summary.textContent = 'Velg dato og klokkeslett, så reserverer vi litt magi.';
     calendarButton.disabled = true;
   }
@@ -209,7 +222,7 @@ function initDatePlanner(planner) {
     continueButton.disabled = true;
     wheelResult.textContent = 'Hjulet tenker veldig hardt…';
     const winnerIndex = Math.floor(Math.random() * DATE_OPTIONS.length);
-    rotation += 2160 + Math.floor(Math.random() * 360) + winnerIndex * 60;
+    rotation = getWheelRotationForIndex(winnerIndex, rotation, 6 + Math.floor(Math.random() * 2));
     wheel.style.transform = `rotate(${rotation}deg)`;
 
     window.setTimeout(() => {
@@ -255,6 +268,18 @@ function initDatePlanner(planner) {
     URL.revokeObjectURL(url);
   });
 
+  iframe.addEventListener('load', () => {
+    if (!iframeReady) {
+      iframeReady = true;
+      return;
+    }
+
+    if (awaitingSubmission) {
+      confirmation.hidden = false;
+      awaitingSubmission = false;
+    }
+  });
+
   form.addEventListener('submit', (event) => {
     updateBooking();
     if (!bookingIsValid()) {
@@ -265,7 +290,8 @@ function initDatePlanner(planner) {
     }
 
     formError.hidden = true;
-    confirmation.hidden = false;
+    confirmation.hidden = true;
+    awaitingSubmission = true;
   });
 }
 
