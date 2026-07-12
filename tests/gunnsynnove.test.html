@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gunn Synnøve date planner tests</title>
+  </head>
+  <body>
+    <div id="results" aria-live="polite">Running tests…</div>
+
+    <script type="module">
+      const results = document.getElementById('results');
+      const failures = [];
+
+      function assert(condition, message) {
+        if (!condition) {
+          failures.push(message);
+        }
+      }
+
+      function renderResults() {
+        if (failures.length === 0) {
+          results.textContent = '0 failures';
+          return;
+        }
+
+        const list = document.createElement('ul');
+        failures.forEach((failure) => {
+          const item = document.createElement('li');
+          item.textContent = failure;
+          list.appendChild(item);
+        });
+        results.replaceChildren(document.createTextNode(`${failures.length} failures`), list);
+      }
+
+      try {
+        const {
+          DATE_OPTIONS,
+          buildCalendarEvent,
+          buildFormFields,
+          isPastDate,
+          selectWheelDate,
+          validateBooking,
+        } = await import('../assets/js/gunnsynnove.js');
+
+        assert(validateBooking('', '') === false, 'validateBooking rejects a missing date and time');
+        assert(validateBooking('2026-07-12', '') === false, 'validateBooking rejects a missing time');
+        assert(validateBooking('2026-07-12', '19:30') === true, 'validateBooking accepts a date and time');
+        assert(
+          isPastDate('2026-07-11', new Date('2026-07-12T12:00:00')) === true,
+          'isPastDate identifies yesterday as past',
+        );
+        assert(
+          isPastDate('2026-07-12', new Date('2026-07-12T12:00:00')) === false,
+          'isPastDate does not identify today as past',
+        );
+        assert(
+          selectWheelDate(0, DATE_OPTIONS) === 'Overnattingsdate hos GS',
+          'selectWheelDate returns the first activity',
+        );
+        assert(
+          selectWheelDate(5, DATE_OPTIONS) === 'Bade på Nydalen',
+          'selectWheelDate returns the sixth activity',
+        );
+
+        const calendarEvent = buildCalendarEvent({
+          activity: 'HYROX',
+          date: '2026-07-13',
+          time: '18:30',
+        });
+        assert(calendarEvent.includes('SUMMARY:HYROX'), 'buildCalendarEvent includes the activity summary');
+        assert(calendarEvent.includes('DTSTART:20260713T183000'), 'buildCalendarEvent includes the start time');
+        assert(calendarEvent.includes('DTEND:20260713T193000'), 'buildCalendarEvent includes the one-hour end time');
+
+        const fields = buildFormFields({
+          activity: 'HYROX',
+          date: '2026-07-13',
+          time: '18:30',
+        });
+        assert(fields.date === '2026-07-13', 'buildFormFields preserves the date');
+        assert(fields.time === '18:30', 'buildFormFields preserves the time');
+      } catch (error) {
+        failures.push(`Module load failed: ${error.message}`);
+      }
+
+      renderResults();
+    </script>
+  </body>
+</html>
