@@ -1,0 +1,93 @@
+---
+layout: null
+title: Gunn Synnøve
+---
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff6dc">
+    <title>Gunn Synnøve</title>
+    <link rel="stylesheet" href="/assets/css/gunnsynnove.css">
+  </head>
+  <body>
+    <main class="date-planner" aria-labelledby="planner-title">
+      <a class="planner-signature" href="/" aria-label="Tilbake til Even Nordhagens hovedside">
+        <img src="/assets/img/signature.png" alt="Even Nordhagen">
+      </a>
+
+      <span class="planner-sticker planner-sticker--star" aria-hidden="true">★</span>
+      <span class="planner-sticker planner-sticker--heart" aria-hidden="true">♥</span>
+
+      <section class="planner-view invitation-view" data-view="invitation">
+        <div class="planner-card">
+          <p class="eyebrow">En veldig viktig invitasjon</p>
+          <h1 id="planner-title">Skal vi dra på date?</h1>
+          <p class="planner-intro">Jeg har en idé. Eller seks, faktisk.</p>
+          <div class="invitation-actions" aria-label="Svar på invitasjonen">
+            <button class="planner-button planner-button--yes" type="button" data-action="accept">Ja</button>
+            <button class="planner-button planner-button--no" type="button" data-action="decline">Nei</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="planner-view wheel-view" data-view="wheel" hidden aria-labelledby="wheel-title">
+        <div class="planner-card planner-card--wide">
+          <p class="eyebrow">Velg skjebnen vår</p>
+          <h2 id="wheel-title">Hva skal vi gjøre?</h2>
+          <div class="wheel-stage">
+            <div class="wheel-pointer" aria-hidden="true"></div>
+            <div class="date-wheel" data-wheel aria-label="Datehjul med seks dateforslag">
+              <span class="wheel-label wheel-label--1">Overnattingsdate<br>hos GS</span>
+              <span class="wheel-label wheel-label--2">HYROX</span>
+              <span class="wheel-label wheel-label--3">Restaurant<br>Festningen</span>
+              <span class="wheel-label wheel-label--4">Fullkroppsmassasje</span>
+              <span class="wheel-label wheel-label--5">Gå til<br>Vettakollen</span>
+              <span class="wheel-label wheel-label--6">Bade på<br>Nydalen</span>
+            </div>
+            <button class="wheel-spin" type="button" data-action="spin" aria-label="Snurr datehjulet">Snurr hjulet</button>
+          </div>
+          <p class="wheel-result" data-wheel-result aria-live="polite">Hjulet venter på deg.</p>
+          <button class="planner-button planner-button--mint" type="button" data-action="continue" disabled>Velg tidspunkt</button>
+        </div>
+      </section>
+
+      <section class="planner-view booking-view" data-view="booking" hidden aria-labelledby="booking-title">
+        <div class="planner-card planner-card--wide">
+          <p class="eyebrow">Date i kalenderen</p>
+          <h2 id="booking-title">Tid for <span data-selected-activity>date</span>!</h2>
+          <p class="booking-choice">Valgt: <strong data-selected-activity>—</strong></p>
+          <button class="text-button" type="button" data-action="respin">← Snurr hjulet på nytt</button>
+
+          <form class="booking-form" data-booking-form action="https://formsubmit.co/even.nordhagen@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="activity" data-form-activity>
+            <input type="hidden" name="date" data-form-date>
+            <input type="hidden" name="time" data-form-time>
+            <input type="hidden" name="_subject" value="Ny date med Gunn Synnøve">
+            <input type="hidden" name="_template" value="table">
+            <div class="booking-fields">
+              <label>
+                Dato
+                <input type="date" name="selected-date" data-date required>
+              </label>
+              <label>
+                Klokkeslett
+                <input type="time" name="selected-time" data-time required>
+              </label>
+            </div>
+            <p class="form-error" data-form-error role="alert" hidden></p>
+            <p class="booking-summary" data-booking-summary aria-live="polite">Velg dato og klokkeslett, så reserverer vi litt magi.</p>
+            <p class="formsubmit-note">Første sending via FormSubmit må bekreftes av Even på e-post. Etter det kommer dateplanene rett frem.</p>
+            <div class="booking-actions">
+              <button class="planner-button planner-button--coral" type="button" data-action="calendar" disabled>Legg i kalender</button>
+              <button class="planner-button planner-button--yes" type="submit" data-action="send">Send</button>
+            </div>
+          </form>
+          <p class="submit-confirmation" data-submit-confirmation role="status" hidden>Takk, dateforslaget er sendt til Even! ✨</p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/assets/js/gunnsynnove.js"></script>
+  </body>
+</html>
