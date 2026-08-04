@@ -65,9 +65,16 @@ Below follows a list of publications, both peer-reviewed and preprints, that I h
 ## Preprints
 
 <font size="5">
+    <b>2026</b>
+</font>
+<ul class="publications">
+  <li><a href="http://arxiv.org/abs/2607.11457"><strong>MS Ingstad, MCA Clare, O Ersland, V Gahlen, HH Haugen, O Miralles, <span class="highlight-author">EM Nordhagen</span> et al.</strong> <em>HourGlass: A Probabilistic Data-Driven Temporal Downscaler for Hourly Global and Regional Weather Forecasting</em>. arXiv:2607.11457 (2026).</a></li>
+</ul>
+
+<font size="5">
     <b>2025</b>
 </font>
 <ul class="publications">
-  <li><a href="http://arxiv.org/abs/2511.23043"><strong><span class="highlight-author">EM Nordhagen</span>, HH Haugen, MS Ingstad, AFS Salihi, TN Nipen et al.</strong> <em>High-Resolution Probabilistic Data-Driven Weather Modeling with a Stretched-Grid</em>. arXiv:2511.23043 (2024).</a></li>
+  <li><a href="http://arxiv.org/abs/2511.23043"><strong><span class="highlight-author">EM Nordhagen</span>, HH Haugen, MS Ingstad, AFS Salihi, TN Nipen et al.</strong> <em>High-Resolution Probabilistic Data-Driven Weather Modeling with a Stretched-Grid</em>. arXiv:2511.23043 (2025).</a></li>
 </ul>
 
