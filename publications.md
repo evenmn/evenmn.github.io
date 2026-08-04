@@ -43,10 +43,16 @@ Below follows a list of publications, both peer-reviewed and preprints, that I h
 ## Journal Articles
 
 <font size="5">
+    <b>2026</b>
+</font>
+<ul class="publications">
+  <li><a href="https://journals.ametsoc.org/view/journals/aies/aop/AIES-D-25-0001.1/AIES-D-25-0001.1.xml"><strong>TN Nipen, HH Haugen, MS Ingstad, <span class="highlight-author">EM Nordhagen</span>, AFS Salihi, et al.</strong> <em>Regional Data-driven Weather Modeling with a Global Stretched-Grid</em>. <strong>Artificial Intelligence for the Earth Systems</strong> 5 (2), 250001, (2026).</a></li>
+</ul>
+
+<font size="5">
     <b>2025</b>
 </font>
 <ul class="publications">
-  <li><a href="https://journals.ametsoc.org/view/journals/aies/aop/AIES-D-25-0001.1/AIES-D-25-0001.1.xml"><strong>TN Nipen, HH Haugen, MS Ingstad, <span class="highlight-author">EM Nordhagen</span>, AFS Salihi, et al.</strong> <em>Regional Data-driven Weather Modeling with a Global Stretched-Grid</em>. <strong>Artificial Intelligence for the Earth Systems</strong> -1, (2025).</a></li>
   <li><a href="https://rdcu.be/ey2fz"><strong><span class="highlight-author">EM Nordhagen</span>, HA Sveinsson, A Malthe-Sørenssen</strong>. <em>Velocity-Dependent Dynamics of Friction and Wear</em> <strong>Tribology Letters</strong> 73, 115 (2025).</a></li>
   <li><a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c02768"><strong><span class="highlight-author">EM Nordhagen</span>, HA Sveinsson, A Malthe-Sørenssen</strong>. <em>Tailoring Frictional Properties of Surfaces Using Diffusion Models</em>. <strong>The Journal of Physical Chemistry C</strong> (2025).</a></li>
   <li><a href="https://pubs.acs.org/doi/10.1021/acs.jctc.5c00722"><strong>AVC Camposano, <span class="highlight-author">EM Nordhagen</span>, A Malthe-Sørenssen, HA Sveinsson</strong>. <em>An Extended Energy-Biased Aggregation-Volume-Bias Monte Carlo (EB-AVBMC) Method for Nucleation Simulation of a Reactive Water Potential</em>. <strong>Journal of Chemical Theory and Computation</strong> (2025).</a></li>
