@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 
-const page = await readFile(new URL('../gunnsynnove/index.html', import.meta.url), 'utf8');
+const page = await readFile(new URL('../date-planner/index.html', import.meta.url), 'utf8');
 const requiredMarkup = [
   'class="date-planner"',
   'data-view="invitation"',
@@ -38,7 +38,7 @@ if (page.includes('data-submission-frame') || page.includes('date-form-result'))
 
 console.log('Date planner invitation shell is present');
 
-const script = await readFile(new URL('../assets/js/gunnsynnove.js', import.meta.url), 'utf8');
+const script = await readFile(new URL('../assets/js/date-planner.js', import.meta.url), 'utf8');
 const requiredControllerBehavior = [
   'function initDatePlanner',
   "querySelector('.date-planner')",

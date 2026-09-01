@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Gunn Synnøve date planner tests</title>
+    <title>Date planner tests</title>
   </head>
   <body>
     <div id="results" aria-live="polite">Running tests…</div>
@@ -40,7 +40,7 @@
           isPastDate,
           selectWheelDate,
           validateBooking,
-        } = await import('../assets/js/gunnsynnove.js');
+        } = await import('../assets/js/date-planner.js');
 
         assert(validateBooking('', '') === false, 'validateBooking rejects a missing date and time');
         assert(validateBooking('2026-07-12', '') === false, 'validateBooking rejects a missing time');

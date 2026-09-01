@@ -55,7 +55,7 @@ export function buildFormFields({ activity, date, time }) {
     activity,
     date,
     time,
-    _subject: 'Ny date med Gunn Synnøve',
+    _subject: 'Ny date-avtale',
     _template: 'table',
   };
 }
@@ -69,7 +69,7 @@ export function buildCalendarEvent({ activity, date, time }) {
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Even Nordhagen//Gunn Synnøve Date Planner//NO',
+    'PRODID:-//Even Nordhagen//Date Planner//NO',
     'BEGIN:VEVENT',
     `UID:${crypto.randomUUID()}@evennordhagen.com`,
     `DTSTAMP:${formatUtcDateTime(new Date())}`,

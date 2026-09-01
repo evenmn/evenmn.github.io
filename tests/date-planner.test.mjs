@@ -7,7 +7,7 @@ import {
   isPastDate,
   selectWheelDate,
   validateBooking,
-} from '../assets/js/gunnsynnove.js';
+} from '../assets/js/date-planner.js';
 
 assert.equal(validateBooking('', ''), false);
 assert.equal(validateBooking('2026-07-12', '19:30'), true);
@@ -33,7 +33,7 @@ assert.deepEqual(fields, {
   activity: 'HYROX',
   date: '2026-07-13',
   time: '18:30',
-  _subject: 'Ny date med Gunn Synnøve',
+  _subject: 'Ny date-avtale',
   _template: 'table',
 });
 

@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const [page, css] = await Promise.all([
-  readFile(new URL('../gunnsynnove/index.html', import.meta.url), 'utf8'),
-  readFile(new URL('../assets/css/gunnsynnove.css', import.meta.url), 'utf8'),
+  readFile(new URL('../date-planner/index.html', import.meta.url), 'utf8'),
+  readFile(new URL('../assets/css/date-planner.css', import.meta.url), 'utf8'),
 ]);
 
 assert.match(page, /wheel-label--5">Gå til<br>Vettakollen/, 'fifth wheel label is Vettakollen');

@@ -1,8 +1,8 @@
-# Gunn Synnøve Date Planner Implementation Plan
+# Date Planner Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build a playful, mobile-friendly date planner at `/gunnsynnove/` with an evasive “Nei” button, random date wheel, booking handoff, FormSubmit email and downloadable calendar event.
+**Goal:** Build a playful, mobile-friendly date planner at `/date-planner/` with an evasive “Nei” button, random date wheel, booking handoff, FormSubmit email and downloadable calendar event.
 
 **Architecture:** Add one layout-free Jekyll page plus scoped stylesheet and ES module. Pure selection, validation, calendar and form-payload helpers live in the module and are exercised in a browser-hosted test page. The page keeps all state client-side, uses FormSubmit for delivery and generates an ICS file locally.
 
@@ -12,20 +12,20 @@
 
 ## File structure
 
-- Create: `gunnsynnove/index.html` — static page markup with three controlled views and form fields.
-- Create: `assets/css/gunnsynnove.css` — all feature-scoped responsive styling, animation and reduced-motion support.
-- Create: `assets/js/gunnsynnove.js` — exported pure helpers plus DOM controller for the invitation, wheel and booking views.
-- Create: `tests/gunnsynnove.test.html` — browser-runnable tests for helper behavior; writes pass/fail output to the page.
+- Create: `date-planner/index.html` — static page markup with three controlled views and form fields.
+- Create: `assets/css/date-planner.css` — all feature-scoped responsive styling, animation and reduced-motion support.
+- Create: `assets/js/date-planner.js` — exported pure helpers plus DOM controller for the invitation, wheel and booking views.
+- Create: `tests/date-planner.test.html` — browser-runnable tests for helper behavior; writes pass/fail output to the page.
 
 ### Task 1: Create red tests for planner helpers
 
 **Files:**
-- Create: `tests/gunnsynnove.test.html`
-- Test: `tests/gunnsynnove.test.html`
+- Create: `tests/date-planner.test.html`
+- Test: `tests/date-planner.test.html`
 
 - [ ] **Step 1: Write the failing browser test page**
 
-Create an HTML page that imports `../assets/js/gunnsynnove.js`, exposes an `assert(condition, message)` function, and runs these tests after the module loads:
+Create an HTML page that imports `../assets/js/date-planner.js`, exposes an `assert(condition, message)` function, and runs these tests after the module loads:
 
 ```js
 assert(validateBooking('', '') === false, 'missing date and time are invalid');
@@ -47,21 +47,21 @@ Render a final `0 failures` or a list of failures in an element with id `results
 
 - [ ] **Step 2: Run the test page and verify it fails**
 
-Run Jekyll locally and navigate the in-app browser to `http://localhost:4000/tests/gunnsynnove.test.html`. Expected result: module load fails with a missing `assets/js/gunnsynnove.js` resource or missing exports; no test can pass yet.
+Run Jekyll locally and navigate the in-app browser to `http://localhost:4000/tests/date-planner.test.html`. Expected result: module load fails with a missing `assets/js/date-planner.js` resource or missing exports; no test can pass yet.
 
 - [ ] **Step 3: Commit the failing test page**
 
 ```bash
-git add tests/gunnsynnove.test.html
+git add tests/date-planner.test.html
 git commit -m "test: define date planner helper behavior"
 ```
 
 ### Task 2: Implement pure helper module and make tests green
 
 **Files:**
-- Create: `assets/js/gunnsynnove.js`
-- Modify: `tests/gunnsynnove.test.html`
-- Test: `tests/gunnsynnove.test.html`
+- Create: `assets/js/date-planner.js`
+- Modify: `tests/date-planner.test.html`
+- Test: `tests/date-planner.test.html`
 
 - [ ] **Step 1: Implement the public constants and helper functions**
 
@@ -91,7 +91,7 @@ export function selectWheelDate(index, options = DATE_OPTIONS) {
 }
 
 export function buildFormFields({ activity, date, time }) {
-  return { activity, date, time, _subject: 'Ny date med Gunn Synnøve', _template: 'table' };
+  return { activity, date, time, _subject: 'Ny date-avtale', _template: 'table' };
 }
 ```
 
@@ -100,7 +100,7 @@ Implement `buildCalendarEvent({ activity, date, time })` by removing dashes and 
 ```text
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Even Nordhagen//Gunn Synnøve Date Planner//NO
+PRODID:-//Even Nordhagen//Date Planner//NO
 BEGIN:VEVENT
 UID:<event-id>@evennordhagen.com
 DTSTAMP:<UTC timestamp ending in Z>
@@ -119,26 +119,26 @@ Reload the test URL. Expected result: `0 failures` and every assertion rendered 
 - [ ] **Step 3: Commit the helper module**
 
 ```bash
-git add assets/js/gunnsynnove.js tests/gunnsynnove.test.html
+git add assets/js/date-planner.js tests/date-planner.test.html
 git commit -m "feat: add date planner helpers"
 ```
 
 ### Task 3: Add the complete date planner interface
 
 **Files:**
-- Create: `gunnsynnove/index.html`
-- Create: `assets/css/gunnsynnove.css`
-- Modify: `assets/js/gunnsynnove.js`
-- Test: `tests/gunnsynnove.test.html`
+- Create: `date-planner/index.html`
+- Create: `assets/css/date-planner.css`
+- Modify: `assets/js/date-planner.js`
+- Test: `tests/date-planner.test.html`
 
 - [ ] **Step 1: Add the page shell and accessible three-view markup**
 
-Create `gunnsynnove/index.html` with no Jekyll layout front matter except:
+Create `date-planner/index.html` with no Jekyll layout front matter except:
 
 ```yaml
 ---
 layout: null
-title: Gunn Synnøve
+title: Date Planner
 ---
 ```
 
@@ -178,7 +178,7 @@ this.state = { activity: null, date: '', time: '', spinning: false };
 
 - [ ] **Step 3: Add scoped visual system and interactions**
 
-In `assets/css/gunnsynnove.css`, use page-local selectors beginning with `.date-planner`. Implement approved style B with:
+In `assets/css/date-planner.css`, use page-local selectors beginning with `.date-planner`. Implement approved style B with:
 
 - warm off-white body background and dark plum text;
 - coral primary controls, mint secondary decorations and yellow sticker-like shapes;
@@ -190,20 +190,20 @@ In `assets/css/gunnsynnove.css`, use page-local selectors beginning with `.date-
 
 - [ ] **Step 4: Verify core flow in the in-app browser**
 
-Navigate to `/gunnsynnove/`, click the unique `Ja` button, spin the wheel, continue, set a future date and time, and verify that the summary, enabled calendar action, generated download and form hidden inputs reflect the chosen activity/date/time. Check that the signature always links to `/`.
+Navigate to `/date-planner/`, click the unique `Ja` button, spin the wheel, continue, set a future date and time, and verify that the summary, enabled calendar action, generated download and form hidden inputs reflect the chosen activity/date/time. Check that the signature always links to `/`.
 
 - [ ] **Step 5: Commit the interface**
 
 ```bash
-git add gunnsynnove/index.html assets/css/gunnsynnove.css assets/js/gunnsynnove.js
-git commit -m "feat: add Gunn Synnøve date planner"
+git add date-planner/index.html assets/css/date-planner.css assets/js/date-planner.js
+git commit -m "feat: add date planner"
 ```
 
 ### Task 4: Validate Jekyll output and responsive behavior
 
 **Files:**
-- Modify: only if verification finds a defect in `gunnsynnove/index.html`, `assets/css/gunnsynnove.css`, or `assets/js/gunnsynnove.js`
-- Test: `tests/gunnsynnove.test.html`
+- Modify: only if verification finds a defect in `date-planner/index.html`, `assets/css/date-planner.css`, or `assets/js/date-planner.js`
+- Test: `tests/date-planner.test.html`
 
 - [ ] **Step 1: Build the Jekyll site**
 
@@ -213,7 +213,7 @@ Run:
 bundle exec jekyll build
 ```
 
-Expected: exit code 0 and `_site/gunnsynnove/index.html` exists.
+Expected: exit code 0 and `_site/date-planner/index.html` exists.
 
 - [ ] **Step 2: Run automated browser assertions at desktop and mobile widths**
 
@@ -232,12 +232,12 @@ FormSubmit form action and hidden field names are correct
 
 - [ ] **Step 3: Re-run helper test page and check browser console**
 
-Expected: `0 failures`; no JavaScript errors on `/gunnsynnove/`.
+Expected: `0 failures`; no JavaScript errors on `/date-planner/`.
 
 - [ ] **Step 4: Commit any verification fixes**
 
 ```bash
-git add gunnsynnove/index.html assets/css/gunnsynnove.css assets/js/gunnsynnove.js tests/gunnsynnove.test.html
+git add date-planner/index.html assets/css/date-planner.css assets/js/date-planner.js tests/date-planner.test.html
 git commit -m "fix: polish date planner interactions"
 ```
 

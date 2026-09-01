@@ -81,7 +81,7 @@ globalThis.FormData = class {
   constructor(form) { this.form = form; }
 };
 
-const { initDatePlanner } = await import('../assets/js/gunnsynnove.js');
+const { initDatePlanner } = await import('../assets/js/date-planner.js');
 
 async function submitWith(fetchImplementation) {
   const harness = createHarness();

@@ -1,8 +1,8 @@
-# Gunn Synnøve date planner — design
+# Date planner — design
 
 ## Purpose
 
-Create a private-feeling, playful date-planning experience at `/gunnsynnove/` on evennordhagen.com. It should guide Gunn Synnøve from accepting a date invitation, through randomly choosing a date idea, to selecting a date and time and sending the result to Even.
+Create a private-feeling, playful date-planning experience at `/date-planner/` on evennordhagen.com. It should guide a visitor from accepting a date invitation, through randomly choosing a date idea, to selecting a date and time and submitting the result.
 
 ## Scope and architecture
 
