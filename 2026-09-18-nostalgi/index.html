@@ -11,14 +11,14 @@
 
   
 
-  <title>My first blog post | Even Nordhagen</title>
+  <title>When Machine Learning Meant Carrying Servers Down the Stairs | Even Nordhagen</title>
 
   
   
   <meta name="author" content="Even Nordhagen">
   
 
-  <meta name="description" content="Why I decided to make my own website">
+  <meta name="description" content="Ten years of machine learning, from hand-derived gradients and home-built clusters to GPU supercomputers.">
 
   
 
@@ -103,11 +103,11 @@
 
   
   <meta property="og:site_name" content="Even Nordhagen">
-  <meta property="og:title" content="My first blog post | Even Nordhagen">
-  <meta property="og:description" content="Why I decided to make my own website">
+  <meta property="og:title" content="When Machine Learning Meant Carrying Servers Down the Stairs | Even Nordhagen">
+  <meta property="og:description" content="Ten years of machine learning, from hand-derived gradients and home-built clusters to GPU supercomputers.">
 
   
-  <meta property="og:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
+  <meta property="og:image" content="/assets/img/nostalgi/IMG_5290.PNG">
   
 
   
@@ -115,22 +115,22 @@
   
   <meta property="og:article:author" content="Even Nordhagen">
   
-  <meta property="og:article:published_time" content="2024-09-01T00:00:00-04:00">
-  <meta property="og:url" content="/2024-09-01-first-post/">
-  <link rel="canonical" href="/2024-09-01-first-post/">
+  <meta property="og:article:published_time" content="2026-09-18T00:00:00-04:00">
+  <meta property="og:url" content="/2026-09-18-nostalgi/">
+  <link rel="canonical" href="/2026-09-18-nostalgi/">
   
 
   
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   
   <meta name="twitter:site" content="@">
   <meta name="twitter:creator" content="@">
 
-  <meta property="twitter:title" content="My first blog post | Even Nordhagen">
-  <meta property="twitter:description" content="Why I decided to make my own website">
+  <meta property="twitter:title" content="When Machine Learning Meant Carrying Servers Down the Stairs | Even Nordhagen">
+  <meta property="twitter:description" content="Ten years of machine learning, from hand-derived gradients and home-built clusters to GPU supercomputers.">
 
   
-  <meta name="twitter:image" content="/assets/img/portrait_nordhagen_machine_learning.jpg">
+  <meta name="twitter:image" content="/assets/img/nostalgi/IMG_5290.PNG">
   
 
   
@@ -422,18 +422,29 @@
   
 
 
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+    
+      data-img-src-1="/assets/img/nostalgi/IMG20210219153728.jpg"
+    
+    
+    
+  ></div>
 
-<header class="header-section ">
-<div class="intro-header ">
+
+<header class="header-section has-img">
+<div class="intro-header  big-img ">
   
   <div class="container-md">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="post-heading">
-          <h1>My first blog post</h1>
+          <h1>When Machine Learning Meant Carrying Servers Down the Stairs</h1>
           
             
-              <h2 class="post-subheading">Why I decided to make my own website</h2>
+              <h2 class="post-subheading">Ten years of machine learning, from hand-derived gradients and home-built clusters to GPU supercomputers.</h2>
             
           
           
@@ -441,7 +452,7 @@
             
               By <strong>Even Nordhagen</strong><br>
             
-            <span class="post-meta">Posted on September 1, 2024</span>
+            <span class="post-meta">Posted on September 18, 2026</span>
             
             
           
@@ -450,7 +461,7 @@
     </div>
   </div>
   
-  
+  <span class='img-desc'></span>
 </div>
 
 
@@ -481,15 +492,124 @@
       
 
       <div class="blog-post">
-        <h2 id="purpose-of-the-website">Purpose of the Website</h2>
+        <p>I’m not very old. Certainly not old enough to sit around reminiscing about the good old days.
+And yet, that is more or less what I found myself doing last Sunday.
+I was out walking when I started thinking about how much the way I work with machine learning has changed since I first entered the field. AI is moving so quickly that something from last year can already feel outdated. Go back ten years, and it almost feels like another era.
+When I started working with machine learning, around 2016, we did things in a way that would seem fairly absurd today.
+We implemented almost everything ourselves.
+And I mean everything.</p>
 
-<p>Today, substantial information about me (and individuals in general) is often dispersed across social media platforms, professional websites, and scientific publications. This website aims to consolidate the most crucial information about me and my work into a single, accessible location. To reach a wider audience, I plan to present popular scientific summaries of my research and publications. The website is structured into two main sections. The <em>Posts</em> section will feature discussions on new findings, intriguing ideas, and various topics of interest. The <em>Projects</em> section will serve as an evolving portfolio, highlighting the projects I am currently involved in or have participated in previously.</p>
+<p>A fairly typical workflow looked something like this:</p>
+<ol>
+  <li>Decide on the neural network architecture. Carefully. Changing it later could mean rewriting large parts of your code.</li>
+  <li>Choose the loss function.</li>
+  <li>Derive the gradients of all the model parameters with respect to that loss, by hand. If you wanted to experiment with certain second-order optimisation methods, there could even be Hessian matrices involved.</li>
+  <li>Implement the whole thing in C++.</li>
+  <li>Parallelise it with MPI.</li>
+  <li>Find some computers to actually run it on, install and configure the cluster software, keep the machines alive, submit the jobs, and eventually collect the results.</li>
+</ol>
 
-<h2 id="why-is-it-launched-now">Why is it Launched Now?</h2>
+<p>Quite comprehensive.
+Today I can define a neural network in PyTorch, write down a loss function, and let automatic differentiation figure out all the gradients for me. Distributed training frameworks take care of much of the communication between GPUs. And instead of building the computer cluster myself, I submit jobs to some of the largest supercomputers in Europe.
+That difference is important for more than just convenience.
+When we were calculating gradients ourselves and running mostly on CPUs, the neural networks we worked with were relatively shallow. There was nothing mathematically preventing us from building deeper networks, of course, but every additional layer increased both the implementation complexity and the computational cost.
+Today, very deep neural networks containing hundreds of millions or billions of parameters are normal. Automatic differentiation takes care of the enormous computational graph, while GPUs make it possible to perform the corresponding calculations at a completely different scale.
+In other words, the tools did not just make the old way of working easier. They changed what was practically possible.
+Back then, the boundary between developing a machine learning model and being a system administrator was considerably less clear.
+And in our case, “setting up the computer cluster” was sometimes meant very literally.</p>
 
-<p>It is often suggested that a personal website should be established as early as possible. While I could have created this site earlier, the present moment is especially opportune as I am transitioning from my PhD position to a new position at the Norwegian Meteorological Institute (MET Norway). This period is filled with exciting developments that I am eager to share. By the end of this year, I anticipate submitting five papers: two on friction related to my PhD, two in collaboration with colleagues at MET Norway and the European Center for Medium-range Weather Forecasting (ECMWF), and one on molecular dynamics simulations of dissociative water. Additionally, I will attend several conferences in the coming months.</p>
+<h2 id="meet-smaug">Meet Smaug</h2>
+<p>Physics students at the University of Oslo had inherited an old collection of compute nodes dating back to around 2007. The cluster was called Smaug, after the dragon from The Hobbit.
+Students were responsible for much of the system themselves.
+That meant software, of course: Linux, networking, Slurm, MPI, libraries and whatever scientific software we needed.
+But it also meant hardware.
+Mounting servers in racks. Connecting network cables. Replacing components. Figuring out cooling. Trying to understand why some node had suddenly disappeared from the network.
+It was HPC in a rather physical sense.
+Looking back, keeping these old CPU systems alive was probably not particularly sensible from an energy-efficiency perspective. I suspect we were sometimes doing more harm than good. But as an education in how computing actually works, it was difficult to beat.
+And then we got something considerably bigger.</p>
 
-<p>I look forward to an exciting autumn. Stay tuned for more updates.</p>
+<div class="text-center">
+    <img src="/assets/img/nostalgi/IMG_5290.PNG" alt="Abel" style="width: 70%;" />
+</div>
+<p><em>A snapshot of when we moved Abel from the Sigma2 halls to the physics building. Me and Anders Malthe-Sørenssen in action.</em></p>
+
+<h2 id="from-abel-to-egil">From Abel to Egil</h2>
+<p>In 2012, the University of Oslo installed Abel, a MEGWARE MiriQuid supercomputer. When it entered the TOP500 list that year, it was among the 100 most powerful supercomputers in the world.
+Eventually Abel reached the end of its production life.
+And apparently following some sort of unofficial university tradition, parts of it ended up with the physics students.
+I was one of the people involved in moving it.
+And “moving a supercomputer” turns out to be less glamorous than it sounds.
+We went to the old machine room, disconnected the equipment, removed the compute nodes from the racks, carried everything out, rented a vehicle, drove it across campus and started rebuilding it in the physics building.
+There were a lot of servers.
+Once the hardware was in place, the software work began. Operating systems, networking, Slurm, storage, libraries and everything else required to turn a large pile of metal boxes into something that scientists could actually use.
+We named the new cluster Egil, after the Norwegian physicist and former University of Oslo professor Egil Hylleraas.
+The name felt appropriate. Hylleraas was one of the pioneers of computational quantum mechanics. In the late 1920s, he performed groundbreaking numerical calculations of the helium atom using the calculating machines available at the time, helping demonstrate that the new quantum mechanics also worked for systems with more than one electron.
+Almost a century later, we were using thousands of CPU cores to solve descendants of the same kinds of problems.
+There was just one small problem with Egil.
+It used a lot of electricity.
+We couldn’t put the entire system in one place, so initially we split it between two locations in the physics building.
+Two racks ended up in a small room on the fourth floor. Cooling involved, among other things, a rather generous use of open windows.
+The third rack went behind a lecture hall on the second floor.
+This turned out to be a terrible idea.
+Anyone who has been near a rack full of servers running at high load knows what happens next. The fans spin up.
+And they are loud.
+So whenever somebody started using the cluster during a lecture, a wall of server noise appeared behind the lecturer.
+People complained.
+Quite reasonably.
+Eventually the machines had to move again.
+This time we were offered a garage in the basement.
+So we dismantled the system, carried everything downstairs, which was an excellent combination of HPC administration and strength training, and rebuilt the cluster yet again.
+By then we were getting rather good at it.
+And despite its improvised surroundings, the machine did real science. Several research projects and publications were run on those compute nodes.</p>
+
+<div class="text-center">
+    <img src="/assets/img/nostalgi/IMG20200625181146.jpeg" alt="Abel" style="width: 40%;" />
+    <img src="/assets/img/nostalgi/IMG20200702105306.jpeg" alt="Abel" style="width: 40%;" />
+</div>
+<p><em>This was the sinlge rack that we installed behind the lecturing hall. Left: Before nodes were installed. Right: After all hardware was in place.</em></p>
+
+<h2 id="then-came-the-gpus">Then came the GPUs</h2>
+<p>At the same time, the type of computing we needed was changing.
+Machine learning and molecular simulation increasingly benefited from GPUs rather than conventional CPUs.
+In 2021 I installed our first machine with four NVIDIA A100 GPUs. The following year we added another node with six A100s.
+Compared with the old CPU clusters, these were extraordinary machines.
+They became essential for my PhD. All of the molecular dynamics simulations behind the papers in my thesis were ultimately performed on these GPUs.
+At the time, having ten A100 GPUs available to us felt like an enormous amount of computing power.
+And it was.
+But even that now feels quite far removed from how I work today.</p>
+
+<div class="text-center">
+    <img src="/assets/img/nostalgi/IMG_0414.JPG" alt="Abel" style="width: 70%;" />
+</div>
+<p><em>Backside of the racks in the basement garage. Some htop and nvtop terminals open for the mood :)</em></p>
+
+<h2 id="ten-years-later">Ten years later</h2>
+<p>Today, I still work with high-performance computing. Probably more than ever.
+But my relationship with the hardware is completely different.
+We now run machine learning models on some of Europe’s largest supercomputers through EuroHPC, including Leonardo, Alps, LUMI and JUPITER.
+These systems are physically hundreds or thousands of kilometres away from me. I have never installed one of their GPUs. I have never connected one of their network cables. I have never had to work out whether opening a window would provide enough cooling.
+Most of the time I never see the machines at all.
+I log in remotely, submit a job, request some GPUs and start training.
+That feels very distant from carrying compute nodes down the stairs at the physics department.
+Not only physically, but mentally.
+Ten years ago, a surprisingly large fraction of the work required to run a machine learning experiment happened below the level of the actual scientific problem. We had to think about gradients, low-level implementation, communication between CPUs, operating systems, schedulers, networking and sometimes the physical machines themselves.
+Today, several layers of that have disappeared behind abstractions.
+PyTorch calculates gradients for us. CUDA lets us use GPUs without writing everything at the level of the hardware. Distributed training frameworks handle communication between accelerators. Containers and package managers make environments easier to reproduce. Professional HPC centres maintain the actual machines.
+That means I spend much more of my time thinking about the model itself.
+What data should we train on? How should the architecture look? What should the model learn? What loss function should we use? How do we represent uncertainty? How do we evaluate whether the model is actually producing useful forecasts?
+Of course, this does not mean everything has become easy.
+I still spend plenty of time debugging distributed jobs, running out of GPU memory, fighting storage systems, dealing with software environments and staring at error messages from jobs running on machines somewhere else in Europe.
+Some things never change.
+But the scale has changed enormously.
+In 2016, building a neural network could mean deriving the gradients, implementing the network in C++, parallelising it with MPI, configuring Slurm and sometimes physically installing the machines it would run on.
+In 2026, I can train very deep neural networks on some of the largest GPU supercomputers in Europe without ever seeing the hardware.
+There is something slightly absurd about the fact that this qualifies as nostalgia.
+It was only ten years ago.</p>
+
+<div class="text-center">
+    <img src="/assets/img/nostalgi/IMG20210219154450.jpg" alt="Abel" style="width: 70%;" />
+</div>
+<p><em>Frontside of the racks in the basement garage.</em></p>
 
 <p>Feel free to drop a comment or question below if you have thoughts or experiences you’d like to share.</p>
 
@@ -503,7 +623,9 @@
         <div class="blog-tags">
           <span>Tags:</span>
           
-            <a href="/tags#first post">first post</a>
+            <a href="/tags#high performance computing">high performance computing</a>
+          
+            <a href="/tags#machine learning">machine learning</a>
           
         </div>
       
@@ -522,7 +644,7 @@
   
 
   
-    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2024-09-01-first-post%2F"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2026-09-18-nostalgi%2F"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -530,7 +652,7 @@
   
 
   
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2024-09-01-first-post%2F"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2026-09-18-nostalgi%2F"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -549,13 +671,13 @@
 
       <ul class="pagination blog-pager">
         
-        
-        <li class="page-item next">
-          <a class="page-link" href="/2024-09-10-large-scale-deep-learning-earth-system/" data-toggle="tooltip" data-placement="top" title="Workshop on Large-scale Deep Learning for the Earth System">
-            <span class="d-none d-sm-inline-block">Next Post</span>
-            <i class="fas fa-arrow-right" alt="Next Post"></i>
+        <li class="page-item previous">
+          <a class="page-link" href="/2026-01-19-bris/" data-toggle="tooltip" data-placement="top" title="Bris">
+            <i class="fas fa-arrow-left" alt="Previous Post"></i>
+            <span class="d-none d-sm-inline-block">Previous Post</span>
           </a>
         </li>
+        
         
       </ul>
       
